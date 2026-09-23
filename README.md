@@ -29,6 +29,12 @@
 
 如需扫描返航余量，可在上述命令后增加 --reserve-values 和一组实际要检查的 rho 值。程序固定执行 FFD baseline → 约束验证 → 局部搜索；MILP 只是可选的最小架次对照，未使用遗传算法。
 
+填写题目提供的结果模板副本，并生成详细对比工作表：
+
+    python -m src.fill_q1_excel --template data/raw/D题/结果提交模板.xlsx --data-dir data --results-dir results --output results/结果提交模板_Q1_已填写.xlsx
+
+输出工作簿保留 Q2–Q4 的原始空表，仅填写 Q1，并新增 Q1_架次明细、Q1_方法对比、Q1_安全载荷、Q1_敏感性、Q1_约束核验和 Q1_路线几何工作表。原始模板和 data/raw/D题 下的附件不会被覆盖。
+
 能耗适配器的模型假设、题面已给公式、外部参考和局限见 docs/能耗模型核验.md。缺少输入、公式核验信息或依赖时，程序应停止并写出阻断状态，不得生成伪造结果。
 
 ## 三人协作步骤
