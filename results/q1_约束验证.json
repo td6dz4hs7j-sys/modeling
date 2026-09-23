@@ -1,0 +1,105 @@
+{
+  "ffd_baseline": {
+    "checks": {
+      "all_boxes_present_once": true,
+      "all_constraints": true,
+      "energy_reserve": true,
+      "finite_units": true,
+      "mass_capacity": true,
+      "no_cross_area_batch": true,
+      "range_constraint": true,
+      "solution_totals_match": true,
+      "volume_capacity": true
+    },
+    "complete_search": false,
+    "errors": [],
+    "method": "FFD baseline",
+    "n_batches": 52,
+    "n_boxes": 80,
+    "notes": [],
+    "passed": true
+  },
+  "local_search": {
+    "checks": {
+      "all_boxes_present_once": true,
+      "all_constraints": true,
+      "energy_reserve": true,
+      "finite_units": true,
+      "mass_capacity": true,
+      "no_cross_area_batch": true,
+      "range_constraint": true,
+      "solution_totals_match": true,
+      "volume_capacity": true
+    },
+    "complete_search": false,
+    "errors": [],
+    "method": "local search from FFD",
+    "n_batches": 52,
+    "n_boxes": 80,
+    "notes": [],
+    "passed": true
+  },
+  "milp": {
+    "checks": {
+      "all_boxes_present_once": true,
+      "all_constraints": true,
+      "energy_reserve": true,
+      "finite_units": true,
+      "mass_capacity": true,
+      "no_cross_area_batch": true,
+      "range_constraint": true,
+      "solution_totals_match": true,
+      "volume_capacity": true
+    },
+    "complete_search": true,
+    "errors": [],
+    "method": "MILP minimum-sortie",
+    "n_batches": 18,
+    "n_boxes": 80,
+    "notes": [],
+    "passed": true
+  },
+  "milp_local_search": {
+    "checks": {
+      "all_boxes_present_once": true,
+      "all_constraints": true,
+      "energy_reserve": true,
+      "finite_units": true,
+      "mass_capacity": true,
+      "no_cross_area_batch": true,
+      "range_constraint": true,
+      "solution_totals_match": true,
+      "volume_capacity": true
+    },
+    "complete_search": false,
+    "errors": [],
+    "method": "local search from MILP",
+    "n_batches": 18,
+    "n_boxes": 80,
+    "notes": [],
+    "passed": true
+  },
+  "selected_solution": {
+    "reference_validation": {
+      "checks": {
+        "all_boxes_present_once": true,
+        "all_constraints": true,
+        "energy_reserve": true,
+        "finite_units": true,
+        "mass_capacity": true,
+        "no_cross_area_batch": true,
+        "range_constraint": true,
+        "solution_totals_match": true,
+        "volume_capacity": true
+      },
+      "complete_search": false,
+      "errors": [],
+      "method": "local search from MILP",
+      "n_batches": 18,
+      "n_boxes": 80,
+      "notes": [],
+      "passed": true
+    },
+    "selected_method": "local search from MILP"
+  }
+}

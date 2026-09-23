@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-23T13:43:20.074246+00:00",
+  "random_seed": 0,
+  "input_files": [
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx",
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+      "bytes": 11017
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx",
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+      "bytes": 17474
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx",
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+      "bytes": 11746
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03",
+      "bytes": 7867096
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡地理空间数据说明.pdf",
+      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4",
+      "bytes": 85812
+    }
+  ],
+  "runtime": {
+    "name": "python",
+    "version": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1",
+      "openpyxl": "3.1.5",
+      "pillow": "12.3.0",
+      "pyproj": "3.8.0",
+      "rasterio": "1.5.1"
+    }
+  },
+  "key_parameters": {
+    "energy_model": "reference-model-A-v1",
+    "range_constraint": true,
+    "baseline": "FFD",
+    "improvement": [
+      "relocate/swap local search",
+      "optional scipy MILP"
+    ],
+    "milp_time_limit_s": 30,
+    "reserve_values": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ]
+  },
+  "reproduce_command": "python -m src.run_q1 --data-dir data --output-dir results --energy-provider src.problem_energy_provider --milp-time-limit-s 30 --reserve-values 0.10 0.15 0.20 0.25 0.30"
+}

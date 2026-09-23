@@ -1,0 +1,36 @@
+{
+  "input_files": [
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx",
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38"
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx",
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx",
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb"
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03"
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡地理空间数据说明.pdf",
+      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4"
+    }
+  ],
+  "message": "问题一真实数据链已运行并通过当前代码验证",
+  "method": "FFD -> local search; optional MILP comparison",
+  "notes": [],
+  "provider_source": "reference-model-A-v1; task Appendix 2 plus 运输无人机数据.xlsx; E_hor=d*Euse/L(q), E_up=(m_empty+q)*g*h_up/(eta_up*3.6e6); descent add-on=0",
+  "seed": 0,
+  "selected_method": "local search from MILP",
+  "selected_metrics": {
+    "energy_kwh": 63.05857757030072,
+    "sorties": 18,
+    "time_s": 19426.761258051094
+  },
+  "status": "COMPLETE"
+}
