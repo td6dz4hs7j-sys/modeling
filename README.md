@@ -35,6 +35,12 @@
 
 输出工作簿保留 Q2–Q4 的原始空表，仅填写 Q1，并新增 Q1_架次明细、Q1_方法对比、Q1_安全载荷、Q1_敏感性、Q1_约束核验和 Q1_路线几何工作表。详细工作表使用普通筛选区域而非结构化 Table，以兼容不同版本的 Excel/WPS。原始模板和 data/raw/D题 下的附件不会被覆盖。
 
+重算外部提供的 Q1 组批方案（输入快照只读，使用统一参考模型 A）：
+
+    python -m src.recompute_q1_solution --solution data/raw/D题/对照方案_问题1_结果提交.xlsx --data-dir data --output-dir results --excel-output results/问题1_对照方案_统一模型.xlsx
+
+该命令生成 `results/q1_对照方案_统一模型.csv`、`results/q1_对照方案_统一模型.json` 和 `results/问题1_对照方案_统一模型.xlsx`。重算结果是 18 架次、59.121155561792 kWh、19272.301126723785 s；它是 reference-model-A-v1 下的条件性结果，原表给出的 59.2329 kWh 仅作为对照，不据此猜测原方案的未知能耗公式。
+
 能耗适配器的模型假设、题面已给公式、外部参考和局限见 docs/能耗模型核验.md。缺少输入、公式核验信息或依赖时，程序应停止并写出阻断状态，不得生成伪造结果。
 
 ## 三人协作步骤
