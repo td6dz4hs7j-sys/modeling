@@ -16,7 +16,6 @@ from typing import Any, Iterable
 
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
-from openpyxl.worksheet.table import Table, TableStyleInfo
 
 from src.data_loader import load_inputs
 
@@ -68,6 +67,14 @@ def _set_widths(ws, headers: list[str], rows: list[list[Any]]) -> None:
 
 
 def _format_table(ws, headers: list[str], rows: list[list[Any]], table_name: str) -> None:
+    """Write a filterable plain range instead of an OOXML structured table.
+
+    The supplied template is intended for broad Excel/WPS compatibility.  A
+    plain range with an autofilter avoids structured-table repair prompts in
+    older Excel-compatible clients while retaining the same comparison data.
+    ``table_name`` remains an argument so callers document the logical table
+    identity without creating a fragile table relationship.
+    """
     ws.freeze_panes = "A2"
     ws.sheet_view.showGridLines = False
     header_fill = PatternFill("solid", fgColor="1F4E78")
@@ -86,17 +93,6 @@ def _format_table(ws, headers: list[str], rows: list[list[Any]], table_name: str
                 cell.number_format = "0.00"
             elif any(unit in header for unit in ("_kg", "_m3", "_m", "_s", "_kWh", "（kg）", "（m³）", "（s）", "（kWh）")):
                 cell.number_format = "0.000"
-    if rows:
-        ref = f"A1:{chr(64 + len(headers)) if len(headers) <= 26 else 'A' + str(len(headers))}{len(rows) + 1}"
-        table = Table(displayName=table_name, ref=ref)
-        table.tableStyleInfo = TableStyleInfo(
-            name="TableStyleMedium2",
-            showFirstColumn=False,
-            showLastColumn=False,
-            showRowStripes=True,
-            showColumnStripes=False,
-        )
-        ws.add_table(table)
     _set_widths(ws, headers, rows)
     ws.auto_filter.ref = f"A1:{chr(64 + len(headers)) if len(headers) <= 26 else 'A' + str(len(headers))}{len(rows) + 1}"
 
