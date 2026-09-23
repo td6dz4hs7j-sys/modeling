@@ -242,7 +242,7 @@ def make_result_figures(
     metrics = [
         ("架次数", "Sorties", "sorties"),
         ("总运输能耗_kWh", "Energy (kWh)", "energy_kwh"),
-        ("累计作业时间_s", "Cumulative flight time (s)", "time_s"),
+        ("累计作业时间_s", "Cumulative work time (s)", "time_s"),
     ]
     fig, axes = plt.subplots(1, 3, figsize=(10.2, 3.8))
     for ax, (column, xlabel, _) in zip(axes, metrics):

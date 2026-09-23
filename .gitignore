@@ -58,3 +58,5 @@ tmp/
 ~$*.xlsm
 
 # Keep formal source code, data and results tracked unless explicitly temporary.
+results/*.inspect.ndjson
+results/*_预览.png

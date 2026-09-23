@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any
 
 from .data_loader import load_inputs
-from .energy_model import load_energy_provider, round_trip_time_s
+from .energy_model import handling_time_s, load_energy_provider, round_trip_time_s
 from .exceptions import Q1Error
 from .optimization import solve_q1
 from .sensitivity import detect_switch_points, scan_reserve_ratio
@@ -81,7 +81,7 @@ def _select_solution(run: Any) -> Any:
     return min(candidates, key=_solution_objective)
 
 
-def _write_solution_csv(output_dir: Path, run: Any) -> None:
+def _write_solution_csv(output_dir: Path, run: Any, uav_types: dict) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     with (output_dir / "q1_安全载荷.csv").open(
         "w", newline="", encoding="utf-8-sig"
@@ -155,6 +155,8 @@ def _write_solution_csv(output_dir: Path, run: Any) -> None:
                 "总质量_kg",
                 "总体积_m3",
                 "往返时间_s",
+                "装卸交接时间_s",
+                "作业时间_s",
                 "架次能耗_kWh",
                 "返航SOC_%",
             ]
@@ -169,6 +171,8 @@ def _write_solution_csv(output_dir: Path, run: Any) -> None:
                     batch.mass_kg,
                     batch.volume_m3,
                     batch.flight_time_s,
+                    handling_time_s(uav_types[batch.uav_type_id], len(batch.box_ids)),
+                    batch.work_time_s,
                     batch.energy_kwh,
                     batch.return_soc_ratio * 100.0,
                 ]
@@ -285,7 +289,7 @@ def main(argv: list[str] | None = None) -> int:
             try_milp=not args.no_milp,
             milp_time_limit_s=args.milp_time_limit_s,
         )
-        _write_solution_csv(output_dir, run)
+        _write_solution_csv(output_dir, run, inputs.uav_types)
         _write_route_geometry(output_dir, routes, inputs.uav_types)
         if args.reserve_values:
             sensitivity = scan_reserve_ratio(

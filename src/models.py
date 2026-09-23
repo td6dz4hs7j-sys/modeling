@@ -45,6 +45,13 @@ class UAVType:
     empty_mass_kg: float = 0.0
     climb_efficiency: float = 0.0
     descent_efficiency: float = 0.0
+    # Q1 operation-time parameters supplied in 运输无人机数据.xlsx.  They
+    # are kept separate from flight time so the two reporting conventions
+    # cannot be mixed accidentally.
+    preparation_time_s: float = 0.0
+    loading_time_per_box_s: float = 0.0
+    handoff_base_time_s: float = 0.0
+    handoff_time_per_box_s: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -91,6 +98,7 @@ class Batch:
     mass_kg: float
     volume_m3: float
     flight_time_s: float
+    work_time_s: float
     energy_kwh: float
     return_soc_ratio: float
 

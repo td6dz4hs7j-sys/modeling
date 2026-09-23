@@ -143,3 +143,37 @@ def round_trip_energy_kwh(
 
 def round_trip_time_s(uav: UAVType, route: RouteGeometry) -> float:
     return leg_time_s(uav, route.outbound) + leg_time_s(uav, route.inbound)
+
+
+def handling_time_s(uav: UAVType, box_count: int) -> float:
+    """题目附件给出的单架次准备、装载和接收点交接时间。
+
+    ``接收点基础交接时间``承担目的地卸货/交接的固定部分，
+    ``每箱增加交接时间``承担随货箱数增加的部分。题面没有给出
+    运输无人机返程再次装货的规则，因此不在返航段重复计时。
+    """
+
+    if isinstance(box_count, bool) or not isinstance(box_count, int) or box_count < 0:
+        raise InputContractError(f"货箱数必须是非负整数: {box_count!r}")
+    value = (
+        uav.preparation_time_s
+        + box_count * uav.loading_time_per_box_s
+        + uav.handoff_base_time_s
+        + box_count * uav.handoff_time_per_box_s
+    )
+    if not math.isfinite(value) or value < 0:
+        raise InputContractError(
+            f"机型 {uav.type_id} 的装卸交接时间无效: {value}"
+        )
+    return value
+
+
+def sortie_work_time_s(uav: UAVType, route: RouteGeometry, box_count: int) -> float:
+    """单点往返架次的总作业时间（飞行 + 准备/装卸交接）。"""
+
+    value = round_trip_time_s(uav, route) + handling_time_s(uav, box_count)
+    if not math.isfinite(value) or value <= 0:
+        raise InputContractError(
+            f"机型 {uav.type_id} 架次总作业时间无效: {value}"
+        )
+    return value

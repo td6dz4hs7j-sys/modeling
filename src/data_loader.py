@@ -356,6 +356,10 @@ def _load_uav_types(path: Path) -> dict[str, UAVType]:
         ),
         ("爬升能耗效率", "爬升效率", "climb_efficiency"),
         ("下降能耗效率", "下降效率", "descent_efficiency"),
+        ("工位固定准备时间", "固定准备时间", "准备时间", "preparation_time_s"),
+        ("每箱装载时间", "装载时间", "loading_time_per_box_s"),
+        ("接收点基础交接时间", "基础交接时间", "卸货基础时间", "handoff_base_time_s"),
+        ("每箱增加交接时间", "每箱交接时间", "卸货每箱时间", "handoff_time_per_box_s"),
     ]
     table = _choose_table(path, [item[0:] for item in aliases])
     cols = [
@@ -400,6 +404,18 @@ def _load_uav_types(path: Path) -> dict[str, UAVType]:
             field=aliases[12][0],
             row=row_no,
         )
+        preparation_time = _number(
+            row[cols[13]], field=aliases[13][0], row=row_no
+        )
+        loading_time_per_box = _number(
+            row[cols[14]], field=aliases[14][0], row=row_no
+        )
+        handoff_base_time = _number(
+            row[cols[15]], field=aliases[15][0], row=row_no
+        )
+        handoff_time_per_box = _number(
+            row[cols[16]], field=aliases[16][0], row=row_no
+        )
         if min(
             empty_mass,
             max_payload,
@@ -417,6 +433,13 @@ def _load_uav_types(path: Path) -> dict[str, UAVType]:
             raise InputContractError(
                 f"运输机型 {type_id} 的满载航程大于空载航程，无法使用题目公式"
             )
+        if min(
+            preparation_time,
+            loading_time_per_box,
+            handoff_base_time,
+            handoff_time_per_box,
+        ) < 0:
+            raise InputContractError(f"运输机型 {type_id} 的作业时间参数不能为负")
         uavs[type_id] = UAVType(
             type_id=type_id,
             max_payload_kg=max_payload,
@@ -431,6 +454,10 @@ def _load_uav_types(path: Path) -> dict[str, UAVType]:
             empty_mass_kg=empty_mass,
             climb_efficiency=climb_efficiency,
             descent_efficiency=descent_efficiency,
+            preparation_time_s=preparation_time,
+            loading_time_per_box_s=loading_time_per_box,
+            handoff_base_time_s=handoff_base_time,
+            handoff_time_per_box_s=handoff_time_per_box,
         )
     if len(uavs) != 3:
         raise InputContractError(

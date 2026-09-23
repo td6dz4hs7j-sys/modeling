@@ -32,9 +32,11 @@ from typing import Any, Iterable
 from .data_loader import load_inputs
 from .energy_model import (
     equivalent_range_m,
+    handling_time_s,
     load_energy_provider,
     round_trip_energy_kwh,
     round_trip_time_s,
+    sortie_work_time_s,
 )
 from .payload_solver import max_safe_payload
 from .terrain import DEM, build_routes
@@ -245,7 +247,9 @@ def _write_workbook(
     notes.append(["适用范围", model["scope"]])
     notes.append(["重算架次", metrics["recomputed"]["sorties"]])
     notes.append(["重算总能耗_kWh", metrics["recomputed"]["energy_kwh"]])
-    notes.append(["重算总时间_s", metrics["recomputed"]["time_s"]])
+    notes.append(["重算往返飞行时间_s", metrics["recomputed"]["time_s"]])
+    notes.append(["装卸交接总时间_s", metrics["recomputed"]["handling_time_s"]])
+    notes.append(["重算总作业时间_s", metrics["recomputed"]["work_time_s"]])
     notes.append(["相对原表能耗差_kWh", metrics["delta"]["energy_kwh"]])
     notes.append(["相对原表时间差_s", metrics["delta"]["time_s"]])
     notes.append(["约束核验", "通过" if validation["passed"] else "未通过"])
@@ -258,18 +262,18 @@ def _write_workbook(
     result = workbook.create_sheet("Q1_统一模型结果")
     result_headers = [
         "架次编号", "服务区编号", "机型编号", "货箱编号列表", "总质量（kg）", "总体积（m³）",
-        "往返时间（s）", "架次能耗（kWh）", "返航SOC（%）", "箱数",
+        "往返时间（s）", "装卸交接时间（s）", "作业时间（s）", "架次能耗（kWh）", "返航SOC（%）", "箱数",
     ]
     result.append(result_headers)
     for row in detail_rows:
         result.append([
             row["batch_id"], row["area_id"], row["uav_type"], row["box_ids_normalized"],
-            row["mass_kg"], row["volume_m3"], row["time_s"], row["energy_kwh"],
-            row["soc_percent"], row["box_count"],
+            row["mass_kg"], row["volume_m3"], row["time_s"], row["handling_time_s"],
+            row["work_time_s"], row["energy_kwh"], row["soc_percent"], row["box_count"],
         ])
     _style_sheet(result, freeze="A2")
-    _set_column_widths(result, [22, 12, 10, 72, 16, 16, 18, 20, 16, 10])
-    for row in result.iter_rows(min_row=2, min_col=5, max_col=9):
+    _set_column_widths(result, [22, 12, 10, 72, 16, 16, 18, 20, 18, 20, 16, 10])
+    for row in result.iter_rows(min_row=2, min_col=5, max_col=10):
         for cell in row:
             cell.number_format = "0.00000000"
 
@@ -277,7 +281,7 @@ def _write_workbook(
     comparison_headers = [
         "架次编号", "服务区编号", "机型编号", "货箱编号列表", "原表总质量_kg", "统一模型总质量_kg",
         "质量差_kg", "原表总体积_m3", "统一模型总体积_m3", "体积差_m3", "原表往返时间_s",
-        "统一模型往返时间_s", "时间差_s", "原表架次能耗_kWh", "统一模型架次能耗_kWh",
+        "统一模型往返时间_s", "时间差_s", "统一模型作业时间_s", "原表架次能耗_kWh", "统一模型架次能耗_kWh",
         "能耗差_kWh", "原表返航SOC_%", "统一模型返航SOC_%", "SOC差_百分点", "安全载荷_kg",
         "质量余量_kg", "体积余量_m3", "往返距离_m", "等效航程_m", "航程余量_m", "允许任务能量_kWh",
         "能量余量_kWh", "源数据质量体积一致", "约束核验通过", "备注",
@@ -288,7 +292,7 @@ def _write_workbook(
             row["batch_id"], row["area_id"], row["uav_type"], row["box_ids_normalized"],
             row["source_mass_kg"], row["mass_kg"], row["mass_diff_kg"],
             row["source_volume_m3"], row["volume_m3"], row["volume_diff_m3"],
-            row["source_time_s"], row["time_s"], row["time_diff_s"],
+            row["source_time_s"], row["time_s"], row["time_diff_s"], row["work_time_s"],
             row["source_energy_kwh"], row["energy_kwh"], row["energy_diff_kwh"],
             row["source_soc_percent"], row["soc_percent"], row["soc_diff_percentage_points"],
             row["safe_payload_kg"], row["mass_slack_kg"], row["volume_slack_m3"],
@@ -319,8 +323,10 @@ def _write_workbook(
         ("有限数值", "通过" if checks["finite_units"] else "未通过", "输出数值均为有限数"),
         ("原表总能耗_kWh", metrics["source_reported"]["energy_kwh"], "由外部方案逐架次能耗求和"),
         ("统一模型总能耗_kWh", metrics["recomputed"]["energy_kwh"], "reference-model-A-v1 重算"),
-        ("原表总时间_s", metrics["source_reported"]["time_s"], "由外部方案逐架次时间求和"),
-        ("统一模型总时间_s", metrics["recomputed"]["time_s"], "按项目路线几何和机型速度重算"),
+        ("原表总往返时间_s", metrics["source_reported"]["time_s"], "由外部方案逐架次往返飞行时间求和"),
+        ("统一模型总往返飞行时间_s", metrics["recomputed"]["time_s"], "按项目路线几何和机型速度重算"),
+        ("统一模型装卸交接总时间_s", metrics["recomputed"]["handling_time_s"], "按运输无人机附件的准备、装载和接收点交接参数求和"),
+        ("统一模型总作业时间_s", metrics["recomputed"]["work_time_s"], "往返飞行时间 + 装卸交接时间"),
     ]
     for item in check_rows:
         check_sheet.append(item)
@@ -412,6 +418,8 @@ def recompute(
         range_m = equivalent_range_m(uav, mass)
         energy = round_trip_energy_kwh(provider, uav, route, mass)
         time_s = round_trip_time_s(uav, route)
+        handling_s = handling_time_s(uav, len(box_ids))
+        work_time_s = sortie_work_time_s(uav, route, len(box_ids))
         soc_percent = 100.0 * (1.0 - energy / uav.usable_energy_kwh)
 
         mass_match = abs(item["source_mass_kg"] - mass) <= 1e-7
@@ -433,7 +441,7 @@ def recompute(
             errors.append(f"{batch_id} 超过当前载荷等效航程")
 
         values = [
-            mass, volume, time_s, energy, soc_percent, safe_payload,
+            mass, volume, time_s, handling_s, work_time_s, energy, soc_percent, safe_payload,
             safe_payload - mass, uav.volume_capacity_m3 - volume,
             distance, range_m, range_m - distance, allowed, allowed - energy,
             item["source_mass_kg"], item["source_volume_m3"], item["source_time_s"],
@@ -453,6 +461,8 @@ def recompute(
                 "mass_kg": _json_number(mass),
                 "volume_m3": _json_number(volume),
                 "time_s": _json_number(time_s),
+                "handling_time_s": _json_number(handling_s),
+                "work_time_s": _json_number(work_time_s),
                 "energy_kwh": _json_number(energy),
                 "soc_percent": _json_number(soc_percent),
                 "source_mass_kg": item["source_mass_kg"],
@@ -506,6 +516,8 @@ def recompute(
     source_time = sum(row["source_time_s"] for row in detail_rows)
     recomputed_energy = sum(row["energy_kwh"] for row in detail_rows)
     recomputed_time = sum(row["time_s"] for row in detail_rows)
+    recomputed_handling_time = sum(row["handling_time_s"] for row in detail_rows)
+    recomputed_work_time = sum(row["work_time_s"] for row in detail_rows)
     metrics = {
         "source_reported": {
             "sorties": len(detail_rows),
@@ -516,6 +528,8 @@ def recompute(
             "sorties": len(detail_rows),
             "energy_kwh": _json_number(recomputed_energy),
             "time_s": _json_number(recomputed_time),
+            "handling_time_s": _json_number(recomputed_handling_time),
+            "work_time_s": _json_number(recomputed_work_time),
         },
         "delta": {
             "energy_kwh": _json_number(recomputed_energy - source_energy),
@@ -527,12 +541,14 @@ def recompute(
         "provider_module": energy_provider_module,
         "provider_source": provider.source,
         "scope": "固定服务区内 O01→S_i→O01 单点往返；外部方案给定的箱体分组和机型不重新优化",
+        "time_definition": "总作业时间 = 往返飞行时间 + 工位固定准备时间 + 每箱装载时间 + 接收点基础交接时间 + 每箱增加交接时间",
+        "time_source": "运输无人机数据.xlsx；Q1 题面/附录 2 的飞行时间规则",
         "caveat": "题面只给出 E=E_hor+E_up，未展开子项；reference-model-A-v1 是项目登记的参数化参考模型，重算值为条件性结果。",
     }
 
     headers = [
         "batch_id", "area_id", "uav_type", "box_ids_normalized", "box_count", "mass_kg", "volume_m3",
-        "time_s", "energy_kwh", "soc_percent", "source_mass_kg", "source_volume_m3", "source_time_s",
+        "time_s", "handling_time_s", "work_time_s", "energy_kwh", "soc_percent", "source_mass_kg", "source_volume_m3", "source_time_s",
         "source_energy_kwh", "source_soc_percent", "mass_diff_kg", "volume_diff_m3", "time_diff_s",
         "energy_diff_kwh", "soc_diff_percentage_points", "safe_payload_kg", "mass_slack_kg", "volume_slack_m3",
         "round_trip_distance_m", "equivalent_range_m", "range_slack_m", "allowed_energy_kwh", "energy_slack_kwh",
@@ -602,7 +618,9 @@ def main(argv: list[str] | None = None) -> int:
         "recomputed "
         f"{metrics['recomputed']['sorties']} sorties, "
         f"{metrics['recomputed']['energy_kwh']:.12f} kWh, "
-        f"{metrics['recomputed']['time_s']:.12f} s"
+        f"flight={metrics['recomputed']['time_s']:.12f} s, "
+        f"handling={metrics['recomputed']['handling_time_s']:.12f} s, "
+        f"work={metrics['recomputed']['work_time_s']:.12f} s"
     )
     print(f"validation={result['validation']['passed']}")
     return 0 if result["validation"]["passed"] else 2

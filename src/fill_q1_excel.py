@@ -28,6 +28,7 @@ Q1_TEMPLATE_HEADERS = [
     "总质量（kg）",
     "总体积（m³）",
     "往返时间（s）",
+    "作业时间（s）",
     "架次能耗（kWh）",
     "返航SOC（%）",
 ]
@@ -112,6 +113,8 @@ def _clear_q1_template_sheet(ws) -> None:
 
 
 def _fill_q1_template_sheet(ws, batch_rows: list[dict[str, str]]) -> None:
+    if ws.max_column < len(Q1_TEMPLATE_HEADERS) or ws.cell(1, 8).value != "作业时间（s）":
+        ws.insert_cols(8, 1)
     headers = [ws.cell(1, col).value for col in range(1, len(Q1_TEMPLATE_HEADERS) + 1)]
     if headers != Q1_TEMPLATE_HEADERS:
         raise ValueError(f"Q1 模板表头不匹配: {headers!r}")
@@ -128,6 +131,7 @@ def _fill_q1_template_sheet(ws, batch_rows: list[dict[str, str]]) -> None:
             _float(record["总质量_kg"]),
             _float(record["总体积_m3"]),
             _float(record["往返时间_s"]),
+            _float(record["作业时间_s"]),
             _float(record["架次能耗_kWh"]),
             _float(record["返航SOC_%"]),
         ]
@@ -138,9 +142,10 @@ def _fill_q1_template_sheet(ws, batch_rows: list[dict[str, str]]) -> None:
         ws.cell(row_idx, 6).number_format = "0.000"
         ws.cell(row_idx, 7).number_format = "0.000"
         ws.cell(row_idx, 8).number_format = "0.000"
-        ws.cell(row_idx, 9).number_format = "0.00"
+        ws.cell(row_idx, 9).number_format = "0.000"
+        ws.cell(row_idx, 10).number_format = "0.00"
     ws.freeze_panes = "A2"
-    ws.auto_filter.ref = f"A1:I{len(batch_rows) + 1}"
+    ws.auto_filter.ref = f"A1:J{len(batch_rows) + 1}"
     ws.sheet_view.showGridLines = False
     ws.column_dimensions["D"].width = 56
 
@@ -184,7 +189,7 @@ def build_workbook(template_path: Path, data_dir: Path, results_dir: Path, outpu
         "总质量_kg", "安全载荷_kg", "质量余量_kg", "质量利用率_%",
         "总体积_m3", "机型体积上限_m3", "体积余量_m3", "体积利用率_%",
         "单程距离_m", "往返距离_m", "安全载荷对应航程_m", "航程余量_m",
-        "架次能耗_kWh", "允许任务能量_kWh", "能耗占允许_%", "往返时间_s", "返航SOC_%",
+        "架次能耗_kWh", "允许任务能量_kWh", "能耗占允许_%", "往返时间_s", "装卸交接时间_s", "作业时间_s", "返航SOC_%",
     ]
     detail_data: list[list[Any]] = []
     for record in batch_rows:
@@ -209,6 +214,7 @@ def build_workbook(template_path: Path, data_dir: Path, results_dir: Path, outpu
             _float(route["单程距离_m"]), roundtrip_distance, range_at_safe,
             range_at_safe - roundtrip_distance, energy, allowed_energy,
             100.0 * energy / allowed_energy, _float(record["往返时间_s"]),
+            _float(record["装卸交接时间_s"]), _float(record["作业时间_s"]),
             _float(record["返航SOC_%"]),
         ])
 

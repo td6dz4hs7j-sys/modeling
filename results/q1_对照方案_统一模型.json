@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-09-23T17:13:42.759654+00:00",
+  "created_at_utc": "2026-09-23T18:40:37.018185+00:00",
   "data_dir": "D:\\Desktop\\modeling-repo\\data",
   "metrics": {
     "delta": {
@@ -8,8 +8,10 @@
     },
     "recomputed": {
       "energy_kwh": 59.121155561792094,
+      "handling_time_s": 13488.0,
       "sorties": 18,
-      "time_s": 19272.301126723785
+      "time_s": 19272.301126723785,
+      "work_time_s": 32760.301126723785
     },
     "source_reported": {
       "energy_kwh": 59.2329,
@@ -22,11 +24,13 @@
     "name": "reference-model-A-v1",
     "provider_module": "src.problem_energy_provider",
     "provider_source": "reference-model-A-v1; task Appendix 2 plus 运输无人机数据.xlsx; E_hor=d*Euse/L(q), E_up=(m_empty+q)*g*h_up/(eta_up*3.6e6); descent add-on=0",
-    "scope": "固定服务区内 O01→S_i→O01 单点往返；外部方案给定的箱体分组和机型不重新优化"
+    "scope": "固定服务区内 O01→S_i→O01 单点往返；外部方案给定的箱体分组和机型不重新优化",
+    "time_definition": "总作业时间 = 往返飞行时间 + 工位固定准备时间 + 每箱装载时间 + 接收点基础交接时间 + 每箱增加交接时间",
+    "time_source": "运输无人机数据.xlsx；Q1 题面/附录 2 的飞行时间规则"
   },
   "outputs": {
     "csv": "D:\\Desktop\\modeling-repo\\results\\q1_对照方案_统一模型.csv",
-    "xlsx": "D:\\Desktop\\modeling-repo\\results\\问题1_对照方案_统一模型.xlsx"
+    "xlsx": "D:\\Desktop\\modeling-repo\\results\\问题1_对照方案_统一模型_含作业时间.xlsx"
   },
   "per_batch": [
     {
@@ -40,6 +44,7 @@
       "energy_kwh": 2.916990969567811,
       "energy_slack_kwh": 3.4830090304321892,
       "equivalent_range_m": 13036.763521404078,
+      "handling_time_s": 876.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 76.0,
       "mass_slack_kg": 4.0,
@@ -60,6 +65,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.17,
       "volume_slack_m3": 0.07999999999999999,
+      "work_time_s": 1493.2808629126555,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -73,6 +79,7 @@
       "energy_kwh": 2.995169788861556,
       "energy_slack_kwh": 3.4048302111384445,
       "equivalent_range_m": 12521.704948325252,
+      "handling_time_s": 1074.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 78.0,
       "mass_slack_kg": 2.0,
@@ -93,6 +100,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.224,
       "volume_slack_m3": 0.025999999999999995,
+      "work_time_s": 1691.2808629126555,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -106,6 +114,7 @@
       "energy_kwh": 2.7132180475444847,
       "energy_slack_kwh": 0.4867819524555155,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -126,6 +135,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1816.459798145339,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -139,6 +149,7 @@
       "energy_kwh": 5.720885244434728,
       "energy_slack_kwh": 0.6791147555652728,
       "equivalent_range_m": 17800.73173996606,
+      "handling_time_s": 810.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 56.0,
       "mass_slack_kg": 12.849049712201946,
@@ -159,6 +170,7 @@
       "volume_diff_m3": 2.7755575615628914e-17,
       "volume_m3": 0.14400000000000002,
       "volume_slack_m3": 0.10599999999999998,
+      "work_time_s": 2041.5245869636983,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -172,6 +184,7 @@
       "energy_kwh": 2.779496381709583,
       "energy_slack_kwh": 0.42050361829041716,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -192,6 +205,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 2079.7634079135883,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -205,6 +219,7 @@
       "energy_kwh": 5.764382980823921,
       "energy_slack_kwh": 0.6356170191760793,
       "equivalent_range_m": 17800.73173996606,
+      "handling_time_s": 810.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 56.0,
       "mass_slack_kg": 12.216368244920162,
@@ -225,6 +240,7 @@
       "volume_diff_m3": 2.7755575615628914e-17,
       "volume_m3": 0.14400000000000002,
       "volume_slack_m3": 0.10599999999999998,
+      "work_time_s": 2369.15875042254,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -238,6 +254,7 @@
       "energy_kwh": 6.153213567639964,
       "energy_slack_kwh": 0.24678643236003595,
       "equivalent_range_m": 17133.115065734753,
+      "handling_time_s": 876.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 59.0,
       "mass_slack_kg": 4.692373288543536,
@@ -258,6 +275,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.156,
       "volume_slack_m3": 0.094,
+      "work_time_s": 2302.9995284817355,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -271,6 +289,7 @@
       "energy_kwh": 4.2205794370942655,
       "energy_slack_kwh": 2.179420562905735,
       "equivalent_range_m": 17133.115065734753,
+      "handling_time_s": 876.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 59.0,
       "mass_slack_kg": 21.0,
@@ -291,6 +310,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.156,
       "volume_slack_m3": 0.094,
+      "work_time_s": 1872.6319426776363,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -304,6 +324,7 @@
       "energy_kwh": 2.6000014531936193,
       "energy_slack_kwh": 3.799998546806381,
       "equivalent_range_m": 17133.115065734753,
+      "handling_time_s": 876.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 59.0,
       "mass_slack_kg": 21.0,
@@ -324,6 +345,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.156,
       "volume_slack_m3": 0.094,
+      "work_time_s": 1569.3363768117622,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -337,6 +359,7 @@
       "energy_kwh": 3.4044165319312363,
       "energy_slack_kwh": 2.995583468068764,
       "equivalent_range_m": 20093.75,
+      "handling_time_s": 810.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 45.0,
       "mass_slack_kg": 35.0,
@@ -357,6 +380,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.129,
       "volume_slack_m3": 0.121,
+      "work_time_s": 1892.2367695248581,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -370,6 +394,7 @@
       "energy_kwh": 5.833566106521047,
       "energy_slack_kwh": 0.566433893478953,
       "equivalent_range_m": 20093.75,
+      "handling_time_s": 810.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 45.0,
       "mass_slack_kg": 13.954006636233522,
@@ -390,6 +415,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.129,
       "volume_slack_m3": 0.121,
+      "work_time_s": 2192.1279608271607,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -403,6 +429,7 @@
       "energy_kwh": 2.098457625430791,
       "energy_slack_kwh": 1.1015423745692092,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -423,6 +450,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1565.4358057612872,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -436,6 +464,7 @@
       "energy_kwh": 1.8228081229609705,
       "energy_slack_kwh": 1.3771918770390297,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -456,6 +485,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1554.64094868432,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -469,6 +499,7 @@
       "energy_kwh": 1.073393480333487,
       "energy_slack_kwh": 2.126606519666513,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -489,6 +520,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1187.6916461446622,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -502,6 +534,7 @@
       "energy_kwh": 2.7511562188261616,
       "energy_slack_kwh": 0.4488437811738386,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -522,6 +555,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1919.41056355343,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -535,6 +569,7 @@
       "energy_kwh": 1.824372515194972,
       "energy_slack_kwh": 1.3756274848050283,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -555,6 +590,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1509.7143451623103,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -568,6 +604,7 @@
       "energy_kwh": 2.139969334505604,
       "energy_slack_kwh": 1.0600306654943963,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -588,6 +625,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1869.0171770830411,
       "备注": "统一模型重算；原表值仅作对照"
     },
     {
@@ -601,6 +639,7 @@
       "energy_kwh": 2.309077755217892,
       "energy_slack_kwh": 0.8909222447821081,
       "equivalent_range_m": 18871.29070824723,
+      "handling_time_s": 630.0,
       "mass_diff_kg": 0.0,
       "mass_kg": 25.0,
       "mass_slack_kg": 5.0,
@@ -621,6 +660,7 @@
       "volume_diff_m3": 0.0,
       "volume_m3": 0.067,
       "volume_slack_m3": 0.0059999999999999915,
+      "work_time_s": 1833.5897927411038,
       "备注": "统一模型重算；原表值仅作对照"
     }
   ],

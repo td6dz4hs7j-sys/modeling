@@ -10,7 +10,12 @@ import math
 from dataclasses import dataclass
 from typing import Iterable
 
-from .energy_model import EnergyProvider, round_trip_energy_kwh, round_trip_time_s
+from .energy_model import (
+    EnergyProvider,
+    round_trip_energy_kwh,
+    round_trip_time_s,
+    sortie_work_time_s,
+)
 from .exceptions import InfeasibleProblemError, InputContractError
 from .models import Batch, CargoBox, RouteGeometry, Solution, UAVType
 
@@ -82,7 +87,8 @@ class BatchEvaluator:
             raise InputContractError(
                 f"架次 {batch.service_area_id}/{batch.uav_type_id} 能量约束失败"
             )
-        time_s = round_trip_time_s(uav, route)
+        flight_time_s = round_trip_time_s(uav, route)
+        work_time_s = sortie_work_time_s(uav, route, len(batch.box_ids))
         return Batch(
             batch_id=f"Q1-{ordinal:03d}",
             service_area_id=batch.service_area_id,
@@ -90,7 +96,8 @@ class BatchEvaluator:
             box_ids=tuple(batch.box_ids),
             mass_kg=batch.mass_kg,
             volume_m3=batch.volume_m3,
-            flight_time_s=time_s,
+            flight_time_s=flight_time_s,
+            work_time_s=work_time_s,
             energy_kwh=energy,
             return_soc_ratio=1.0 - energy / uav.usable_energy_kwh,
         )
@@ -212,7 +219,7 @@ def _solution_from_batches(
         batches=batches,
         total_sorties=len(batches),
         total_energy_kwh=sum(batch.energy_kwh for batch in batches),
-        total_time_s=sum(batch.flight_time_s for batch in batches),
+        total_time_s=sum(batch.work_time_s for batch in batches),
         method=method,
         complete_search=complete_search,
         notes=notes,

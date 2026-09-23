@@ -37,15 +37,17 @@
 
 重算外部提供的 Q1 组批方案（输入快照只读，使用统一参考模型 A）：
 
-    python -m src.recompute_q1_solution --solution data/raw/D题/对照方案_问题1_结果提交.xlsx --data-dir data --output-dir results --excel-output results/问题1_对照方案_统一模型.xlsx
+    python -m src.recompute_q1_solution --solution data/raw/D题/对照方案_问题1_结果提交.xlsx --data-dir data --output-dir results --excel-output results/问题1_对照方案_统一模型_含作业时间.xlsx
 
-该命令生成 `results/q1_对照方案_统一模型.csv`、`results/q1_对照方案_统一模型.json` 和 `results/问题1_对照方案_统一模型.xlsx`。重算结果是 18 架次、59.121155561792 kWh、19272.301126723785 s；它是 reference-model-A-v1 下的条件性结果，原表给出的 59.2329 kWh 仅作为对照，不据此猜测原方案的未知能耗公式。
+该命令生成 `results/q1_对照方案_统一模型.csv`、`results/q1_对照方案_统一模型.json` 和带作业时间明细的 `results/问题1_对照方案_统一模型_含作业时间.xlsx`。重算结果是 18 架次、59.121155561792 kWh；往返飞行时间为 19272.301126723785 s，按附件参数计入准备、逐箱装载和接收点交接后总作业时间为 32760.301126723785 s（9.1000836463 h）。它是 reference-model-A-v1 下的条件性结果，原表给出的 59.2329 kWh 仅作为对照，不据此猜测原方案的未知能耗公式。
+
+注意：`results/q1_组批方案.csv` 是另一次独立优化搜索产生的候选方案，架次明细可能与上述外部方案统一重算不同；提交工作簿和本次 59.13 kWh 版本以 `q1_对照方案_统一模型.json` 为准。
 
 将统一模型方案替换到主提交工作簿的 Q1 栏目，并增加每架次总作业时间列：
 
-    python -m src.replace_q1_submission --source-workbook results/问题1_对照方案_统一模型.xlsx --result-json results/q1_对照方案_统一模型.json --output results/结果提交模板_Q1_已填写.xlsx
+    python -m src.replace_q1_submission --source-workbook results/问题1_对照方案_统一模型_含作业时间.xlsx --result-json results/q1_对照方案_统一模型.json --output results/结果提交模板_Q1_已填写_含作业时间.xlsx
 
-主表 `Q1_单点组批` 现在包含 `往返时间（s）` 和 `作业时间（s）` 两列；问题一每架次均为 O01→S_i→O01 单点往返，故两列数值相同。Q2–Q4 工作表保留，原始附件不修改。
+主表 `Q1_单点组批` 现在包含 `往返时间（s）` 和 `作业时间（s）` 两列；`作业时间（s）` 按题面附件参数计入准备、逐箱装载和接收点交接。Q2–Q4 工作表保留，原始附件不修改。若现有工作簿被 Excel/WPS 占用，请使用带“含作业时间”的新文件名。
 
 能耗适配器的模型假设、题面已给公式、外部参考和局限见 docs/能耗模型核验.md。缺少输入、公式核验信息或依赖时，程序应停止并写出阻断状态，不得生成伪造结果。
 

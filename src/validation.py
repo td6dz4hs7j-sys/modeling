@@ -77,7 +77,7 @@ def validate_solution(
             errors.append(f"架次 {batch.batch_id} 超过等效航程")
         if not all(
             value >= -1e-9
-            for value in (mass, volume, batch.flight_time_s, batch.energy_kwh)
+            for value in (mass, volume, batch.flight_time_s, batch.work_time_s, batch.energy_kwh)
         ):
             checks["finite_units"] = False
             errors.append(f"架次 {batch.batch_id} 存在负值")
@@ -85,7 +85,7 @@ def validate_solution(
     checks["solution_totals_match"] = (
         solution.total_sorties == len(solution.batches)
         and abs(solution.total_energy_kwh - sum(batch.energy_kwh for batch in solution.batches)) <= 1e-7
-        and abs(solution.total_time_s - sum(batch.flight_time_s for batch in solution.batches)) <= 1e-7
+        and abs(solution.total_time_s - sum(batch.work_time_s for batch in solution.batches)) <= 1e-7
     )
     if not checks["solution_totals_match"]:
         errors.append("Solution 汇总指标与架次明细不一致")
