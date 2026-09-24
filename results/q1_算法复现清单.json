@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "algorithm": {
+    "name": "MILP minimum-sortie + deterministic relocate/swap local search",
+    "selected_method": "local search from MILP",
+    "objective_order": ["sorties", "energy_kwh", "work_time_s"],
+    "description": "先按服务区求解质量、体积和安全载荷容量约束下的最小架次 MILP，再从 MILP 解执行同服务区 relocate/swap 局部搜索；可行候选按架次数、总能耗、总作业时间字典序严格改进。",
+    "genetic_algorithm": false
+  },
+  "input_sha256": {
+    "algorithm_solution_csv": "a3223708b970baea4a98a1bb765b914aa58edbed52dbbff7ddadd268b6fa7499",
+    "algorithm_validation_json": "fba8fe3b1ee452e71fe6f314def149482e63f47c927251c568a806d81ac2292b",
+    "method_comparison_csv": "d8795ad82485c8b832d65831a8d6ee60f9424beb1b01561571f9f1e4a5e70237",
+    "fixed_grouping_reference_json": "614c1c9a48b2f7f4e9d9d79a1e3c31b4d01b491de6f37c1e0cf57e41dc57de39",
+    "transport_uav_xlsx": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb"
+  },
+  "algorithm_result": {
+    "sorties": 18,
+    "energy_kwh": 63.05857757030072,
+    "flight_time_s": 19426.761258051094,
+    "handling_time_s": 13584.0,
+    "work_time_s": 33010.7612580511,
+    "work_time_h": 9.169655905014194,
+    "n_boxes": 80,
+    "validation_passed": true
+  },
+  "fixed_grouping_reference": {
+    "sorties": 18,
+    "energy_kwh": 59.121155561792094,
+    "flight_time_s": 19272.301126723785,
+    "handling_time_s": 13488.0,
+    "work_time_s": 32760.301126723785,
+    "work_time_h": 9.100083646312163,
+    "source": "fixed input grouping recomputed from supplied parameters; not algorithm output"
+  },
+  "algorithm_vs_reference": {
+    "sortie_delta": 0,
+    "energy_delta_kwh": 3.9374220085086264,
+    "energy_delta_percent_vs_reference": 6.659920583577434,
+    "work_time_delta_s": 250.4601313273124,
+    "work_time_delta_h": 0.06957225870203122,
+    "work_time_delta_percent_vs_reference": 0.7645232879834638
+  },
+  "commands": {
+    "q1_algorithm": "python -m src.run_q1 --data-dir data --output-dir results --energy-provider src.problem_energy_provider --milp-time-limit-s 30",
+    "matlab_validation": "matlab -batch \"addpath('src'); matlab_q1_batch\"",
+    "algorithm_workbook": "python -m src.fill_q1_excel --template data/raw/D题/结果提交模板.xlsx --data-dir data --results-dir results --output results/结果提交模板_Q1_算法方案_含作业时间.xlsx"
+  },
+  "outputs": [
+    "results/q1_组批方案.csv",
+    "results/q1_约束验证.json",
+    "results/matlab_q1_verification.json",
+    "results/matlab_q1_method_comparison.csv",
+    "results/matlab_q1_advantage.csv",
+    "results/matlab_q1_reference_gap.csv",
+    "results/结果提交模板_Q1_算法方案_含作业时间.xlsx"
+  ]
+}

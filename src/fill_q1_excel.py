@@ -115,6 +115,9 @@ def _clear_q1_template_sheet(ws) -> None:
 def _fill_q1_template_sheet(ws, batch_rows: list[dict[str, str]]) -> None:
     if ws.max_column < len(Q1_TEMPLATE_HEADERS) or ws.cell(1, 8).value != "作业时间（s）":
         ws.insert_cols(8, 1)
+        # The supplied template has no eighth header cell.  Set it explicitly
+        # after insertion so the generated workbook has a stable Q1 schema.
+        ws.cell(1, 8, "作业时间（s）")
     headers = [ws.cell(1, col).value for col in range(1, len(Q1_TEMPLATE_HEADERS) + 1)]
     if headers != Q1_TEMPLATE_HEADERS:
         raise ValueError(f"Q1 模板表头不匹配: {headers!r}")

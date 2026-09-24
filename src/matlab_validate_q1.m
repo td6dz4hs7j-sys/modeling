@@ -16,6 +16,8 @@ assert(environment.ok, "MATLAB 数据/可视化环境检查未通过");
 
 resultJsonPath = fullfile(resultsDir, "q1_对照方案_统一模型.json");
 methodCsvPath = fullfile(resultsDir, "q1_方法比较.csv");
+algorithmPlanPath = fullfile(resultsDir, "q1_组批方案.csv");
+algorithmValidationPath = fullfile(resultsDir, "q1_约束验证.json");
 uavDataPath = fullfile(projectRoot, "data", "raw", "D题", "数据", ...
     "无人机应急物资运输基础数据", "运输无人机数据.xlsx");
 result = jsondecode(fileread(resultJsonPath));
@@ -63,6 +65,46 @@ end
 sourceHandlingResidual = sourceHandling - handlingTime;
 assert(max(abs(sourceHandlingResidual)) <= 1e-9, "附件参数重算的装卸交接时间不一致");
 
+% 独立读取程序实际选出的算法方案。该方案不是固定输入快照的改名，
+% 而是由 MILP 最小架次解出发，再做确定性的同服务区 relocate/swap 局部搜索。
+algorithmTable = readtable(algorithmPlanPath, "TextType", "string", ...
+    "VariableNamingRule", "preserve");
+algorithmFlightTime = reshape(double(algorithmTable.("往返时间_s")), [], 1);
+algorithmHandlingTime = reshape(double(algorithmTable.("装卸交接时间_s")), [], 1);
+algorithmWorkTime = reshape(double(algorithmTable.("作业时间_s")), [], 1);
+algorithmEnergy = reshape(double(algorithmTable.("架次能耗_kWh")), [], 1);
+algorithmType = upper(strip(string(algorithmTable.("机型编号"))));
+algorithmBoxIds = strings(0, 1);
+for k = 1:height(algorithmTable)
+    currentIds = string(strsplit(string(algorithmTable.("货箱编号列表")(k)), ";"));
+    algorithmBoxIds = [algorithmBoxIds; reshape(currentIds, [], 1)]; %#ok<AGROW>
+end
+algorithmBoxIds = strip(algorithmBoxIds);
+algorithmUniqueBoxIds = unique(algorithmBoxIds);
+algorithmTimeResidual = algorithmWorkTime - algorithmFlightTime - algorithmHandlingTime;
+assert(height(algorithmTable) == 18, "算法方案架次数不是预期的 18 架次");
+assert(all(isfinite([algorithmFlightTime; algorithmHandlingTime; algorithmWorkTime; algorithmEnergy])));
+assert(all([algorithmFlightTime; algorithmHandlingTime; algorithmWorkTime; algorithmEnergy] >= 0));
+assert(max(abs(algorithmTimeResidual)) <= 1e-9, "算法方案逐架次作业时间分解不一致");
+assert(numel(algorithmBoxIds) == result.validation.n_boxes, "算法方案货箱总数不一致");
+assert(numel(algorithmUniqueBoxIds) == numel(algorithmBoxIds), "算法方案存在重复货箱编号");
+algorithmSourceHandling = zeros(height(algorithmTable), 1);
+for k = 1:height(algorithmTable)
+    typeIndex = find(sourceType == algorithmType(k), 1);
+    assert(~isempty(typeIndex), "附件中找不到算法方案机型 %s", algorithmType(k));
+    boxCount = numel(strsplit(string(algorithmTable.("货箱编号列表")(k)), ";"));
+    algorithmSourceHandling(k) = sourcePrep(typeIndex) + boxCount * sourceLoad(typeIndex) + ...
+        sourceHandoffBase(typeIndex) + boxCount * sourceHandoffBox(typeIndex);
+end
+algorithmSourceHandlingResidual = algorithmSourceHandling - algorithmHandlingTime;
+assert(max(abs(algorithmSourceHandlingResidual)) <= 1e-9, ...
+    "附件参数重算的算法方案装卸交接时间不一致");
+algorithmValidation = jsondecode(fileread(algorithmValidationPath));
+assert(algorithmValidation.selected_solution.reference_validation.passed, ...
+    "算法方案的 Python 完整约束核验未通过");
+assert(string(algorithmValidation.selected_solution.selected_method) == ...
+    "local search from MILP", "选出的算法方法不是 MILP 后局部搜索");
+
 % 独立核对货箱编号是否恰好覆盖一次。
 boxIds = strings(0, 1);
 for k = 1:numel(batchRows)
@@ -75,7 +117,8 @@ assert(numel(boxIds) == result.validation.n_boxes, "货箱总数与验证记录�
 assert(numel(uniqueBoxIds) == numel(boxIds), "存在重复货箱编号");
 assert(result.validation.passed, "Python 统一模型约束核验标记未通过");
 
-% 读取已有候选方法结果，并追加固定外部方案。外部方案不标记为重新优化的最优解。
+% 将算法输出标记为本方案，并把固定输入组批保留为独立参考项。这样不把
+% 59.13 kWh 的固定输入方案误写成由本算法生成的结果。
 methodTable = readtable(methodCsvPath, "TextType", "string", ...
     "VariableNamingRule", "preserve");
 methodNames = reshape(string(methodTable.("方法")), [], 1);
@@ -83,20 +126,32 @@ sorties = reshape(double(methodTable.("架次数")), [], 1);
 methodEnergy = reshape(double(methodTable.("总运输能耗_kWh")), [], 1);
 methodWorkTime = reshape(double(methodTable.("累计作业时间_s")), [], 1);
 
-comparisonNames = [methodNames; "External fixed plan"];
+algorithmMethodIndex = find(methodNames == "MILP + local search", 1);
+assert(~isempty(algorithmMethodIndex), "方法比较表缺少 MILP + local search 算法结果");
+assert(height(algorithmTable) == sorties(algorithmMethodIndex), "算法方案架次数与方法表不一致");
+assert(abs(sum(algorithmEnergy) - methodEnergy(algorithmMethodIndex)) <= 1e-8, ...
+    "算法方案能耗与方法表不一致");
+assert(abs(sum(algorithmWorkTime) - methodWorkTime(algorithmMethodIndex)) <= 1e-8, ...
+    "算法方案作业时间与方法表不一致");
+
+comparisonNames = [methodNames; "Reference grouping"];
+comparisonNames(algorithmMethodIndex) = "Our method";
 comparisonSorties = [sorties; expected.sorties];
 comparisonEnergy = [methodEnergy; expected.energy_kwh];
 comparisonWorkTime = [methodWorkTime; expected.work_time_s];
-comparisonSource = [repmat("independent candidate", height(methodTable), 1); ...
-    "fixed external grouping, unified-model recomputation"];
+comparisonSource = repmat("Python candidate method output", height(methodTable) + 1, 1);
+comparisonSource(algorithmMethodIndex) = ...
+    "our method: MILP minimum-sortie + deterministic relocate/swap local search";
+comparisonSource(end) = ...
+    "fixed input grouping, recomputed from supplied parameters (not algorithm output)";
 comparisonTable = table(comparisonNames, comparisonSorties, comparisonEnergy, ...
     comparisonWorkTime, comparisonSource, ...
     'VariableNames', {'Method', 'Sorties', 'Energy_kWh', ...
     'CumulativeWorkTime_s', 'Source'});
 writetable(comparisonTable, fullfile(resultsDir, "matlab_q1_method_comparison.csv"));
 
-targetIndex = numel(comparisonNames);
-referenceNames = ["FFD baseline"; "MILP + local search"];
+targetIndex = algorithmMethodIndex;
+referenceNames = ["FFD baseline"; "MILP minimum-sortie"];
 referenceIndex = [find(comparisonNames == referenceNames(1), 1), ...
     find(comparisonNames == referenceNames(2), 1)];
 referenceEnergy = reshape(comparisonEnergy(referenceIndex), [], 1);
@@ -113,34 +168,66 @@ advantageTable = table(referenceNames, energySavings, workTimeSavings, sortieSav
     'EnergyReduction_kWh', 'WorkTimeReduction_h'});
 writetable(advantageTable, fullfile(resultsDir, "matlab_q1_advantage.csv"));
 
+referenceIndexForGap = find(comparisonNames == "Reference grouping", 1);
+referenceGapTable = table( ...
+    "Our method", "Reference grouping", ...
+    comparisonSorties(targetIndex) - comparisonSorties(referenceIndexForGap), ...
+    comparisonEnergy(targetIndex) - comparisonEnergy(referenceIndexForGap), ...
+    100 * (comparisonEnergy(targetIndex) - comparisonEnergy(referenceIndexForGap)) / ...
+        comparisonEnergy(referenceIndexForGap), ...
+    comparisonWorkTime(targetIndex) - comparisonWorkTime(referenceIndexForGap), ...
+    (comparisonWorkTime(targetIndex) - comparisonWorkTime(referenceIndexForGap)) / 3600, ...
+    100 * (comparisonWorkTime(targetIndex) - comparisonWorkTime(referenceIndexForGap)) / ...
+        comparisonWorkTime(referenceIndexForGap), ...
+    'VariableNames', {'Method', 'Reference', 'SortieDelta', 'EnergyDelta_kWh', ...
+    'EnergyDelta_percent_vs_reference', 'WorkTimeDelta_s', 'WorkTimeDelta_h', ...
+    'WorkTimeDelta_percent_vs_reference'});
+writetable(referenceGapTable, fullfile(resultsDir, "matlab_q1_reference_gap.csv"));
+
 report = struct();
 report.engine = "MATLAB";
 report.matlab_version = version;
 report.required_toolboxes = environment.required_toolboxes;
-report.n_sorties = expected.sorties;
+report.algorithm = "MILP minimum-sortie + deterministic relocate/swap local search";
+report.selected_method = "local search from MILP";
+report.n_sorties = height(algorithmTable);
 report.n_boxes = result.validation.n_boxes;
-report.unique_box_count = numel(uniqueBoxIds);
-report.flight_time_s = expected.time_s;
-report.handling_time_s = expected.handling_time_s;
-report.work_time_s = expected.work_time_s;
-report.work_time_h = expected.work_time_s / 3600;
-report.energy_kwh = expected.energy_kwh;
-report.max_work_time_residual_s = max(abs(timeResidual));
-report.flight_time_sum_residual_s = sum(flightTime) - expected.time_s;
-report.handling_time_sum_residual_s = sum(handlingTime) - expected.handling_time_s;
-report.work_time_sum_residual_s = sum(workTime) - expected.work_time_s;
-report.energy_sum_residual_kwh = sum(energy) - expected.energy_kwh;
-report.source_handling_time_residual_max_s = max(abs(sourceHandlingResidual));
+report.unique_box_count = numel(algorithmUniqueBoxIds);
+report.flight_time_s = sum(algorithmFlightTime);
+report.handling_time_s = sum(algorithmHandlingTime);
+report.work_time_s = sum(algorithmWorkTime);
+report.work_time_h = sum(algorithmWorkTime) / 3600;
+report.energy_kwh = sum(algorithmEnergy);
+report.max_work_time_residual_s = max(abs(algorithmTimeResidual));
+report.method_csv_work_time_residual_s = sum(algorithmWorkTime) - methodWorkTime(algorithmMethodIndex);
+report.method_csv_energy_residual_kwh = sum(algorithmEnergy) - methodEnergy(algorithmMethodIndex);
+report.source_handling_time_residual_max_s = max(abs(algorithmSourceHandlingResidual));
 report.input_sha256 = struct( ...
     "unified_model_json", sha256File(resultJsonPath), ...
     "method_comparison_csv", sha256File(methodCsvPath), ...
+    "algorithm_solution_csv", sha256File(algorithmPlanPath), ...
+    "algorithm_validation_json", sha256File(algorithmValidationPath), ...
     "transport_uav_xlsx", sha256File(uavDataPath));
-report.constraint_validation_passed = result.validation.passed;
+report.constraint_validation_passed = algorithmValidation.selected_solution.reference_validation.passed;
 report.time_definition = "work = round-trip flight + preparation + per-box loading + base handoff + per-box handoff";
-report.comparison_note = "External fixed plan is a re-evaluated supplied grouping, not a newly proven global optimum.";
+report.comparison_note = "Our method is the selected MILP minimum-sortie solution followed by deterministic relocate/swap local search; the fixed grouping is shown separately as a parameter-recomputed reference and is not an algorithm output.";
+report.algorithm_vs_reference = struct( ...
+    "sortie_delta", referenceGapTable.SortieDelta, ...
+    "energy_delta_kwh", referenceGapTable.EnergyDelta_kWh, ...
+    "energy_delta_percent_vs_reference", referenceGapTable.EnergyDelta_percent_vs_reference, ...
+    "work_time_delta_s", referenceGapTable.WorkTimeDelta_s, ...
+    "work_time_delta_h", referenceGapTable.WorkTimeDelta_h, ...
+    "work_time_delta_percent_vs_reference", referenceGapTable.WorkTimeDelta_percent_vs_reference);
+report.reference_grouping = struct( ...
+    "sorties", expected.sorties, ...
+    "flight_time_s", expected.time_s, ...
+    "handling_time_s", expected.handling_time_s, ...
+    "work_time_s", expected.work_time_s, ...
+    "energy_kwh", expected.energy_kwh, ...
+    "source", "fixed input grouping recomputed from supplied parameters");
 writeJson(fullfile(resultsDir, "matlab_q1_verification.json"), report);
 
-plotTimeReconciliation(flightTime, handlingTime, figuresDir);
+plotTimeReconciliation(algorithmFlightTime, algorithmHandlingTime, figuresDir);
 plotMethodComparison(comparisonNames, comparisonEnergy, comparisonWorkTime, figuresDir);
 plotAdvantages(referenceNames, energySavings, workTimeSavings, sortieSavings, figuresDir);
 
@@ -193,14 +280,18 @@ close(fig);
 end
 
 function plotMethodComparison(names, energy, workTime, figuresDir)
-labels = ["FFD", "Local", "MILP", "MILP+LS", "External"];
+labels = ["FFD", "Local", "MILP", "Our method", "Reference"];
+assert(numel(names) == numel(labels), "方法对比行数与图标签不一致");
+algorithmIndex = find(names == "Our method", 1);
+referenceIndex = find(names == "Reference grouping", 1);
 fig = figure("Visible", "off");
 tiledlayout(fig, 1, 2, "TileSpacing", "compact", "Padding", "compact");
 
 ax1 = nexttile;
 b1 = bar(ax1, energy, "FaceColor", "flat");
 b1.CData = repmat([0.3373, 0.7059, 0.9137], numel(energy), 1);
-b1.CData(end, :) = [0.0000, 0.4471, 0.6980];
+b1.CData(algorithmIndex, :) = [0.0000, 0.4471, 0.6980];
+b1.CData(referenceIndex, :) = [0.5000, 0.5000, 0.5000];
 xticks(ax1, 1:numel(labels));
 xticklabels(ax1, labels);
 xtickangle(ax1, 25);
@@ -210,7 +301,8 @@ title(ax1, "Energy comparison");
 ax2 = nexttile;
 b2 = bar(ax2, workTime / 3600, "FaceColor", "flat");
 b2.CData = repmat([0.9020, 0.6235, 0.0000], numel(workTime), 1);
-b2.CData(end, :) = [0.0000, 0.6196, 0.4510];
+b2.CData(algorithmIndex, :) = [0.0000, 0.6196, 0.4510];
+b2.CData(referenceIndex, :) = [0.5000, 0.5000, 0.5000];
 xticks(ax2, 1:numel(labels));
 xticklabels(ax2, labels);
 xtickangle(ax2, 25);
@@ -230,7 +322,7 @@ b(1).FaceColor = [0.0000, 0.4471, 0.6980];
 b(2).FaceColor = [0.9020, 0.6235, 0.0000];
 b(3).FaceColor = [0.0000, 0.6196, 0.4510];
 xticks(1:numel(referenceNames));
-xticklabels({"vs FFD", "vs MILP+LS"});
+xticklabels({"vs FFD", "vs MILP"});
 ylabel("Reduction (%)");
 title("Relative advantage");
 legend({"Energy", "Work time", "Sorties"}, "Location", "northeast");

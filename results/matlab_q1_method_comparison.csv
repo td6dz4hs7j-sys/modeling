@@ -1,6 +1,6 @@
 Method,Sorties,Energy_kWh,CumulativeWorkTime_s,Source
-FFD baseline,52,112.635546989608,89286.4515381413,"independent candidate"
-local search,52,112.159064059838,89286.4515381413,"independent candidate"
-MILP minimum-sortie,18,63.5822663879368,33010.7612580511,"independent candidate"
-MILP + local search,18,63.0585775703007,33010.7612580511,"independent candidate"
-External fixed plan,18,59.1211555617921,32760.3011267238,"fixed external grouping, unified-model recomputation"
+FFD baseline,52,112.635546989608,89286.4515381413,"Python candidate method output"
+local search,52,112.159064059838,89286.4515381413,"Python candidate method output"
+MILP minimum-sortie,18,63.5822663879368,33010.7612580511,"Python candidate method output"
+Our method,18,63.0585775703007,33010.7612580511,"our method: MILP minimum-sortie + deterministic relocate/swap local search"
+Reference grouping,18,59.1211555617921,32760.3011267238,"fixed input grouping, recomputed from supplied parameters (not algorithm output)"
