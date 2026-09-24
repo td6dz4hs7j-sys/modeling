@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-23T13:43:20.074246+00:00",
+  "random_seed": 0,
+  "input_files": [
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx",
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+      "bytes": 11017
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx",
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+      "bytes": 17474
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx",
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+      "bytes": 11746
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03",
+      "bytes": 7867096
+    },
+    {
+      "path": "D:\\Desktop\\modeling-repo\\data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡地理空间数据说明.pdf",
+      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4",
+      "bytes": 85812
+    }
+  ],
+  "runtime": {
+    "name": "python",
+    "version": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1",
+      "openpyxl": "3.1.5",
+      "pillow": "12.3.0",
+      "pyproj": "3.8.0",
+      "rasterio": "1.5.1"
+    }
+  },
+  "key_parameters": {
+    "energy_model": "reference-model-A-v1",
+    "q1_time_definition": "sortie work time = round-trip flight time + fixed preparation + per-box loading + base receiving-point handoff + per-box handoff",
+    "q1_time_source": "运输无人机数据.xlsx and question Appendix 2",
+    "range_constraint": true,
+    "baseline": "FFD",
+    "improvement": [
+      "relocate/swap local search",
+      "optional scipy MILP"
+    ],
+    "milp_time_limit_s": 30,
+    "reserve_values": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ]
+  },
+  "reproduce_command": "python -m src.run_q1 --data-dir data --output-dir results --energy-provider src.problem_energy_provider --milp-time-limit-s 30 --reserve-values 0.10 0.15 0.20 0.25 0.30",
+  "q1_external_recompute_command": "python -m src.recompute_q1_solution --solution data/raw/D题/对照方案_问题1_结果提交.xlsx --data-dir data --output-dir results --excel-output results/问题1_对照方案_统一模型_含作业时间.xlsx --energy-provider src.problem_energy_provider",
+  "q1_workbook_update_command": "node src/update_q1_workbook.mjs",
+  "matlab_validation_command": "matlab -batch \"addpath('src'); matlab_q1_batch\"",
+  "matlab_runtime": "MATLAB R2022a (9.12.0.1884302)",
+  "matlab_required_toolboxes": [
+    "MATLAB"
+  ],
+  "matlab_input_sha256": {
+    "q1_unified_model_json": "614c1c9a48b2f7f4e9d9d79a1e3c31b4d01b491de6f37c1e0cf57e41dc57de39",
+    "q1_method_comparison_csv": "d8795ad82485c8b832d65831a8d6ee60f9424beb1b01561571f9f1e4a5e70237",
+    "transport_uav_xlsx": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb"
+  },
+  "matlab_verification_outputs": [
+    "results/matlab_q1_verification.json",
+    "results/matlab_q1_method_comparison.csv",
+    "results/matlab_q1_advantage.csv",
+    "figures/process_q1_matlab_time_reconciliation.svg",
+    "figures/process_q1_matlab_time_reconciliation.png",
+    "figures/result_q1_matlab_method_comparison.svg",
+    "figures/result_q1_matlab_method_comparison.png",
+    "figures/result_q1_matlab_advantage.svg",
+    "figures/result_q1_matlab_advantage.png"
+  ],
+  "q1_result_lineage": {
+    "q1_组批方案.csv": "独立优化候选方案；与外部方案统一模型重算结果不是同一组架次",
+    "q1_对照方案_统一模型.json": "固定外部 18 架次方案的 reference-model-A-v1 重算；提交工作簿使用此结果"
+  }
+}
