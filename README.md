@@ -43,6 +43,12 @@
 
 注意：`results/q1_组批方案.csv` 是另一次独立优化搜索产生的候选方案，架次明细可能与上述外部方案统一重算不同；提交工作簿和本次 59.13 kWh 版本以 `q1_对照方案_统一模型.json` 为准。
 
+使用 MATLAB R2022a 独立验证并生成对比优势图：
+
+    matlab -batch "addpath('src'); matlab_q1_batch"
+
+该命令核对 80 箱唯一覆盖、逐架次时间分解、总时间和总能耗，并生成 `results/matlab_q1_verification.json`、`results/matlab_q1_method_comparison.csv`、`results/matlab_q1_advantage.csv`，以及 `figures/process_q1_matlab_time_reconciliation.*`、`figures/result_q1_matlab_method_comparison.*`、`figures/result_q1_matlab_advantage.*`。外部固定方案与候选方法的比较只表示统一口径下的结果差异，不把外部方案宣称为重新证明的全局最优。
+
 将统一模型方案替换到主提交工作簿的 Q1 栏目，并增加每架次总作业时间列：
 
     python -m src.replace_q1_submission --source-workbook results/问题1_对照方案_统一模型_含作业时间.xlsx --result-json results/q1_对照方案_统一模型.json --output results/结果提交模板_Q1_已填写_含作业时间.xlsx

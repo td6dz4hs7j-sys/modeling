@@ -1,0 +1,3 @@
+Reference,EnergyReduction_percent,WorkTimeReduction_percent,SortieReduction_percent,EnergyReduction_kWh,WorkTimeReduction_h
+FFD baseline,47.5111036063538,63.3087657059265,65.3846153846154,53.5143914278161,15.701708447616
+MILP + local search,6.24407045039828,0.758722676430938,0,3.93742200850863,0.0695722587020312
