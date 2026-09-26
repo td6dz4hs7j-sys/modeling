@@ -1,0 +1,553 @@
+{
+  "status": "PASS",
+  "scope": "Frozen Q3 tasks/times; same-type group-local reassignment; no balance cutoff",
+  "method": "independent set merging + all labeled assignments + SciPy maximum bipartite matching",
+  "blocks": [
+    [
+      "S001",
+      "S002"
+    ],
+    [
+      "S003",
+      "S007",
+      "S011"
+    ],
+    [
+      "S004",
+      "S005"
+    ],
+    [
+      "S006"
+    ],
+    [
+      "S008"
+    ],
+    [
+      "S009",
+      "S010",
+      "S013",
+      "S014"
+    ],
+    [
+      "S012"
+    ],
+    [
+      "S015"
+    ]
+  ],
+  "nonempty_subsets_checked": 255,
+  "results": {
+    "2": {
+      "partitions": 127,
+      "all_saved_rows_match": true,
+      "min_individual_resources": [
+        8,
+        14,
+        2,
+        3
+      ],
+      "global_minima": {
+        "gap": 2,
+        "units": 29,
+        "cv": 0.0021357947688828106
+      },
+      "target_hits": 1,
+      "selected": {
+        "selected": {
+          "groups": [
+            [
+              "S001",
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S011",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            [
+              "S006"
+            ]
+          ],
+          "resources": [
+            9,
+            15,
+            2,
+            3
+          ],
+          "gap": 2,
+          "units": 29,
+          "cv": 0.9504421400153372,
+          "relay_copies": 4,
+          "by_type": [
+            4,
+            2,
+            3,
+            6,
+            4,
+            5,
+            2,
+            3
+          ],
+          "dominators": {
+            "resources": 0,
+            "typed_resources": 0,
+            "gap_units_cv": 0
+          },
+          "better_gap": 0,
+          "better_units": 0,
+          "better_cv": 126
+        },
+        "resource_first": {
+          "groups": [
+            [
+              "S001",
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S011",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            [
+              "S006"
+            ]
+          ],
+          "resources": [
+            9,
+            15,
+            2,
+            3
+          ],
+          "gap": 2,
+          "units": 29,
+          "cv": 0.9504421400153372,
+          "relay_copies": 4,
+          "by_type": [
+            4,
+            2,
+            3,
+            6,
+            4,
+            5,
+            2,
+            3
+          ],
+          "dominators": {
+            "resources": 0,
+            "typed_resources": 0,
+            "gap_units_cv": 0
+          },
+          "better_gap": 0,
+          "better_units": 0,
+          "better_cv": 126
+        }
+      },
+      "min_gap_count": 2,
+      "min_units_count": 1,
+      "least_units": {
+        "groups": [
+          [
+            "S001",
+            "S002",
+            "S003",
+            "S004",
+            "S005",
+            "S007",
+            "S008",
+            "S009",
+            "S010",
+            "S011",
+            "S012",
+            "S013",
+            "S014",
+            "S015"
+          ],
+          [
+            "S006"
+          ]
+        ],
+        "resources": [
+          9,
+          15,
+          2,
+          3
+        ],
+        "gap": 2,
+        "units": 29,
+        "cv": 0.9504421400153372,
+        "relay_copies": 4,
+        "by_type": [
+          4,
+          2,
+          3,
+          6,
+          4,
+          5,
+          2,
+          3
+        ]
+      },
+      "best_balance": {
+        "groups": [
+          [
+            "S001",
+            "S002",
+            "S003",
+            "S007",
+            "S011",
+            "S012",
+            "S015"
+          ],
+          [
+            "S004",
+            "S005",
+            "S006",
+            "S008",
+            "S009",
+            "S010",
+            "S013",
+            "S014"
+          ]
+        ],
+        "resources": [
+          13,
+          17,
+          4,
+          6
+        ],
+        "gap": 10,
+        "units": 40,
+        "cv": 0.0021357947688828106,
+        "relay_copies": 7,
+        "by_type": [
+          7,
+          4,
+          2,
+          7,
+          6,
+          4,
+          4,
+          6
+        ]
+      },
+      "balanced_resource_best": {
+        "groups": [
+          [
+            "S001",
+            "S002",
+            "S003",
+            "S007",
+            "S009",
+            "S010",
+            "S011",
+            "S013",
+            "S014"
+          ],
+          [
+            "S004",
+            "S005",
+            "S006",
+            "S008",
+            "S012",
+            "S015"
+          ]
+        ],
+        "resources": [
+          10,
+          15,
+          4,
+          6
+        ],
+        "gap": 5,
+        "units": 35,
+        "cv": 0.20461516036745453,
+        "relay_copies": 7,
+        "by_type": [
+          4,
+          4,
+          2,
+          6,
+          5,
+          4,
+          4,
+          6
+        ]
+      }
+    },
+    "3": {
+      "partitions": 966,
+      "all_saved_rows_match": true,
+      "min_individual_resources": [
+        9,
+        14,
+        4,
+        5
+      ],
+      "global_minima": {
+        "gap": 4,
+        "units": 34,
+        "cv": 0.012267394137257364
+      },
+      "target_hits": 0,
+      "selected": {
+        "selected": {
+          "groups": [
+            [
+              "S001",
+              "S002",
+              "S003",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S011",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            [
+              "S004",
+              "S005"
+            ],
+            [
+              "S006"
+            ]
+          ],
+          "resources": [
+            9,
+            15,
+            4,
+            6
+          ],
+          "gap": 4,
+          "units": 34,
+          "cv": 0.9381758772249565,
+          "relay_copies": 7,
+          "by_type": [
+            4,
+            2,
+            3,
+            6,
+            4,
+            5,
+            4,
+            6
+          ],
+          "dominators": {
+            "resources": 0,
+            "typed_resources": 0,
+            "gap_units_cv": 0
+          },
+          "better_gap": 0,
+          "better_units": 0,
+          "better_cv": 961
+        },
+        "resource_first": {
+          "groups": [
+            [
+              "S001",
+              "S002",
+              "S003",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S011",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            [
+              "S004",
+              "S005"
+            ],
+            [
+              "S006"
+            ]
+          ],
+          "resources": [
+            9,
+            15,
+            4,
+            6
+          ],
+          "gap": 4,
+          "units": 34,
+          "cv": 0.9381758772249565,
+          "relay_copies": 7,
+          "by_type": [
+            4,
+            2,
+            3,
+            6,
+            4,
+            5,
+            4,
+            6
+          ],
+          "dominators": {
+            "resources": 0,
+            "typed_resources": 0,
+            "gap_units_cv": 0
+          },
+          "better_gap": 0,
+          "better_units": 0,
+          "better_cv": 961
+        }
+      },
+      "min_gap_count": 1,
+      "min_units_count": 2,
+      "least_units": {
+        "groups": [
+          [
+            "S001",
+            "S002",
+            "S003",
+            "S007",
+            "S008",
+            "S009",
+            "S010",
+            "S011",
+            "S012",
+            "S013",
+            "S014",
+            "S015"
+          ],
+          [
+            "S004",
+            "S005"
+          ],
+          [
+            "S006"
+          ]
+        ],
+        "resources": [
+          9,
+          15,
+          4,
+          6
+        ],
+        "gap": 4,
+        "units": 34,
+        "cv": 0.9381758772249565,
+        "relay_copies": 7,
+        "by_type": [
+          4,
+          2,
+          3,
+          6,
+          4,
+          5,
+          4,
+          6
+        ]
+      },
+      "best_balance": {
+        "groups": [
+          [
+            "S001",
+            "S002",
+            "S008"
+          ],
+          [
+            "S003",
+            "S004",
+            "S005",
+            "S006",
+            "S007",
+            "S011"
+          ],
+          [
+            "S009",
+            "S010",
+            "S012",
+            "S013",
+            "S014",
+            "S015"
+          ]
+        ],
+        "resources": [
+          14,
+          17,
+          6,
+          9
+        ],
+        "gap": 16,
+        "units": 46,
+        "cv": 0.012267394137257364,
+        "relay_copies": 10,
+        "by_type": [
+          7,
+          4,
+          3,
+          7,
+          5,
+          5,
+          6,
+          9
+        ]
+      },
+      "balanced_resource_best": {
+        "groups": [
+          [
+            "S001",
+            "S002",
+            "S008",
+            "S012",
+            "S015"
+          ],
+          [
+            "S003",
+            "S006",
+            "S007",
+            "S011"
+          ],
+          [
+            "S004",
+            "S005",
+            "S009",
+            "S010",
+            "S013",
+            "S014"
+          ]
+        ],
+        "resources": [
+          13,
+          16,
+          6,
+          8
+        ],
+        "gap": 13,
+        "units": 43,
+        "cv": 0.18308570040420497,
+        "relay_copies": 10,
+        "by_type": [
+          7,
+          3,
+          3,
+          7,
+          4,
+          5,
+          6,
+          8
+        ]
+      }
+    }
+  }
+}

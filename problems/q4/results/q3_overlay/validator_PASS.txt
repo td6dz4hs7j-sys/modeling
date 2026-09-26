@@ -1,0 +1,8 @@
+validate_q3_solution: PASS
+Transport sorties: 23
+Relay sorties: 4
+Transport energy: 65.869091416 kWh
+Relay energy: 2.741650264 kWh
+Joint energy: 68.610741681 kWh
+Joint makespan: 5933.082180813 s
+Continuous communication certificate intervals: 296

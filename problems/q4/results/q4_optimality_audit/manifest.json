@@ -1,0 +1,19 @@
+{
+  "command": "python q4/optimality_audit.py",
+  "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+  "scipy": "1.17.1",
+  "input_sha256": {
+    "q4/optimality_audit.py": "aef648bfd8d5bc114ce661301d0fffe2eb5e5c20440541868e2f837c6a724106",
+    "results/q4_final/q4_results.json": "e54757dfacbcb3592fb0d149a10b0a13d930180aab76dc3e9d85b86136dd078f",
+    "results/q3_overlay/q3_final_solution.mat": "041bca5c74d70fcb9c45c1a766aa83ec63af4a7f42939ea34fdcbe28a2b04a22",
+    "results/q3_overlay/transport_sorties.csv": "430cc828fbce7511b6b8d6f768dd573d5fee6c7267cb54b99814b7a1a38d1f64",
+    "results/q3_overlay/relay_sorties.csv": "de35a629a7861c70645d79fe7a2848419771fe46ca62e5780f9093faadbaff0f",
+    "results/q3_overlay/continuous_communication_certificate.csv": "d2aabe77b3ac9c378d9054eecfd3e408c4c17b269279b413b371b2106f90585e",
+    "results/q3_overlay/box_deliveries.csv": "ab46e520de631f2859991b75e232ffe842deb927307d459f5dac220a921e5a7a",
+    "results/q3_overlay/q3_metrics.csv": "35dd7d5164764a7892d62a55a2692958338fb2c7a8b6e8e8b4cb7d9bfbc97e43",
+    "results/q3_overlay/validator_PASS.txt": "fe136dd8c0070785dc1e6fa458e118ac12af4bfac171a4cd12aa2ea409d1de85",
+    "results/q3_overlay/问题三_优化结果.md": "fbc10926bda50cac8c7d301de5378877c833442ebce62d61909685bf5313ceaf",
+    "results/q4_final/q4_2group_pooled_search.csv": "4f51e94f5360da91c1e8850106c83f20259f107bc1f529e903bc25cd9901f2be",
+    "results/q4_final/q4_3group_pooled_search.csv": "acd88eb4de001a54bad6010a6a933afa83271aa83ba4295b74f1d8939f99adba"
+  }
+}

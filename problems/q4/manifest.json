@@ -1,0 +1,235 @@
+{
+  "command": "python run_problem4.py",
+  "verification": "python verify_bundle.py",
+  "random_seed": null,
+  "deterministic": true,
+  "python": "3.11.4",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "h5py": "3.16.0",
+    "openpyxl": "3.1.5"
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 141,
+      "sha256": "1445b5ffe50d46ce67397ceed212e988a48d4ff30b2c5dcd50321822913727d2"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 52,
+      "sha256": "b068590ab3c9c25c177d64ea455889c55b747d43f1e9d7729c6e61bcd678da1e"
+    },
+    {
+      "path": "docs/GitHub任务指令.md",
+      "bytes": 2762,
+      "sha256": "ec3439ca3680b51787cab67b178f2e6831c6c452b56ce38f14352200fe9103fb"
+    },
+    {
+      "path": "make_manifest.py",
+      "bytes": 982,
+      "sha256": "2f250bbbf1f8a15b649d0270579b522384d96faaf5225832be52de2a0449bec2"
+    },
+    {
+      "path": "q4/final_delivery.py",
+      "bytes": 15249,
+      "sha256": "b8333df690c43f41275ab85a3071f445a6cc6927ee66bc0de758be7fabdefd8e"
+    },
+    {
+      "path": "q4/main_q4.py",
+      "bytes": 15068,
+      "sha256": "82a45d7d5b7328a90e158258adcc69d8461f9088fc78c9ff5e5337c9f5d26e84"
+    },
+    {
+      "path": "q4/optimality_audit.py",
+      "bytes": 10746,
+      "sha256": "aef648bfd8d5bc114ce661301d0fffe2eb5e5c20440541868e2f837c6a724106"
+    },
+    {
+      "path": "q4/solve_overlay.py",
+      "bytes": 8794,
+      "sha256": "0bae7db01627ed432bec834018501be1dac2f7491972cc5f401b1fa2e88fdd85"
+    },
+    {
+      "path": "q4/verify_overlay.py",
+      "bytes": 10500,
+      "sha256": "ba4523ee6288f60def9c028c7f98820aaaac55eae0d485ed443cdcb932f6eb0f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4351,
+      "sha256": "bbd945f87abfa2f601d5bdca0034b03c2cc05d01dc7c0735b383d3b51b211b7f"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 64,
+      "sha256": "2031b3b41c0d29b03947830bd973b0192fba3f6a4136eaa8d8e31f21a2fb71ca"
+    },
+    {
+      "path": "results/q3_overlay/box_deliveries.csv",
+      "bytes": 6222,
+      "sha256": "ab46e520de631f2859991b75e232ffe842deb927307d459f5dac220a921e5a7a"
+    },
+    {
+      "path": "results/q3_overlay/continuous_communication_certificate.csv",
+      "bytes": 17308,
+      "sha256": "d2aabe77b3ac9c378d9054eecfd3e408c4c17b269279b413b371b2106f90585e"
+    },
+    {
+      "path": "results/q3_overlay/q3_final_solution.mat",
+      "bytes": 1197503,
+      "sha256": "041bca5c74d70fcb9c45c1a766aa83ec63af4a7f42939ea34fdcbe28a2b04a22"
+    },
+    {
+      "path": "results/q3_overlay/q3_metrics.csv",
+      "bytes": 221,
+      "sha256": "35dd7d5164764a7892d62a55a2692958338fb2c7a8b6e8e8b4cb7d9bfbc97e43"
+    },
+    {
+      "path": "results/q3_overlay/Q3_结果提交.xlsx",
+      "bytes": 34543,
+      "sha256": "2866e8d227688c7b7bc7e21101b96eff17253865da28f1cee6e989e7bc15168d"
+    },
+    {
+      "path": "results/q3_overlay/relay_sorties.csv",
+      "bytes": 1022,
+      "sha256": "de35a629a7861c70645d79fe7a2848419771fe46ca62e5780f9093faadbaff0f"
+    },
+    {
+      "path": "results/q3_overlay/transport_sorties.csv",
+      "bytes": 3804,
+      "sha256": "430cc828fbce7511b6b8d6f768dd573d5fee6c7267cb54b99814b7a1a38d1f64"
+    },
+    {
+      "path": "results/q3_overlay/validator_PASS.txt",
+      "bytes": 247,
+      "sha256": "fe136dd8c0070785dc1e6fa458e118ac12af4bfac171a4cd12aa2ea409d1de85"
+    },
+    {
+      "path": "results/q3_overlay/模型口径.md",
+      "bytes": 3348,
+      "sha256": "56f00c7ec2ab89fdf0c947e081761e1ecfe52f547a23a2938b209bae5b06798c"
+    },
+    {
+      "path": "results/q3_overlay/问题三_优化结果.md",
+      "bytes": 1557,
+      "sha256": "fbc10926bda50cac8c7d301de5378877c833442ebce62d61909685bf5313ceaf"
+    },
+    {
+      "path": "results/q4_final/comparison_original_id_communication.csv",
+      "bytes": 43532,
+      "sha256": "bcda10bc337abe216270d9f9982f4cf8d57b091c46c99af8e0627a1f29699950"
+    },
+    {
+      "path": "results/q4_final/comparison_original_id_resources.csv",
+      "bytes": 8202,
+      "sha256": "b91c7124f79a9918be6035e31e3eedf627e5345d925dcd01fd605c4a23182d4f"
+    },
+    {
+      "path": "results/q4_final/q4_2group_pooled_search.csv",
+      "bytes": 15532,
+      "sha256": "4f51e94f5360da91c1e8850106c83f20259f107bc1f529e903bc25cd9901f2be"
+    },
+    {
+      "path": "results/q4_final/q4_2group_search.csv",
+      "bytes": 15582,
+      "sha256": "57047e330bb2b18fa7c8c748177881a2798dc8b04f2c29bc32f415862a7429a5"
+    },
+    {
+      "path": "results/q4_final/q4_3group_pooled_search.csv",
+      "bytes": 119903,
+      "sha256": "acd88eb4de001a54bad6010a6a933afa83271aa83ba4295b74f1d8939f99adba"
+    },
+    {
+      "path": "results/q4_final/q4_3group_search.csv",
+      "bytes": 120461,
+      "sha256": "eca49f06fba0778be20aa916114f107c3f9fb33a0bb95a6be6e0a955ed08afb3"
+    },
+    {
+      "path": "results/q4_final/q4_pooled_resource_assignments.csv",
+      "bytes": 22109,
+      "sha256": "679c685d0b0c07a4e053c7c7b03caf91aa52cf56efe653502e7dbf7d62aad3d6"
+    },
+    {
+      "path": "results/q4_final/q4_results.json",
+      "bytes": 274734,
+      "sha256": "e54757dfacbcb3592fb0d149a10b0a13d930180aab76dc3e9d85b86136dd078f"
+    },
+    {
+      "path": "results/q4_final/Q4_结果提交.xlsx",
+      "bytes": 75382,
+      "sha256": "374627a1c2502310b616cb04a9c70e59cfe860848c4fdacba065346d5c1cb35d"
+    },
+    {
+      "path": "results/q4_final/verification.json",
+      "bytes": 3483,
+      "sha256": "4f288b4536c2e6d9a40e66ba5744abf8b3149b3ceff395f099f141d4f5f02719"
+    },
+    {
+      "path": "results/q4_final/库存缺口冗余.csv",
+      "bytes": 506,
+      "sha256": "0a1461ccba305066b7285f272b63af882590a3f779ab20eeb1a1fe35dff5b32d"
+    },
+    {
+      "path": "results/q4_final/方案汇总.csv",
+      "bytes": 372,
+      "sha256": "4e152c7268e1ae3ad15186d86856508ac36ec993ef2fd76466e0743bdce348fb"
+    },
+    {
+      "path": "results/q4_final/组内实体映射.csv",
+      "bytes": 10748,
+      "sha256": "5424aba65fb0f03e88eaf84ba634c74a85e3012f4feff5b45ae9a14cc891aefd"
+    },
+    {
+      "path": "results/q4_final/货箱归属.csv",
+      "bytes": 4838,
+      "sha256": "d72efea64cd3eed23a4aaeaa7ac04caa5c34e83e0b4d411c35cbc40f69c0baa1"
+    },
+    {
+      "path": "results/q4_final/逐组配置.csv",
+      "bytes": 1044,
+      "sha256": "6eba27ad066335a783c1778ea65bbedf253c24d68c102c19f802e3e210b2089d"
+    },
+    {
+      "path": "results/q4_final/通信映射.csv",
+      "bytes": 46551,
+      "sha256": "b6d944973a9493df9211dcd2f8de752b8abcd32d61d806a4a332bf867d070a6b"
+    },
+    {
+      "path": "results/q4_final/问题四_最终结果与方法.md",
+      "bytes": 6725,
+      "sha256": "3d8721ad7eef672cf434b9bb3265e142bf8fbeae92d20d67dc47b32f3866166d"
+    },
+    {
+      "path": "results/q4_optimality_audit/all_2group_partitions.csv",
+      "bytes": 16498,
+      "sha256": "7273f930eff24f8ac596d7e36172185abe7a282d63bf9858ed0223a626a35390"
+    },
+    {
+      "path": "results/q4_optimality_audit/all_3group_partitions.csv",
+      "bytes": 127046,
+      "sha256": "8f3e931e805e0f63c268fdbd404e6c549f14377e4f6febe97fd7066c4f258919"
+    },
+    {
+      "path": "results/q4_optimality_audit/manifest.json",
+      "bytes": 1587,
+      "sha256": "223481e7d77c6153bc4bfa1c031017a3b429537aa1922ecb6ee9b89b8a97b0e7"
+    },
+    {
+      "path": "results/q4_optimality_audit/optimality_certificate.json",
+      "bytes": 10578,
+      "sha256": "3cfc2b1aa24527c793f0addd638982885bbcf6ba383e02940da12c4ddbf22e56"
+    },
+    {
+      "path": "run_problem4.py",
+      "bytes": 407,
+      "sha256": "cd607f08105aa5a5597fe437d85de157d2438310d79d3ef6c29a03426ffeba14"
+    },
+    {
+      "path": "verify_bundle.py",
+      "bytes": 4052,
+      "sha256": "00c5033d9bddca7adb58f2cd7574caf2c1d4efe3719e318e3dbec8c7e05de123"
+    }
+  ]
+}
