@@ -1,0 +1,535 @@
+{
+  "scope": "Published Q3 bundle; excludes manifest itself, raw input, cache and local logs",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 113,
+      "sha256": "7684e61258ae49ab54dc80533c9c7b1a1549cfc7d00a845a53ab5d84804f15cb"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 60,
+      "sha256": "fe6f211edd803630475d1fceacbe63775aecc48664dc372e97e069642485120e"
+    },
+    {
+      "path": "common/load_dem.m",
+      "bytes": 472,
+      "sha256": "5362dba87fb30a45b579a657c7b74e77fd962d45e4c8dc85fc8de40e10cd0532"
+    },
+    {
+      "path": "common/physical_constants.m",
+      "bytes": 224,
+      "sha256": "cf4a57012af2eff664fa7141c4dae4c83a774a975f1ea11b3d3b898527084b2a"
+    },
+    {
+      "path": "common/terrain_profile.m",
+      "bytes": 1622,
+      "sha256": "a7c171ce1013621adfb0d043defd0b019d5514e4b2df9353259c8776dfb01608"
+    },
+    {
+      "path": "docs/GitHub任务指令.md",
+      "bytes": 2000,
+      "sha256": "ae0ddf6c94222ee550de9fa0c94a6b893c3adb9419848b48cd1da1a5f21239c7"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/flow_overall_model_grayscale.png",
+      "bytes": 33563,
+      "sha256": "fdbcc5778b5cc93c88722fdbb93a891b1d77b3be67cdbc851e3bac1b08c1daec"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/process_q3_joint_gantt_grayscale.png",
+      "bytes": 23241,
+      "sha256": "5b37d23c3fc31048411d0872258e6c730eb6b6f979d346511b50c0d9b32e10a1"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/process_q3_relay_service_grayscale.png",
+      "bytes": 17545,
+      "sha256": "bb1e0fa6dd563dc5798e52657fa8c9f5ffb83b47dfa712761f3d7f8d5cf49a5b"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/process_q3_takeoff_adjustment_grayscale.png",
+      "bytes": 18965,
+      "sha256": "555f36d260c7d9169544a072da303971386e8d04efc5f796376f36f363451352"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/raw_q3_boxes_by_area_grayscale.png",
+      "bytes": 15601,
+      "sha256": "5d34ffc4de94cd5fa95f3544f60a52ad1aa59c694515681c2d9b411f4f7cdac5"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/raw_q3_deadline_slack_grayscale.png",
+      "bytes": 21142,
+      "sha256": "483b2265e86e06482e6027388e3ca0e05288483b41b8000e14a8f2f1a51633fc"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/raw_q3_dem_nodes_gateway_grayscale.png",
+      "bytes": 354494,
+      "sha256": "773434f752c49300f8636da706820dc899052189d8ceb98fbb10292cf2ac3dcc"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/result_q3_coverage_grayscale.png",
+      "bytes": 23779,
+      "sha256": "607f6ea1679f778077e3d7e69397ab1281180b2942693ae11db848a7c10e6975"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/result_q3_energy_grayscale.png",
+      "bytes": 18750,
+      "sha256": "0fb147fed09a379acbf783b78e4c77d07de092962b2f31b50c674ae02b7a1187"
+    },
+    {
+      "path": "figures/q3_overlay/_qa/result_q3_routes_relays_grayscale.png",
+      "bytes": 198683,
+      "sha256": "a79e0a9eb3f9b1eacff6a3222b731ac13da6d94e0e8e3a714697497fac2ddcf6"
+    },
+    {
+      "path": "figures/q3_overlay/flow_overall_model.png",
+      "bytes": 72241,
+      "sha256": "dc6e8074ea5d308131859995c21d446684b9aa1f488017220ea4adedc7ec1159"
+    },
+    {
+      "path": "figures/q3_overlay/flow_overall_model.svg",
+      "bytes": 12510,
+      "sha256": "122b92ce81b79ba979d5fb5648147cbe30feb253e71cda20440ab6fd2926c7fa"
+    },
+    {
+      "path": "figures/q3_overlay/process_q3_joint_gantt.png",
+      "bytes": 47226,
+      "sha256": "016fa45eaf063cbf4bee41cd3a7d3854d132d48d66ae9c045c9039afdd94b36a"
+    },
+    {
+      "path": "figures/q3_overlay/process_q3_joint_gantt.svg",
+      "bytes": 11941,
+      "sha256": "bc6dcdde4e9af5a6210066de422d52e6222c1bd43e70fe44ec0ab8482a1683ab"
+    },
+    {
+      "path": "figures/q3_overlay/process_q3_relay_service.png",
+      "bytes": 35898,
+      "sha256": "b5237cee331a35dce53f9b312e2ef9e14f21f2898c5b0765dce430825ad5e4a8"
+    },
+    {
+      "path": "figures/q3_overlay/process_q3_relay_service.svg",
+      "bytes": 9226,
+      "sha256": "2b93ba068a0c2ec44853962c4ca7300189feba65c34929948df8bceb24607305"
+    },
+    {
+      "path": "figures/q3_overlay/process_q3_takeoff_adjustment.png",
+      "bytes": 38870,
+      "sha256": "76bbb298efebcb1a05b180d1b74c2072128d2c40b77edc7cf280421ed150671c"
+    },
+    {
+      "path": "figures/q3_overlay/process_q3_takeoff_adjustment.svg",
+      "bytes": 11296,
+      "sha256": "80a0e00fa0e69b4cf2b3ae7f93af59a943bd6573bd9b08213edb850c132b7059"
+    },
+    {
+      "path": "figures/q3_overlay/raw_q3_boxes_by_area.png",
+      "bytes": 30964,
+      "sha256": "a7b952bbf66ee5c0beab1d763c10649ef889e751b2ebba41b0d3a8f646c8130d"
+    },
+    {
+      "path": "figures/q3_overlay/raw_q3_boxes_by_area.svg",
+      "bytes": 11558,
+      "sha256": "d708f87e5c209237f84c1d21861f2d94bb066daaa68f74127c65f26de5bfa39b"
+    },
+    {
+      "path": "figures/q3_overlay/raw_q3_deadline_slack.png",
+      "bytes": 43845,
+      "sha256": "cda1030d3391627d11ac71647f836e072d54fcb209e90aab061f2d81bc5d67ab"
+    },
+    {
+      "path": "figures/q3_overlay/raw_q3_deadline_slack.svg",
+      "bytes": 12002,
+      "sha256": "8c2677fd22b3a14aadf99532ba6783ad3c5a2ac0671f622bcb611c003ef04a8e"
+    },
+    {
+      "path": "figures/q3_overlay/raw_q3_dem_nodes_gateway.png",
+      "bytes": 881895,
+      "sha256": "6b77d5b4a02d68266beb0b586182cbf309ce165adc2a2c577187fca42fa0f911"
+    },
+    {
+      "path": "figures/q3_overlay/raw_q3_dem_nodes_gateway.svg",
+      "bytes": 593808,
+      "sha256": "9f4febb2c2614b857c5cc4b130064a49c2bec3f720a811b60d1152e8fb74fcf9"
+    },
+    {
+      "path": "figures/q3_overlay/result_q3_coverage.png",
+      "bytes": 50295,
+      "sha256": "8ee275b6f0b0eaa9b18a16ffb1623845f6dda9d436289a1e663968146ddb443b"
+    },
+    {
+      "path": "figures/q3_overlay/result_q3_coverage.svg",
+      "bytes": 28912,
+      "sha256": "b18fe7b98dc142c163d71fa7e16fcfef2c1239c857d242eb017117ca07a33fbc"
+    },
+    {
+      "path": "figures/q3_overlay/result_q3_energy.png",
+      "bytes": 38027,
+      "sha256": "009631ebde4870bd9ea207c00449f9f057ba74de200f2a905b4a5ec54c1f4598"
+    },
+    {
+      "path": "figures/q3_overlay/result_q3_energy.svg",
+      "bytes": 7380,
+      "sha256": "12bcdca806d0e6bfbdc19b5b220a8007083bc685c8fc91e96fc138d09c17fc63"
+    },
+    {
+      "path": "figures/q3_overlay/result_q3_routes_relays.png",
+      "bytes": 513988,
+      "sha256": "2a3611c9989c41c2ef9ee149c412fd02c82aa9b1814b09ae9222c4d989c8ae3d"
+    },
+    {
+      "path": "figures/q3_overlay/result_q3_routes_relays.svg",
+      "bytes": 365424,
+      "sha256": "8f38f31a2084eeffa39aff773a42ebdc773f6c426813d50c7263c9c69572b34f"
+    },
+    {
+      "path": "logs/fresh_main.exit",
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "path": "logs/fresh_main.log",
+      "bytes": 3635,
+      "sha256": "d7a69148e977acabf7313c6aa0daa745111c6f224595888015157109e0eb4c45"
+    },
+    {
+      "path": "prepare_q3_github_bundle.m",
+      "bytes": 653,
+      "sha256": "ab1fa6f17d0267bd3c6579419accd5cecec74ce3a04553af6271e6d3c2315d47"
+    },
+    {
+      "path": "q2/build_q2_leg_cache.m",
+      "bytes": 3759,
+      "sha256": "2f62d7a5369577034249137d2e9245056a30f11d9084a1eb9d4ea2531b592c75"
+    },
+    {
+      "path": "q2/load_q2_data.m",
+      "bytes": 3603,
+      "sha256": "8af659f03a3a1fb103ee24ba8491994767e8310a564269a4b2c2ffe8f6da274a"
+    },
+    {
+      "path": "q2/q2_sha256.m",
+      "bytes": 521,
+      "sha256": "e65059889b6c2e020c20c895a62cee9550a4ca0324dca8595004996f6cd9d91c"
+    },
+    {
+      "path": "q2/validate_q2_solution.m",
+      "bytes": 10701,
+      "sha256": "49ab94300b7423293d0c7a2a8969165ef47f2a1191f68ef9a3f03d38369fcdc4"
+    },
+    {
+      "path": "q3/load_q3_data.m",
+      "bytes": 1362,
+      "sha256": "8c1efd7cf85bb7a80355b0393587aa9161ba982fa5d63bee87e8438206b720fd"
+    },
+    {
+      "path": "q3/luna_flex_overlay_cpsat.py",
+      "bytes": 7777,
+      "sha256": "df8ad4a70cec3b7776755109720afb863880454699030a5ed8e30878c4ff37c1"
+    },
+    {
+      "path": "q3/plot_q3_dem.m",
+      "bytes": 889,
+      "sha256": "75058d41c1053852198c9fb388e33cb65078a11851a2173766bd3f8894c1eaf0"
+    },
+    {
+      "path": "q3/plot_q3_final.m",
+      "bytes": 6053,
+      "sha256": "0fe3a825138460499da1381550c70be1e91a68fa4a3b95442ca6e22bf8ea110a"
+    },
+    {
+      "path": "q3/q3_audit_conservative_prep.m",
+      "bytes": 1731,
+      "sha256": "15e09eda2480fbd431423a379880b14b851575600862265602f187a6d1bc09e3"
+    },
+    {
+      "path": "q3/q3_audit_continuous_certificate.m",
+      "bytes": 2035,
+      "sha256": "749e659304251f29a3090ead766187ec0d58b805658a095e8a8ca2d0112bf0ea"
+    },
+    {
+      "path": "q3/q3_build_relays.m",
+      "bytes": 1680,
+      "sha256": "436b2ce1d0c00ce5adff909dadf4a780d54279fa8e324dfae59d234999d64a87"
+    },
+    {
+      "path": "q3/q3_dem_at.m",
+      "bytes": 294,
+      "sha256": "32eab7702774e65d43dd433bbfd15ba81b7164f57994b2e9fcefc033f0239cef"
+    },
+    {
+      "path": "q3/q3_export_results.m",
+      "bytes": 2921,
+      "sha256": "08311a4582859d8e9565349986d7077e26c9b59cf603592487ffd2d50cd0a883"
+    },
+    {
+      "path": "q3/q3_export_submission_workbook.m",
+      "bytes": 2096,
+      "sha256": "3faecddb35551b413897013e7427005195ae99455a5eb6046108e0463659ae2e"
+    },
+    {
+      "path": "q3/q3_link_interval.m",
+      "bytes": 2849,
+      "sha256": "f9486c72f77171fe91b26c9fefaba9e9721400359754ad8d7614db5b8eb3857c"
+    },
+    {
+      "path": "q3/q3_overlay_candidate_matlab.m",
+      "bytes": 431,
+      "sha256": "5d9480875a0fdc94a4241a4912742d52323991b23f8f7c20c6f727a33094f52d"
+    },
+    {
+      "path": "q3/q3_overlay_figures.m",
+      "bytes": 2420,
+      "sha256": "47e173532cc63ba34c0c9af59acf228e4d1c923eace38f6cc5e2b054215ad62f"
+    },
+    {
+      "path": "q3/q3_overlay_report.m",
+      "bytes": 3278,
+      "sha256": "554b93048ce8685666d0a1b3a04b3ac848c9991c7aa4a539a051177ab283013a"
+    },
+    {
+      "path": "q3/q3_overlay_schedule.m",
+      "bytes": 10614,
+      "sha256": "34df670bfd853e71be3599e9f1c882fc20bce09768c42e9aff0d8878ef43952c"
+    },
+    {
+      "path": "q3/q3_relay_physics.m",
+      "bytes": 2096,
+      "sha256": "166ddd01d8bafd6ec76b6917490c7b3c22133d4dedf552c5cc7b81aa3da303b1"
+    },
+    {
+      "path": "q3/q3_reorder_transport.m",
+      "bytes": 2157,
+      "sha256": "d4163732543a9c12471780d306af5d266bca9886ccc76840f672a2d509c736c0"
+    },
+    {
+      "path": "q3/q3_save_overlay_plot.m",
+      "bytes": 298,
+      "sha256": "671863c5ad961b40511a2ea6972fb6a24d96304630ce95ba0101b24d4f960042"
+    },
+    {
+      "path": "q3/q3_transport_segments.m",
+      "bytes": 1504,
+      "sha256": "56eded8b832615a844dccac4b4fb10e7582e4e5373dc2d8a82ace0f142fa517c"
+    },
+    {
+      "path": "q3/q3_verify_q2_workbook.m",
+      "bytes": 1144,
+      "sha256": "20efc335ffedd025d4ec60dc1d0f48347af0f834efcf3cff13e264e1fd83d43e"
+    },
+    {
+      "path": "q3/validate_q3_solution.m",
+      "bytes": 5740,
+      "sha256": "d3e65ade219eb49de5e040499675e21093c98c01714c0094859d0eb398da9e26"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5910,
+      "sha256": "aab03e49e5c2d596788a868af908d5690190f4ec17c3b75ad09d558dd91a4071"
+    },
+    {
+      "path": "results/q2_strategy_scenarios/balanced_best_pass.mat",
+      "bytes": 465752,
+      "sha256": "e3ff4a329ee6c01730d2aeec47159755d5dd06fc83d1ffdf4cdcbeacf214074a"
+    },
+    {
+      "path": "results/q2_strategy_scenarios/Q2_综合均衡最终结果.xlsx",
+      "bytes": 22871,
+      "sha256": "1497d5058b2622da466e2b5378c3accc83f7c327495a4728094f663d8a4f6ab1"
+    },
+    {
+      "path": "results/q3_fresh/all_candidate_coverage.mat",
+      "bytes": 47100,
+      "sha256": "588a28a95f36bf4b38e6c6ab377122e1ffddfdee5cfae2f4c0679d047a028371"
+    },
+    {
+      "path": "results/q3_fresh/gateway_gap_samples.csv",
+      "bytes": 118919,
+      "sha256": "c6d3ebf2a086e3f25da12cd0414ac2b0cf922cdc0b08d5f35818b9f230608eb1"
+    },
+    {
+      "path": "results/q3_fresh/source_route_slack.csv",
+      "bytes": 3243,
+      "sha256": "1e283ba074c83258b5fe7ec42062d9519ac58c3bef21e8796f0760c26290fac9"
+    },
+    {
+      "path": "results/q3_overlay/box_deliveries.csv",
+      "bytes": 6222,
+      "sha256": "ab46e520de631f2859991b75e232ffe842deb927307d459f5dac220a921e5a7a"
+    },
+    {
+      "path": "results/q3_overlay/continuous_communication_certificate.csv",
+      "bytes": 17308,
+      "sha256": "d2aabe77b3ac9c378d9054eecfd3e408c4c17b269279b413b371b2106f90585e"
+    },
+    {
+      "path": "results/q3_overlay/continuous_demand_groups.csv",
+      "bytes": 5248,
+      "sha256": "f178dd59477a396ae74c62423f3ad003e52d5b0a8033ea8a052a7af4e1c44980"
+    },
+    {
+      "path": "results/q3_overlay/continuous_independent_audit.json",
+      "bytes": 211,
+      "sha256": "78f4e0818854ca2206315dc39e69d6935d38215412a5fb64a49af6a6855bbb8d"
+    },
+    {
+      "path": "results/q3_overlay/figure_audit.json",
+      "bytes": 3789,
+      "sha256": "1eb5007ce990fb796bc29a3caacc83a903ad99a832dd92e331aac5491400ffdc"
+    },
+    {
+      "path": "results/q3_overlay/github_bundle_validation.json",
+      "bytes": 362,
+      "sha256": "e32d2d6d85b68bcfe36ddbbde58deb71f13f7dc11fd11d75ba159bba439faaee"
+    },
+    {
+      "path": "results/q3_overlay/luna_flex_relays.csv",
+      "bytes": 148,
+      "sha256": "5d97526be0a5cc7263df7f3b20c3832eb2ddbcb7f5dd105fe9beee0a30c665af"
+    },
+    {
+      "path": "results/q3_overlay/luna_flex_solver.json",
+      "bytes": 459,
+      "sha256": "290133d8f2dbeb63c72f70e32de99c25d3788bef1cd7b097afc366e4f9bf38cd"
+    },
+    {
+      "path": "results/q3_overlay/luna_flex_transport.csv",
+      "bytes": 458,
+      "sha256": "6a88b5ceb5c683ec79f80b25ebe8723b36f6937de770842bb06ce3223f9d050a"
+    },
+    {
+      "path": "results/q3_overlay/overlay_validated.mat",
+      "bytes": 1635896,
+      "sha256": "f668a1f8316f5ca0c295d358e934a5857b59b66739e230973a0c40b6143e473d"
+    },
+    {
+      "path": "results/q3_overlay/P2_独立验收.md",
+      "bytes": 5078,
+      "sha256": "6c31f595c4a45f5d9dad3310152aea5cd30ed17785024deffb0ac408a7dfc6c0"
+    },
+    {
+      "path": "results/q3_overlay/q3_final_solution.mat",
+      "bytes": 1197503,
+      "sha256": "041bca5c74d70fcb9c45c1a766aa83ec63af4a7f42939ea34fdcbe28a2b04a22"
+    },
+    {
+      "path": "results/q3_overlay/q3_metrics.csv",
+      "bytes": 221,
+      "sha256": "35dd7d5164764a7892d62a55a2692958338fb2c7a8b6e8e8b4cb7d9bfbc97e43"
+    },
+    {
+      "path": "results/q3_overlay/Q3_结果提交.xlsx",
+      "bytes": 34543,
+      "sha256": "2866e8d227688c7b7bc7e21101b96eff17253865da28f1cee6e989e7bc15168d"
+    },
+    {
+      "path": "results/q3_overlay/relay_sorties.csv",
+      "bytes": 1022,
+      "sha256": "de35a629a7861c70645d79fe7a2848419771fe46ca62e5780f9093faadbaff0f"
+    },
+    {
+      "path": "results/q3_overlay/selected_site_physics.csv",
+      "bytes": 479,
+      "sha256": "82691f9831d34f02f3f616e382a5d9ee8537f37834b2658c9f87bc9c3afa6da2"
+    },
+    {
+      "path": "results/q3_overlay/six_checks.json",
+      "bytes": 552,
+      "sha256": "490dfaf7165fc63e609aad562cb2bc7a2313a08985f902e5b888215699623f76"
+    },
+    {
+      "path": "results/q3_overlay/solver_stats.json",
+      "bytes": 4788,
+      "sha256": "0b2716db58d19619b80dc560e07b03fb9335d46581828f767adaada5f4afd822"
+    },
+    {
+      "path": "results/q3_overlay/source_overlay.mat",
+      "bytes": 473320,
+      "sha256": "40f43d739ecd2be3e6dcca1969fa5d9153ed67ed523409f45876971584923095"
+    },
+    {
+      "path": "results/q3_overlay/source_transport_gaps.csv",
+      "bytes": 1040,
+      "sha256": "0fc994671b9a50bc01bd46449cbb84abc2f430c79b0345fb076370dd5c38e87a"
+    },
+    {
+      "path": "results/q3_overlay/transport_communication_providers.csv",
+      "bytes": 1079,
+      "sha256": "b8fce734adacdd0e5b632eb8926f578323156744c73a468a778053186877a45d"
+    },
+    {
+      "path": "results/q3_overlay/transport_inheritance_audit.csv",
+      "bytes": 1340,
+      "sha256": "463d939902e641da04d19081f677fd68759f6c5f21b80757cfe1c421dbe074b7"
+    },
+    {
+      "path": "results/q3_overlay/transport_sorties.csv",
+      "bytes": 3804,
+      "sha256": "430cc828fbce7511b6b8d6f768dd573d5fee6c7267cb54b99814b7a1a38d1f64"
+    },
+    {
+      "path": "results/q3_overlay/validator_PASS.txt",
+      "bytes": 247,
+      "sha256": "fe136dd8c0070785dc1e6fa458e118ac12af4bfac171a4cd12aa2ea409d1de85"
+    },
+    {
+      "path": "results/q3_overlay/六项检查与修正.md",
+      "bytes": 1465,
+      "sha256": "5a0792fc748015d3a0dabbe56b76464649647e337e99a55d88b1478eb32c560f"
+    },
+    {
+      "path": "results/q3_overlay/图表说明.md",
+      "bytes": 1370,
+      "sha256": "fe3216751e7eb69e3110d2200bc565e519dcf42740128d0fc6bb5868a003e5a2"
+    },
+    {
+      "path": "results/q3_overlay/模型口径.md",
+      "bytes": 3348,
+      "sha256": "56f00c7ec2ab89fdf0c947e081761e1ecfe52f547a23a2938b209bae5b06798c"
+    },
+    {
+      "path": "results/q3_overlay/问题三_优化结果.md",
+      "bytes": 1557,
+      "sha256": "fbc10926bda50cac8c7d301de5378877c833442ebce62d61909685bf5313ceaf"
+    },
+    {
+      "path": "run_problem3.m",
+      "bytes": 585,
+      "sha256": "940f51ce8b80b601ae6747b73c18682004ef31a2cc7701479ba2847551409edc"
+    },
+    {
+      "path": "update_manifest.py",
+      "bytes": 861,
+      "sha256": "2e32747a5eeff5c3c136e5005572cce60c45c3c9ad8bd3875a138e0facb33d7c"
+    },
+    {
+      "path": "utils/apply_publication_style.m",
+      "bytes": 2234,
+      "sha256": "c4814151c6645d0d65f7a31f568129712881707013df75be2d0dba15f1ff2e08"
+    },
+    {
+      "path": "utils/audit_publication_figure.m",
+      "bytes": 3531,
+      "sha256": "e5cf88bdb832703440f6b5d73c7b09151445008fe982dd261cff180108bd0765"
+    },
+    {
+      "path": "utils/check_matlab_env.m",
+      "bytes": 1308,
+      "sha256": "23d7b1cc9fe14e6cbfe2643e3ca31010dae2af7ff4e4cb0d104421b32d180343"
+    },
+    {
+      "path": "utils/export_editable_svg.m",
+      "bytes": 6057,
+      "sha256": "7471906a83f29a26984609078221dd9f9e2870075cf907c18bd3620dcdfa6abd"
+    },
+    {
+      "path": "utils/export_publication_figure.m",
+      "bytes": 1694,
+      "sha256": "2d11879cfd18ed63c18ad900b06b46d530b66e2ce2a2f9214f012b6213c2bc07"
+    },
+    {
+      "path": "verify_q3_github_bundle.m",
+      "bytes": 1656,
+      "sha256": "ccb37ea3b7717b8e80cd4f1d7e7f1363711db7ac2ce766ae703d3c5719450285"
+    }
+  ]
+}

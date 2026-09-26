@@ -1,0 +1,143 @@
+{
+  "ok": true,
+  "directory": "D:\\Desktop\\modeling\\figures\\q3_overlay",
+  "questions": [
+    "q3"
+  ],
+  "files": {
+    "flow_overall_model.png": {
+      "width_px": 1890,
+      "height_px": 1500,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 5.0000100000200005
+    },
+    "flow_overall_model.svg": {
+      "text_count": 33,
+      "embedded_raster": false
+    },
+    "process_q3_joint_gantt.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "process_q3_joint_gantt.svg": {
+      "text_count": 25,
+      "embedded_raster": false
+    },
+    "process_q3_relay_service.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "process_q3_relay_service.svg": {
+      "text_count": 18,
+      "embedded_raster": false
+    },
+    "process_q3_takeoff_adjustment.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "process_q3_takeoff_adjustment.svg": {
+      "text_count": 15,
+      "embedded_raster": false
+    },
+    "raw_q3_boxes_by_area.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "raw_q3_boxes_by_area.svg": {
+      "text_count": 22,
+      "embedded_raster": false
+    },
+    "raw_q3_deadline_slack.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "raw_q3_deadline_slack.svg": {
+      "text_count": 18,
+      "embedded_raster": false
+    },
+    "raw_q3_dem_nodes_gateway.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "raw_q3_dem_nodes_gateway.svg": {
+      "text_count": 31,
+      "embedded_raster": true
+    },
+    "result_q3_coverage.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "result_q3_coverage.svg": {
+      "text_count": 27,
+      "embedded_raster": true
+    },
+    "result_q3_energy.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "result_q3_energy.svg": {
+      "text_count": 14,
+      "embedded_raster": false
+    },
+    "result_q3_routes_relays.png": {
+      "width_px": 1890,
+      "height_px": 1172,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.906674480015627
+    },
+    "result_q3_routes_relays.svg": {
+      "text_count": 34,
+      "embedded_raster": true
+    }
+  },
+  "issues": [
+    {
+      "severity": "WARN",
+      "message": "raw_q3_dem_nodes_gateway.svg 含嵌入位图，请确认确有必要"
+    },
+    {
+      "severity": "WARN",
+      "message": "result_q3_coverage.svg 含嵌入位图，请确认确有必要"
+    },
+    {
+      "severity": "WARN",
+      "message": "result_q3_routes_relays.svg 含嵌入位图，请确认确有必要"
+    }
+  ]
+}

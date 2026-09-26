@@ -1,0 +1,220 @@
+{
+  "backend": "MATLAB intlinprog",
+  "transport_mode": "Q2 fixed routes; MATLAB timing refinement of candidate resource order",
+  "exitflag": 1,
+  "output": {
+    "relativegap": 0,
+    "absolutegap": 0,
+    "numfeaspoints": 2,
+    "numnodes": 27,
+    "constrviolation": 7.275957614183426e-12,
+    "message": "Optimal solution found.\n\nIntlinprog stopped because the objective value is within a gap tolerance of the optimal value, options.AbsoluteGapTolerance = 0 (the default value). The intcon variables are integer within tolerance, options.IntegerTolerance = 1e-05 (the default value)."
+  },
+  "relay_sorties": 4,
+  "source_transport_sorties": 23,
+  "Q2_takeoff_lower_bound": [
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300
+  ],
+  "inherit_Q2_prestage": true,
+  "transport_assignments_frozen": false,
+  "candidate_input": {
+    "transport": [
+      {
+        "route": 1,
+        "takeoff_s": 2656,
+        "uav_id": "U01",
+        "battery_id": "A-B02"
+      },
+      {
+        "route": 2,
+        "takeoff_s": 300,
+        "uav_id": "U07",
+        "battery_id": "C-B01"
+      },
+      {
+        "route": 3,
+        "takeoff_s": 300,
+        "uav_id": "U01",
+        "battery_id": "A-B01"
+      },
+      {
+        "route": 4,
+        "takeoff_s": 4516,
+        "uav_id": "U08",
+        "battery_id": "C-B02"
+      },
+      {
+        "route": 5,
+        "takeoff_s": 300,
+        "uav_id": "U05",
+        "battery_id": "B-B01"
+      },
+      {
+        "route": 6,
+        "takeoff_s": 300,
+        "uav_id": "U02",
+        "battery_id": "A-B02"
+      },
+      {
+        "route": 7,
+        "takeoff_s": 300,
+        "uav_id": "U03",
+        "battery_id": "A-B03"
+      },
+      {
+        "route": 8,
+        "takeoff_s": 4270,
+        "uav_id": "U05",
+        "battery_id": "B-B02"
+      },
+      {
+        "route": 9,
+        "takeoff_s": 2680,
+        "uav_id": "U04",
+        "battery_id": "A-B03"
+      },
+      {
+        "route": 10,
+        "takeoff_s": 1150,
+        "uav_id": "U05",
+        "battery_id": "B-B03"
+      },
+      {
+        "route": 11,
+        "takeoff_s": 2315,
+        "uav_id": "U03",
+        "battery_id": "A-B06"
+      },
+      {
+        "route": 12,
+        "takeoff_s": 2643,
+        "uav_id": "U06",
+        "battery_id": "B-B04"
+      },
+      {
+        "route": 13,
+        "takeoff_s": 325,
+        "uav_id": "U06",
+        "battery_id": "B-B02"
+      },
+      {
+        "route": 14,
+        "takeoff_s": 4394,
+        "uav_id": "U06",
+        "battery_id": "B-B03"
+      },
+      {
+        "route": 15,
+        "takeoff_s": 1555,
+        "uav_id": "U07",
+        "battery_id": "C-B03"
+      },
+      {
+        "route": 16,
+        "takeoff_s": 300,
+        "uav_id": "U08",
+        "battery_id": "C-B02"
+      },
+      {
+        "route": 17,
+        "takeoff_s": 3726,
+        "uav_id": "U07",
+        "battery_id": "C-B01"
+      },
+      {
+        "route": 18,
+        "takeoff_s": 300,
+        "uav_id": "U04",
+        "battery_id": "A-B04"
+      },
+      {
+        "route": 19,
+        "takeoff_s": 1871,
+        "uav_id": "U02",
+        "battery_id": "A-B05"
+      },
+      {
+        "route": 20,
+        "takeoff_s": 4259,
+        "uav_id": "U02",
+        "battery_id": "A-B04"
+      },
+      {
+        "route": 21,
+        "takeoff_s": 1592,
+        "uav_id": "U08",
+        "battery_id": "C-B04"
+      },
+      {
+        "route": 22,
+        "takeoff_s": 3631,
+        "uav_id": "U04",
+        "battery_id": "A-B01"
+      },
+      {
+        "route": 23,
+        "takeoff_s": 2702,
+        "uav_id": "U05",
+        "battery_id": "B-B01"
+      }
+    ],
+    "relays": [
+      {
+        "site_row": 1,
+        "uav": "R02",
+        "serviceStart_s": 4642,
+        "serviceEnd_s": 5429,
+        "component_id": "R-B01"
+      },
+      {
+        "site_row": 2,
+        "uav": "R01",
+        "serviceStart_s": 3111,
+        "serviceEnd_s": 5548,
+        "component_id": "R-B02"
+      },
+      {
+        "site_row": 3,
+        "uav": "R02",
+        "serviceStart_s": 681,
+        "serviceEnd_s": 3163,
+        "component_id": "R-B03"
+      },
+      {
+        "site_row": 4,
+        "uav": "R01",
+        "serviceStart_s": 682,
+        "serviceEnd_s": 1774,
+        "component_id": "R-B04"
+      }
+    ]
+  },
+  "candidate_times_refined_in_MATLAB": true,
+  "authoritative_final_files": [
+    "transport_sorties.csv",
+    "relay_sorties.csv",
+    "Q3_结果提交.xlsx"
+  ]
+}

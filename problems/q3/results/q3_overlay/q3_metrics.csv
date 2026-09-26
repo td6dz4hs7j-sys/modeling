@@ -1,0 +1,2 @@
+transport_sorties,relay_sorties,transport_energy_kWh,relay_energy_kWh,joint_energy_kWh,makespan_s,makespan_h,weighted_lateness
+23,4,65.8690914160528,2.74165026446129,68.6107416805141,5933.08218081291,1.64807838355914,0

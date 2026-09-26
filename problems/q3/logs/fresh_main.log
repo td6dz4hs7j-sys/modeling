@@ -1,0 +1,83 @@
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+{
+  "ok": true,
+  "matlab_version": "9.12.0.1884302 (R2022a)",
+  "features": [
+    "data",
+    "optimization"
+  ],
+  "required_toolboxes": [
+    "MATLAB",
+    "Optimization Toolbox"
+  ],
+  "missing_toolboxes": [],
+  "unknown_features": []
+}
+{
+  "ok": true,
+  "matlab_version": "9.12.0.1884302 (R2022a)",
+  "features": [
+    "data",
+    "visualization",
+    "optimization"
+  ],
+  "required_toolboxes": [
+    "MATLAB",
+    "Optimization Toolbox"
+  ],
+  "missing_toolboxes": [],
+  "unknown_features": []
+}
+                                    g_m_s2: 9.8060
+                       specified_Q2_status: 'PASS'
+                  source_transport_sorties: 23
+                              source_boxes: 80
+                           source_return_s: 5.8624e+03
+                         source_energy_kWh: 65.8691
+                           same_box_groups: 1
+                          same_route_order: 1
+          previous_changed_uav_assignments: 12
+      previous_changed_battery_assignments: 21
+            previous_changed_takeoff_times: 19
+    previous_transport_relay_overlap_pairs: 57
+                  relay_physical_uav_count: 2
+           inherit_Q2_preparation_contract: 1
+                   transport_routes_frozen: 1
+              transport_assignments_frozen: 0
+          allow_same_type_resource_overlay: 1
+
+Conservative candidate independently satisfies every MATLAB inequality.
+Use existing same-type transport aircraft/batteries; route content remains fixed.
+LP:                Optimal objective value is 5908.204088.                                          
+
+Cut Generation:    Applied 16 Gomory cuts,                                                          
+                   20 implication cuts, 1 cover cut,                                                
+                   and 7 mir cuts.                                                                  
+                   Lower bound is 5908.204088.                                                      
+                   Relative gap is 0.47%.                                                          
+
+Heuristics:        Found 1 solution using ZI round.                                                 
+                   Upper bound is 5933.082180.                                                      
+                   Relative gap is 0.42%.                                                          
+
+Cut Generation:    Applied 7 Gomory cuts,                                                           
+                   and 2 flow cover cuts.                                                           
+                   Lower bound is 5908.204088.                                                      
+                   Relative gap is 0.42%.                                                          
+
+Branch and Bound:
+
+   nodes     total   num int        integer       relative                                          
+explored  time (s)  solution           fval        gap (%)                                         
+      27      0.22         2   5.933082e+03   0.000000e+00                                          
+
+Optimal solution found.
+
+Intlinprog stopped because the objective value is within a gap tolerance of the optimal value, options.AbsoluteGapTolerance = 0 (the default value). The intcon variables are
+integer within tolerance, options.IntegerTolerance = 1e-05 (the default value).
+
+Q2 OVERLAY PASS: 23 transport + 4 relay, C 98.884703 min, energy 68.610741681 kWh, W 0.000000.
+Result: D:\Desktop\modeling\results\q3_overlay\Q3_结果提交.xlsx

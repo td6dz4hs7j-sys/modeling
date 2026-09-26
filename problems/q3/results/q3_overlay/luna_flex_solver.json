@@ -1,0 +1,7 @@
+{
+  "status": "OPTIMAL",
+  "wall_s": 0.14139780000000002,
+  "branches": 668,
+  "objective_s": 5936,
+  "limits": "23 Q2 routes/groups/order/type fixed; same-type UAV and batteries reassigned; takeoff can advance/delay within 0..per-route expected-deadline upper; UAV capacities A4/B2/C2; battery A6/B4/C4; four relay sites/tasks; two relay UAVs; distinct initial components; 130 demand groups; conservative integer seconds; no continuous certification"
+}

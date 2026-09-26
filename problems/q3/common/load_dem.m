@@ -1,0 +1,9 @@
+function dem=load_dem(root)
+f=dir(fullfile(root,'input','**','*DEM.mat')); assert(numel(f)==1);
+dem=load(fullfile(f.folder,f.name));
+assert(isequal(size(dem.dem),[numel(dem.latitude),numel(dem.longitude)]));
+assert(all(diff(dem.latitude)<0) && all(diff(dem.longitude)>0));
+assert(dem.epsg_code==4326 && ~any(dem.dem(:)==dem.nodata));
+f=dir(fullfile(root,'input','**','*DEM.tif'));
+z=imread(fullfile(f.folder,f.name));assert(isequal(z,dem.dem),'DEM MAT/TIF mismatch');
+end
