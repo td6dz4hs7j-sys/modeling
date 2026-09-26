@@ -1,0 +1,6 @@
+{
+  "status": "NO_FEASIBLE_IN_BOUNDED_SET_SWEEP",
+  "set_count": 575,
+  "time_s": 106.13798069953918,
+  "model_scope": "discrete samples; greedy static 4-cover sets; route retiming and same-UAV/battery order; two simultaneous service intervals; travel/setup/energy omitted"
+}

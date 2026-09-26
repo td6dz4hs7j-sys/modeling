@@ -1,0 +1,668 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-26T16:16:44.883857+00:00",
+  "random_seed": 20260926,
+  "input_files": [
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q2_strategy_scenarios\\Q2_综合均衡最终结果.xlsx",
+      "sha256": "1497d5058b2622da466e2b5378c3accc83f7c327495a4728094f663d8a4f6ab1",
+      "bytes": 22871
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q2_strategy_scenarios\\balanced_best_pass.mat",
+      "sha256": "e3ff4a329ee6c01730d2aeec47159755d5dd06fc83d1ffdf4cdcbeacf214074a",
+      "bytes": 465752
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\cache\\leg_cache.mat",
+      "sha256": "ddde0051c3013e621717cf8432448d9518c3920a5204cb7e52bcbc5bc21c26c2",
+      "bytes": 1997704
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_fresh\\fresh_validated.mat",
+      "sha256": "5eea6d2c59040659d27a8689420861ae8e7dfb59257cab353eb75ea9b225cbab",
+      "bytes": 1250906
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\input\\数据\\无人机应急物资运输基础数据\\中继无人机数据.xlsx",
+      "sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
+      "bytes": 11082
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\input\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx",
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+      "bytes": 17474
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\input\\数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx",
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+      "bytes": 11017
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\input\\数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx",
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+      "bytes": 11746
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\input\\数据\\无人机应急物资运输基础数据\\通信链路参数.xlsx",
+      "sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
+      "bytes": 10485
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\input\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03",
+      "bytes": 7867096
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\luna_flex_transport.csv",
+      "sha256": "6a88b5ceb5c683ec79f80b25ebe8723b36f6937de770842bb06ce3223f9d050a",
+      "bytes": 458
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\luna_flex_relays.csv",
+      "sha256": "5d97526be0a5cc7263df7f3b20c3832eb2ddbcb7f5dd105fe9beee0a30c665af",
+      "bytes": 148
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\selected_site_physics.csv",
+      "sha256": "82691f9831d34f02f3f616e382a5d9ee8537f37834b2658c9f87bc9c3afa6da2",
+      "bytes": 479
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\continuous_demand_groups.csv",
+      "sha256": "f178dd59477a396ae74c62423f3ad003e52d5b0a8033ea8a052a7af4e1c44980",
+      "bytes": 5248
+    }
+  ],
+  "runtime": {
+    "name": "matlab",
+    "version": "R2022a 9.12.0.1884302",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "Optimization Toolbox": "intlinprog",
+      "Mapping Toolbox": "WGS84 distance"
+    }
+  },
+  "key_parameters": {
+    "g": 9.806,
+    "transport_sorties": 23,
+    "relay_sorties": 4,
+    "relay_aircraft": 2,
+    "relay_components_used": 4,
+    "transport_groups_routes_types": "inherited unchanged from current Q2",
+    "same_type_resources": "rescheduled within 8 aircraft and 14 batteries",
+    "continuous_validation": "189 phases, 296 certified intervals; zero gap",
+    "optimality_scope": "MATLAB time optimum conditional on selected sites and candidate resource order; no global claim"
+  },
+  "reproduce_command": "matlab -batch \"run_problem3\"",
+  "code_files": [
+    {
+      "path": "D:\\Desktop\\modeling\\run_problem3.m",
+      "sha256": "8dcaa765faeb605d3fb20ece9b81ab741e669d90456893b7f06ad863a50cdd1c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\common\\physical_constants.m",
+      "sha256": "cf4a57012af2eff664fa7141c4dae4c83a774a975f1ea11b3d3b898527084b2a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\fill_q3_critical_workbook.m",
+      "sha256": "4bb838ee11a19046e79a075b9a8f7d46ab37c46fd30bcb3dec4ce2bfd3d089fa"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\load_q3_data.m",
+      "sha256": "8c1efd7cf85bb7a80355b0393587aa9161ba982fa5d63bee87e8438206b720fd"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\main_q3.m",
+      "sha256": "f578cba90e2c88de5c68e8fd77e152a6b890a0ebab7c730abfc3135e592bfb4f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\main_q3_balanced.m",
+      "sha256": "c2293cb960b98c4109e22b847e272adb1c7c9aa302ee68039a74be385e162290"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\main_q3_critical_optimized.m",
+      "sha256": "28b9ad3a3bf203d44683120c9942b03073460bf9a4253310d979295713a9e436"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\main_q3_current.m",
+      "sha256": "22ad48558d1ee59402252739586313edc66ef6de90a2299002208b85aa2a84f3"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\main_q3_joint_opt_luna.m",
+      "sha256": "94376a3a8dc3bb33ba389ec3cda4d5f52f040723fa48a324be12b7a9e749e6c8"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\plot_q3_dem.m",
+      "sha256": "75058d41c1053852198c9fb388e33cb65078a11851a2173766bd3f8894c1eaf0"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\plot_q3_final.m",
+      "sha256": "0fe3a825138460499da1381550c70be1e91a68fa4a3b95442ca6e22bf8ea110a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\probe_q3.m",
+      "sha256": "b7bdf785deb371871a4a61bc8ea02e9433a4363227a85c04c1a83deec4dc60f0"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_audit_conservative_prep.m",
+      "sha256": "15e09eda2480fbd431423a379880b14b851575600862265602f187a6d1bc09e3"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_audit_continuous_certificate.m",
+      "sha256": "749e659304251f29a3090ead766187ec0d58b805658a095e8a8ca2d0112bf0ea"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_audit_seed_conservative.m",
+      "sha256": "1db7e67bd1ba2992b0e61b428fe0a166db127b8b88d4dc03d92afc1740cf40da"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_balanced_export.m",
+      "sha256": "643d83d496c5342a9f3e2e0548b3a436ce8dd09cfcde788756bf5c2b1bb12d4a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_balanced_optimize.m",
+      "sha256": "7e3852bbc5f52979558d85e5de48624e9dbea1a8cd38186cfd40480cbffd0d34"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_balanced_scan.m",
+      "sha256": "921bc0bec44766375264688accdbda578edaa8f7e1dd0110c3fed4f410cb5f3a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_balanced_site_scan.m",
+      "sha256": "2fce75796047a91d4f000f0c1888c2c62eeadab36f602a300bc54e3f62edd4f1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_build_relays.m",
+      "sha256": "436b2ce1d0c00ce5adff909dadf4a780d54279fa8e324dfae59d234999d64a87"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_candidate_scan.m",
+      "sha256": "86fb52beed5319f73e22474820d59fc1d56d9a9eeec83497007e39c467a116cd"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_compare_final_routes.m",
+      "sha256": "5f23d1576c022cf78703306eafb1e31cbacaf3a6bb4f0a96ef23e53e9c68b083"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_conservative_altitude_search.m",
+      "sha256": "a612c611e91cdaa05a61ae23a41ada20c75c13f31b58c90bfad1dc60e9149b6f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_conservative_merge45_probe.m",
+      "sha256": "f130f6f03ce036a3674e64dd606378d3738ceb2bdc3fc1d5ee8111b7b17786c4"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_conservative_q2_repair_probe.m",
+      "sha256": "a05fde2503634c4e687b76ec331e9c37df7ad12e9dba6e3d7b83fbc633442504"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_conservative_retime.m",
+      "sha256": "5426e34308b859358aa7738d2a8dbd590dfa00a340f50450f69bd7e2549cca45"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_conservative_schedule_seed.m",
+      "sha256": "5d0c5bbc503b487a1404f642ea82db3083828c4ce0d7942d359b777bd61416e5"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_critical_scan.m",
+      "sha256": "d1e358e6efb83932e5654ab7c9ccc23d2ad7a6e0aed9662fdeb1eebcf5ff296b"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_debug.m",
+      "sha256": "0f0de2ca8796fda17e71cfa980fa7bb845a722243b673bf9028627353aaa01c3"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_feasible.m",
+      "sha256": "87a718e272aed689705cf011306d878b54f23c68135ddcab25a22f51e60e757c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_feasible_v6.m",
+      "sha256": "8512834ea4df039c82b03b5fa4a358cf343129510307d051e6b48be0b3c27d34"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_feasible_v6_order.m",
+      "sha256": "f6427bf9f0779e91dc5e0e676ac23fb15483aa55e4761470e01aaf8713f3e615"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_n_alt_scan.m",
+      "sha256": "a23fc93a206210a9c23bc716eeca340673f75ee7dd0d1812dae39e650858e857"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_scan.m",
+      "sha256": "8a2c402481e63dc586715919e73183968c6bd2e51773abf0b8a54adf470c3b90"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_site_scan.m",
+      "sha256": "32a1225057bf031dc1e26b6732c466b2f59d76fe9e52b9ec7b1eb66161c1a0ea"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_trial_v6.m",
+      "sha256": "960ecdf9ed17a45efe990795c96b957e7e04955fffe77e69e9085d2ff0f61fc0"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_current_trial_v6_order.m",
+      "sha256": "010ba5a1f569374d3ac630e5fdb526de2fadea5987cac71d3bf1b09c726b28e4"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_debug_failed.m",
+      "sha256": "2de72b55d8c3bcecd56b52fc3daead73e61fde3d9d123095929e686cf9f88128"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_dem_at.m",
+      "sha256": "32eab7702774e65d43dd433bbfd15ba81b7164f57994b2e9fcefc033f0239cef"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_dem_only.m",
+      "sha256": "b4de281576ddd461b3558b443c3d1f77f1bb1d0168d408edf5a6ba4d9832dd40"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_export_results.m",
+      "sha256": "08311a4582859d8e9565349986d7077e26c9b59cf603592487ffd2d50cd0a883"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_export_submission_workbook.m",
+      "sha256": "3faecddb35551b413897013e7427005195ae99455a5eb6046108e0463659ae2e"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_final_balanced_feasibility.m",
+      "sha256": "9783d6b8ce926d7bf5c26fdaba75667908560576bc8733580f7d9b57af23cc84"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_final_balanced_optimize.m",
+      "sha256": "92c4b3cf772b1ee87d2832d1d7ddd5f6cc0b07b967d8d1d9d3f84a45250667f5"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_final_balanced_scan.m",
+      "sha256": "a45a637c98858af59abd182fbcb26e4dfcca5e1edb63fbabba3c1c3567dc53aa"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_first_feasible.m",
+      "sha256": "9aab67765be9ceab99c06ee948c004e7af3076210bb538725ba0968eeebed709"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_four_exact_energy_bound.m",
+      "sha256": "a7afb26762ab19a9cb2f63cdd79dcf9bcea4a39ddd5475c40e84a15411a8fa8f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_four_relay_baseline_audit.m",
+      "sha256": "78069fdff5dfdee01e034c00c1dd13e811d101d25f5a2fabd34f57cdb6dff393"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_four_relay_diagnose.m",
+      "sha256": "65399c1bc4440c0ac4e02f3046185082f082013892c635ffa2e4740549022139"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_four_relay_fixedgrid_probe.m",
+      "sha256": "32949661e0763351070ab8422048f7d7eac8e4469f3cd35b8570c0153cd494bf"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_four_relay_merge45_probe.m",
+      "sha256": "f093c4b78f680dc399ce5b0a60f02302762fca3d7c45351eff96b44d67a24b4a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_four_relay_window_probe.m",
+      "sha256": "cafb310e55f53dff3da99017c8a1db76a8030b59a54b7c81fe39a4325844843a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_adaptive_sites.m",
+      "sha256": "c02839ad643acc0ceb06c194face06ea8f813a8d0a31383513f6e2a824b5d8f8"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_append_north.m",
+      "sha256": "8a34751444a9915dce0339275f1cfa72fbe5f538b8d7a7cde67ba68ee277deb7"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_cover_matrix.m",
+      "sha256": "0c6e81aa8f929ffd5fc468610817680c259e3d64e2016de4d5e151a2e34820a6"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_east_refine.m",
+      "sha256": "d456db3994dcfdc4e6038f2478232ad0058c2675ff79f7d1b7cecf0cb4639546"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_exact_windows.m",
+      "sha256": "b00e9846962dc4fded62f5ac3bea094e7152395bc45ce2621ec850a0e130a537"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_finalize.m",
+      "sha256": "e6a37e77e1938e648f158a61355a05e77713495bc01c67c4aa1793864d3d4391"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_four_site_search.m",
+      "sha256": "da7b442c78a60a15dadeaf29667f6c1d793e04f0aca434f22291ec9e6da275b1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_four_windows.m",
+      "sha256": "272ff3806d354f6326bbb6be8e5741392eef7553b4a0022a2c1e1065085eb458"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_matlab.m",
+      "sha256": "71be9b596916c1b51baaf6dfa2f08b9d80f3e2b887eebf5eaa98c2c39fe3b8fe"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_north_height.m",
+      "sha256": "b8954e94226f9f8fb209a10ba34de9927ffec133037187e70a6bd76520c742e6"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_north_merge.m",
+      "sha256": "fa5cf027f07728faf0e13ae947330b9ebaac22c9403f269aa768e69112f105d9"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_retime_probe.m",
+      "sha256": "a3c32c537634038e75206c7f633b669e0c6c26e355cf1db6f7bd7dd3f80cfde4"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_route_slack.m",
+      "sha256": "a92a2b9e939e6e414e33c45389b06a04a5f7691f35a13668dd3dc3537f48d3ba"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_site_physics.m",
+      "sha256": "721f4755652fef81efa84a25d1c64605c4ee3684f337510a79a49593ee155bb9"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_site_scan.m",
+      "sha256": "dcfc98bde58ea83ee2a8001aa8d1a8287c04a52b8fec76b128acb7fdd2000f51"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_source_diagnostic.m",
+      "sha256": "e58370a83f2d04446c42761d5086ad6f89387bd395b8732e09829155c0c6b30a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_fresh_validate_candidate.m",
+      "sha256": "038a9cd49a5de662a8d9358db2c6eb7569c735da9a50f8d7c79ba8607c736aec"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_full_scan.m",
+      "sha256": "2b1ae40bb7c4df541d833126b8d7c5d6ab64d6838cc6535c472dee05aa1468d4"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_hybrid_sector_scan.m",
+      "sha256": "fffc9246699b4815195dc02527dbfa5b497804414d62b3eb5394a1da2e019379"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_identify_gaps.m",
+      "sha256": "2beb40859e284d9a8870cb97d004785425f30dc3a15a29e8c54092bd68b8da1a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_import_q2_csv.m",
+      "sha256": "29c07e25fc29b70311322fff9349822186412bb4b72f8a6cee46ad6c6cdbd451"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_import_smoke.m",
+      "sha256": "08c58bd8d8cb7b47f18a3f2eeb43353d716dd9673fdc43c2bd3d3d276604d200"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_inspect_q2.m",
+      "sha256": "27a1982aa2d8ac349146185b9aaf420fb4c3b8ca4bb9a26c4c47c031058e1ab9"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_inspect_route_fields.m",
+      "sha256": "7a6bf70d98edb259954aebee728beca90ccddefe78eba72c315f8dfa1f0796c8"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_interval_smoke.m",
+      "sha256": "b3b3a491d0233c92460d43ac92351677c229a8ce5c0aab690ff5f339fd7d988f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_joint_opt_luna_optimize.m",
+      "sha256": "e7036a6694defa4a103566faa2c41c2525ffa7ee4fdbe79e63509b632583587e"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_joint_opt_luna_scan.m",
+      "sha256": "5e6cadc14aa7c9208504927c1b1598a2654c16245df3b1aaebb4b172ec999166"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_link.m",
+      "sha256": "49c61bc4625b6382df286b2c9c18ebc78726ad7f9d68fa374c3a2c3e905c39db"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_link_interval.m",
+      "sha256": "f9486c72f77171fe91b26c9fefaba9e9721400359754ad8d7614db5b8eb3857c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_local_scan.m",
+      "sha256": "d509095f21aa3f3ed7706696c42b2c0f7f7f007ba772edb41daec65a6305eb76"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_luna_grid_merge_scan.m",
+      "sha256": "66ae7bc6751e84dd6e600d87c124e69996369bf059449cb86b15723e9991b74c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_luna_optimize8.m",
+      "sha256": "b272f05196c8346a0fcdaa05db1abccc5320f8fb016e7ee0b0c4816316ad97b5"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_luna_optimize_unbalanced8.m",
+      "sha256": "842233f01d7c36517ee95184659b34ac042551d873385b94631f34cbd8a248ec"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_luna_reorder_transport.m",
+      "sha256": "52cc93009db8db842088341aee611fabdb4ced64ec036750c095373d73ffb8f2"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_ne_search.m",
+      "sha256": "aa825a27668b0c8c7d1857d22be889ff9e73837f2e37d5e1448ea1567732f6c8"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_nn_fast_scan.m",
+      "sha256": "8b5825ab12c4bd19806a8cb1ea9638f9fb582e47ffc29befcb7ef413c479859d"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_north_hybrid_probe.m",
+      "sha256": "971dafed2c933c09c77a74a0671d5fecb1f5e3ce1bb9985dc81936c4c0564c55"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_north_search.m",
+      "sha256": "f2f0b417c5e2b1a44ef049ad1bf58c630461a8a88e6264892bd5817e314d7a52"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_audit.m",
+      "sha256": "0cae57ecb7698c2bb36cb586e0625c963d7e3cc871504bcfc50c4ad84d55638d"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_candidate_matlab.m",
+      "sha256": "5d9480875a0fdc94a4241a4912742d52323991b23f8f7c20c6f727a33094f52d"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_figures.m",
+      "sha256": "47e173532cc63ba34c0c9af59acf228e4d1c923eace38f6cc5e2b054215ad62f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_finalize.m",
+      "sha256": "41013378eda048da9b8ddb3a4da779e51ab7f9d6bb14090809db9c4b789e22aa"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_global_sites.m",
+      "sha256": "d56b6a59c4316807cd6955024bb1f745420f1accfd6dc6197aa3636b0e4b59eb"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_joint_sites.m",
+      "sha256": "b98b95dda9fff95895af065650c4b4f3b919e24045f010bc72a828bfe1660597"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_pointcheck.m",
+      "sha256": "9027573117f8e71914d736da52233ee4bc3786905c0caf62dc3c92fe381b38a1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_report.m",
+      "sha256": "554b93048ce8685666d0a1b3a04b3ac848c9991c7aa4a539a051177ab283013a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_resource_probe.m",
+      "sha256": "752f0a46f3710f2f34b1ce7b8f886c1404cb1ba92fc1c41b3d73c9b84900b513"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_schedule.m",
+      "sha256": "34df670bfd853e71be3599e9f1c882fc20bce09768c42e9aff0d8878ef43952c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_split_probe.m",
+      "sha256": "4a17856ddae061a29b1e0b1d2a9c89fad7ee525918bfe3a4c61ae9b1f085cc84"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_overlay_windows.m",
+      "sha256": "cabeb66db6997689100b79a036c1c044985fe7fafb5744c56c4b63c6b0b329f5"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_p1_smoke.m",
+      "sha256": "cf71903fffff614dc6cf7dfa0d027bd15cde12d68aa789a309639ae65c154397"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_plot_saved.m",
+      "sha256": "1b2807b68dbf9e23d1caaf38f7db9bf52077c61d439cee7f008cbd81f5b69ac1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_print_coverage.m",
+      "sha256": "39e62605e015bd3f3c46c465421d724d354993a5d32f91b9f2ee81cffe716c8e"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_publish_conservative_seed.m",
+      "sha256": "8dad759fe253b36af6782ddab94e3146cc9d224d30a73b373ba056bf5705f7a0"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_q299_export.m",
+      "sha256": "1aa64c88ea984a3f0401df64d91ef9070e1368df0c99c1e616c743889f2ddbe6"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_q299_optimize.m",
+      "sha256": "6689bfd57c89ff527d9b499114d406e4b11cacb3e15a2f012fe80ddfe5c6140f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_q299_prepare.m",
+      "sha256": "09dacedb6f9efb53faf6bb2dc939b0c9524f386ae32863f68953c4fb5264fdb2"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_q299_window_report.m",
+      "sha256": "3af4759f5d8df1c5a68e5b0edd58ffae7c4a7021f1ee4d9933a99dc6012425b1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_relay_physics.m",
+      "sha256": "166ddd01d8bafd6ec76b6917490c7b3c22133d4dedf552c5cc7b81aa3da303b1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_reorder_transport.m",
+      "sha256": "d4163732543a9c12471780d306af5d266bca9886ccc76840f672a2d509c736c0"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_sample_diagnostic.m",
+      "sha256": "028617cc9dac5574d2839423ba089db1a156688a355f54b35383303b4f64542b"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_save_overlay_plot.m",
+      "sha256": "671863c5ad961b40511a2ea6972fb6a24d96304630ce95ba0101b24d4f960042"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_search_access_cover.m",
+      "sha256": "540ab6c7a3d367ef54900187cd521333884b4867761a44bd8b49777e4879c382"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_selected_scan.m",
+      "sha256": "e713cb5f23827316d0b00446ca408b12ca096512db9d7e2468bfa7711888afb7"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_shift_transport.m",
+      "sha256": "3711cfbe89482ac1aeedcc115a89ccfab40c445dd27289197f77d57ccaed739c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_single_north_scan.m",
+      "sha256": "123774022f993b92ca2d315827937d449e806ef0782bf6c7995cddf05c17be67"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_site_times.m",
+      "sha256": "9e9bac6d094de51c09bdcd8934cc77d23637aa39ebe48096a4e4babc60dcde8e"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_source_smoke.m",
+      "sha256": "078d9328cb5fca2aa3600d053b6404e2f9b3bd3f7e6c56396753fb9196f49ce3"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_special_scan.m",
+      "sha256": "63defd1c88b3ad29157eb2f1579a6edf42067eefb27a7c9c20e9e9b09b47200b"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_transport_segments.m",
+      "sha256": "56eded8b832615a844dccac4b4fb10e7582e4e5373dc2d8a82ace0f142fa517c"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_validate_final.m",
+      "sha256": "efca0211c51e034a4971b13a39c2fb2b76cc3a47a0ed1c9171167bb0690d5254"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_validated_seed_trim.m",
+      "sha256": "a90af5cb62bbf7461a10558dd35d859de9b1fd49a00d90ad0e453d2b818fce33"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_validator_smoke.m",
+      "sha256": "084281e015160e5f31e6dffa8b6164fbcb620aed3b2e49316517ce416c3df9da"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\q3_verify_q2_workbook.m",
+      "sha256": "20efc335ffedd025d4ec60dc1d0f48347af0f834efcf3cff13e264e1fd83d43e"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\validate_q3_solution.m",
+      "sha256": "d3e65ade219eb49de5e040499675e21093c98c01714c0094859d0eb398da9e26"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\luna_flex_overlay_cpsat.py",
+      "sha256": "df8ad4a70cec3b7776755109720afb863880454699030a5ed8e30878c4ff37c1"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\q3\\run_overlay_gates.py",
+      "sha256": "f1c3a5290a2a8f14ba1b21c54754b327dd5045c20b8c64e6b797cb2427949abe"
+    }
+  ],
+  "validated_outputs": [
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\Q3_结果提交.xlsx",
+      "sha256": "2866e8d227688c7b7bc7e21101b96eff17253865da28f1cee6e989e7bc15168d"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\overlay_validated.mat",
+      "sha256": "f668a1f8316f5ca0c295d358e934a5857b59b66739e230973a0c40b6143e473d"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\q3_metrics.csv",
+      "sha256": "35dd7d5164764a7892d62a55a2692958338fb2c7a8b6e8e8b4cb7d9bfbc97e43"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\relay_sorties.csv",
+      "sha256": "de35a629a7861c70645d79fe7a2848419771fe46ca62e5780f9093faadbaff0f"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\transport_sorties.csv",
+      "sha256": "430cc828fbce7511b6b8d6f768dd573d5fee6c7267cb54b99814b7a1a38d1f64"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\box_deliveries.csv",
+      "sha256": "ab46e520de631f2859991b75e232ffe842deb927307d459f5dac220a921e5a7a"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\continuous_communication_certificate.csv",
+      "sha256": "d2aabe77b3ac9c378d9054eecfd3e408c4c17b269279b413b371b2106f90585e"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\continuous_independent_audit.json",
+      "sha256": "78f4e0818854ca2206315dc39e69d6935d38215412a5fb64a49af6a6855bbb8d"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\transport_inheritance_audit.csv",
+      "sha256": "463d939902e641da04d19081f677fd68759f6c5f21b80757cfe1c421dbe074b7"
+    },
+    {
+      "path": "D:\\Desktop\\modeling\\results\\q3_overlay\\solver_stats.json",
+      "sha256": "0b2716db58d19619b80dc560e07b03fb9335d46581828f767adaada5f4afd822"
+    }
+  ],
+  "candidate_discovery": {
+    "backend": "Luna CP-SAT; conservative integer candidate only",
+    "script": "D:\\Desktop\\modeling\\q3\\luna_flex_overlay_cpsat.py",
+    "candidate_makespan_s": 5936
+  },
+  "final_solver": {
+    "backend": "MATLAB intlinprog",
+    "makespan_s": 5933.08218081291,
+    "energy_kWh": 68.6107416805141
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "scope": "Published Q3 bundle; excludes manifest itself, raw input, cache and local logs",
+  "scope": "Published branch snapshot, current and explicitly labelled historical evidence; excludes ignored inputs, caches and this manifest.",
   "files": [
     {
       "path": ".gitattributes",
@@ -10,6 +10,11 @@
       "path": ".gitignore",
       "bytes": 60,
       "sha256": "fe6f211edd803630475d1fceacbe63775aecc48664dc372e97e069642485120e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6369,
+      "sha256": "57e6364e5e22651233d194f7179d31c4be66980c9c0d481478dc0bb576c58c4f"
     },
     {
       "path": "common/load_dem.m",
@@ -182,6 +187,46 @@
       "sha256": "8f38f31a2084eeffa39aff773a42ebdc773f6c426813d50c7263c9c69572b34f"
     },
     {
+      "path": "history/q3_overlay/README.md",
+      "bytes": 534,
+      "sha256": "4d0716a41bfd9563dd5fc66fde4160509561bc99b73aa174cdbef7a25012261c"
+    },
+    {
+      "path": "history/q3_overlay/four_site_remaining_points.csv",
+      "bytes": 3589,
+      "sha256": "bf4ce946727f8b6a9911d8f2b86d1c3b05382c3d2e2e981b6816e080ab3a334a"
+    },
+    {
+      "path": "history/q3_overlay/joint_site_stats.json",
+      "bytes": 323,
+      "sha256": "3ba27ff1ffca8811019b8682f7a46e66fe1887efbea3f78c380e4d6e3c90fdc3"
+    },
+    {
+      "path": "history/q3_overlay/joint_site_stats_4.json",
+      "bytes": 335,
+      "sha256": "0fa92929a68db69f25e4792e8504c2373426cf45a51b6cacbcf5cb1e95890a77"
+    },
+    {
+      "path": "history/q3_overlay/joint_site_stats_5.json",
+      "bytes": 335,
+      "sha256": "4b245c4205a8ebddd4fcd66629dbb5128f1a4fa0f639ab96bfc461b6505a4069"
+    },
+    {
+      "path": "history/q3_overlay/luna_overlay_candidates.json",
+      "bytes": 280,
+      "sha256": "75cafa5c722890dac1d0b8443ccac216e76f2c3c594a50b3731c87ca6582ef22"
+    },
+    {
+      "path": "history/q3_overlay/luna_site_shortlist.csv",
+      "bytes": 9145,
+      "sha256": "bc6cd7831e351e02929eb0fc7a9b3f525f706f2a2e89cac34df8df90ddf6d240"
+    },
+    {
+      "path": "history/q3_overlay/复现清单.json",
+      "bytes": 27930,
+      "sha256": "e46e09a01aa3102fd191d8c97851f6ddcbe0cbc4be8d7a80241adf0c5d7d8a90"
+    },
+    {
       "path": "logs/fresh_main.exit",
       "bytes": 1,
       "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
@@ -322,19 +367,14 @@
       "sha256": "d3e65ade219eb49de5e040499675e21093c98c01714c0094859d0eb398da9e26"
     },
     {
-      "path": "README.md",
-      "bytes": 5910,
-      "sha256": "aab03e49e5c2d596788a868af908d5690190f4ec17c3b75ad09d558dd91a4071"
+      "path": "results/q2_strategy_scenarios/Q2_综合均衡最终结果.xlsx",
+      "bytes": 22871,
+      "sha256": "1497d5058b2622da466e2b5378c3accc83f7c327495a4728094f663d8a4f6ab1"
     },
     {
       "path": "results/q2_strategy_scenarios/balanced_best_pass.mat",
       "bytes": 465752,
       "sha256": "e3ff4a329ee6c01730d2aeec47159755d5dd06fc83d1ffdf4cdcbeacf214074a"
-    },
-    {
-      "path": "results/q2_strategy_scenarios/Q2_综合均衡最终结果.xlsx",
-      "bytes": 22871,
-      "sha256": "1497d5058b2622da466e2b5378c3accc83f7c327495a4728094f663d8a4f6ab1"
     },
     {
       "path": "results/q3_fresh/all_candidate_coverage.mat",
@@ -350,6 +390,16 @@
       "path": "results/q3_fresh/source_route_slack.csv",
       "bytes": 3243,
       "sha256": "1e283ba074c83258b5fe7ec42062d9519ac58c3bef21e8796f0760c26290fac9"
+    },
+    {
+      "path": "results/q3_overlay/P2_独立验收.md",
+      "bytes": 5078,
+      "sha256": "6c31f595c4a45f5d9dad3310152aea5cd30ed17785024deffb0ac408a7dfc6c0"
+    },
+    {
+      "path": "results/q3_overlay/Q3_结果提交.xlsx",
+      "bytes": 34543,
+      "sha256": "2866e8d227688c7b7bc7e21101b96eff17253865da28f1cee6e989e7bc15168d"
     },
     {
       "path": "results/q3_overlay/box_deliveries.csv",
@@ -402,11 +452,6 @@
       "sha256": "f668a1f8316f5ca0c295d358e934a5857b59b66739e230973a0c40b6143e473d"
     },
     {
-      "path": "results/q3_overlay/P2_独立验收.md",
-      "bytes": 5078,
-      "sha256": "6c31f595c4a45f5d9dad3310152aea5cd30ed17785024deffb0ac408a7dfc6c0"
-    },
-    {
       "path": "results/q3_overlay/q3_final_solution.mat",
       "bytes": 1197503,
       "sha256": "041bca5c74d70fcb9c45c1a766aa83ec63af4a7f42939ea34fdcbe28a2b04a22"
@@ -415,11 +460,6 @@
       "path": "results/q3_overlay/q3_metrics.csv",
       "bytes": 221,
       "sha256": "35dd7d5164764a7892d62a55a2692958338fb2c7a8b6e8e8b4cb7d9bfbc97e43"
-    },
-    {
-      "path": "results/q3_overlay/Q3_结果提交.xlsx",
-      "bytes": 34543,
-      "sha256": "2866e8d227688c7b7bc7e21101b96eff17253865da28f1cee6e989e7bc15168d"
     },
     {
       "path": "results/q3_overlay/relay_sorties.csv",
@@ -498,8 +538,8 @@
     },
     {
       "path": "update_manifest.py",
-      "bytes": 861,
-      "sha256": "2e32747a5eeff5c3c136e5005572cce60c45c3c9ad8bd3875a138e0facb33d7c"
+      "bytes": 139,
+      "sha256": "730885b867307338f5ef1eb390ac8b246e0280c60ab2a7d2a62a09b626363897"
     },
     {
       "path": "utils/apply_publication_style.m",
@@ -530,6 +570,11 @@
       "path": "verify_q3_github_bundle.m",
       "bytes": 1656,
       "sha256": "ccb37ea3b7717b8e80cd4f1d7e7f1363711db7ac2ce766ae703d3c5719450285"
+    },
+    {
+      "path": "verify_snapshot.py",
+      "bytes": 2417,
+      "sha256": "a5094d85a5ddae79847de35cc1e691d1075a34189da8ebcaf7c2523b201172b7"
     }
   ]
 }

@@ -1,0 +1,1 @@
+{"exitflag":0,"objective":[],"output":{"relativegap":[],"absolutegap":[],"numfeaspoints":0,"numnodes":0,"constrviolation":[],"message":"Solver stopped prematurely. No integer feasible point found.\n\nIntlinprog stopped because it exceeded the time limit, options.MaxTime = 120 (the selected value)."},"candidate_count":841,"sorties":4}

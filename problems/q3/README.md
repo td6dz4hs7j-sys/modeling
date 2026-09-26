@@ -79,3 +79,7 @@ run_problem3               % 从 Q2 基准和所选候选重新运行 MATLAB 连
 `q3/luna_flex_overlay_cpsat.py` 为可选候选生成器（Python、OR-Tools、openpyxl），不承担最终物理核验。提供的候选 CSV 已足够运行 MATLAB；候选整数时间不是最终时刻。最终数值来自 MATLAB 连续时间优化和独立约束检查。
 
 `manifest.json` 记录本包发布文件的相对路径、大小与 SHA256；`input/`、`cache/` 和本机临时日志不提交。`logs/` 为原成功运行记录，新增包级复核见 `results/q3_overlay/github_bundle_validation.json`。
+
+## 最新成果完整性核对
+
+27项最终结果、30个图件文件（10 PNG、10 SVG、10灰度）、33个依赖代码及Q2冻结来源已与本地最新成果逐文件核对一致。原P2回执引用的本地复现清单已归档至[history/q3_overlay](history/q3_overlay/)，六项旧候选/诊断也在此归档且明确不作最终结果。当前运行及下载完整性以包根manifest.json为准，可执行`python verify_snapshot.py`核对。
