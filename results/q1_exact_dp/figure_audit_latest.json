@@ -1,0 +1,211 @@
+{
+  "ok": true,
+  "directory": "D:\\Desktop\\modeling\\github_delivery\\q1_gravity_revision\\results\\q1_exact_dp\\figures",
+  "questions": [
+    "q1"
+  ],
+  "files": {
+    "flow_overall_model.png": {
+      "width_px": 2160,
+      "height_px": 2100,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 7.000014000028001
+    },
+    "flow_overall_model.svg": {
+      "text_count": 10,
+      "embedded_raster": false
+    },
+    "flow_q1_model.png": {
+      "width_px": 2160,
+      "height_px": 2100,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 7.000014000028001
+    },
+    "flow_q1_model.svg": {
+      "text_count": 10,
+      "embedded_raster": false
+    },
+    "process_q1_certificates.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "process_q1_certificates.svg": {
+      "text_count": 28,
+      "embedded_raster": false
+    },
+    "process_q1_energy_payload.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "process_q1_energy_payload.svg": {
+      "text_count": 23,
+      "embedded_raster": false
+    },
+    "process_q1_profiles.png": {
+      "width_px": 2160,
+      "height_px": 1650,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 5.500011000022001
+    },
+    "process_q1_profiles.svg": {
+      "text_count": 35,
+      "embedded_raster": false
+    },
+    "process_q1_tradeoff.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "process_q1_tradeoff.svg": {
+      "text_count": 25,
+      "embedded_raster": false
+    },
+    "raw_q1_box_distribution.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "raw_q1_box_distribution.svg": {
+      "text_count": 15,
+      "embedded_raster": false
+    },
+    "raw_q1_demand.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "raw_q1_demand.svg": {
+      "text_count": 26,
+      "embedded_raster": false
+    },
+    "raw_q1_map.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "raw_q1_map.svg": {
+      "text_count": 41,
+      "embedded_raster": true
+    },
+    "result_q1_energy.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "result_q1_energy.svg": {
+      "text_count": 29,
+      "embedded_raster": false
+    },
+    "result_q1_payload.png": {
+      "width_px": 2160,
+      "height_px": 1650,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 5.500011000022001
+    },
+    "result_q1_payload.svg": {
+      "text_count": 29,
+      "embedded_raster": false
+    },
+    "result_q1_reserve_metrics.png": {
+      "width_px": 2160,
+      "height_px": 2100,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 7.000014000028001
+    },
+    "result_q1_reserve_metrics.svg": {
+      "text_count": 53,
+      "embedded_raster": false
+    },
+    "result_q1_reserve_payload.png": {
+      "width_px": 2160,
+      "height_px": 1650,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 5.500011000022001
+    },
+    "result_q1_reserve_payload.svg": {
+      "text_count": 70,
+      "embedded_raster": true
+    },
+    "result_q1_sorties.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "result_q1_sorties.svg": {
+      "text_count": 20,
+      "embedded_raster": false
+    },
+    "result_q1_time.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "result_q1_time.svg": {
+      "text_count": 27,
+      "embedded_raster": false
+    },
+    "result_q1_utilization.png": {
+      "width_px": 2160,
+      "height_px": 1350,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.500009000018
+    },
+    "result_q1_utilization.svg": {
+      "text_count": 27,
+      "embedded_raster": false
+    }
+  },
+  "issues": [
+    {
+      "severity": "WARN",
+      "message": "raw_q1_map.svg 含嵌入位图，请确认确有必要"
+    },
+    {
+      "severity": "WARN",
+      "message": "result_q1_reserve_payload.svg 含嵌入位图，请确认确有必要"
+    }
+  ]
+}

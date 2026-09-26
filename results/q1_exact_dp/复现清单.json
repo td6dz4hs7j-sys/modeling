@@ -652,7 +652,7 @@
       "Date": "02-Jan-2022"
     }
   ],
-  "elapsed_seconds": 119.8042765,
+  "elapsed_seconds": 152.4756822,
   "input_files": [
     {
       "path": "data\\raw\\D题\\对照方案_问题1_结果提交.xlsx",
@@ -736,7 +736,7 @@
     }
   ],
   "parameters": {
-    "gravity": 9.81,
+    "gravity": 9.806,
     "clearance_m": 50,
     "delivery_height_m": 30,
     "reserve": [
