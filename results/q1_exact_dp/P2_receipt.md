@@ -10,4 +10,6 @@
 - main_q1仅调用finalize_q1_report统一导出附页；去除发布补页时临时增加的重复调用，未改变优化算法。
 - 最优性仅针对冻结物理解释、枚举可行模式及登记目标；不是所有偏好共同唯一最优。
 
-独立质检由本次发布核对的Q1审核代理完成；可用仓库根verify_snapshot.py复核所有发布文件SHA256。原M1/P1、截图推断和旧双目标记录均为历史证据。
+独立质检由本次发布核对的Q1审核代理完成；可用仓库根verify_snapshot.py复核所有发布文件SHA256。原M1、旧P1、截图推断和旧双目标记录均为历史证据；当前P1为g=9.806修订验收。
+
+并行更新合并：保留另一独立验收的最新MAT及P1，P2全文另存P2_gravity_revision.md。双方MAT的metrics、validation、physics和g逐项相同，31张PNG像素及两份工作簿全部8页一致；相关新增gravity_revision材料均保留。

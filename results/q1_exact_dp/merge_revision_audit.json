@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "incoming_commit": "8895aa042ef0ad2ba29249a7e04a19da58f7fe76",
+  "checks": [
+    {
+      "path": "results/q1_exact_dp/D题_问题一_结果提交.xlsx",
+      "check": "all 8 worksheet values identical"
+    },
+    {
+      "path": "results/q1_exact_dp/Q1_结果提交.xlsx",
+      "check": "all 8 worksheet values identical"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/flow_q1_model_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_certificates_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_energy_payload_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_profiles_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_tradeoff_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/raw_q1_box_distribution_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/raw_q1_demand_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/raw_q1_map_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_energy_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_payload_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_reserve_metrics_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_reserve_payload_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_sorties_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_time_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_utilization_grayscale.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/flow_overall_model.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/flow_q1_model.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_certificates.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_energy_payload.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_profiles.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_tradeoff.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_box_distribution.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_demand.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_map.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_energy.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_payload.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_reserve_metrics.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_reserve_payload.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_sorties.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_time.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_utilization.png",
+      "check": "identical decoded pixels"
+    },
+    {
+      "path": "results/q1_exact_dp/q1_solution.mat",
+      "check": "metrics, validation, physics and gravity identical; retain incoming published MAT",
+      "sha256": "6bf3c67e7cc9a93a202f1b355ec819268acfd42a85ffae1c24b9ac339b34842f"
+    }
+  ],
+  "retained_incoming": [
+    "gravity_revision.json",
+    "gravity_revision.md",
+    "P1_receipt.md",
+    "q1_solution.mat",
+    "P2_gravity_revision.md",
+    "docs/交接记录/成员A/Q1重力标准统一-2026-09-27.md"
+  ],
+  "note": "Both runs use g=9.806; decoded pixels/workbook values and MAT core results agree. No optimization was changed during merge."
+}

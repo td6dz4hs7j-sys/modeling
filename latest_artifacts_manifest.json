@@ -138,8 +138,13 @@
     },
     {
       "path": "docs/Q1_最新版模型与术语.md",
-      "bytes": 10976,
-      "sha256": "efa15e8b486b80e88e427328cbd392c496536b7476f6b5cbf7d1671331fe45d6"
+      "bytes": 10986,
+      "sha256": "cc804b1c72a77f7738b920f7c03b85d41a211a166ea0392a0d9bd55d77ce7496"
+    },
+    {
+      "path": "docs/history/P1_Q1_g9.81.md",
+      "bytes": 701,
+      "sha256": "d62d6dfc673ccd59900c065c592de74961772792adceb0e062ab2c46199912df"
     },
     {
       "path": "docs/history/P2_Q1_g9.81_2026-09-26.md",
@@ -210,6 +215,11 @@
       "path": "docs/交接记录/成员A/Q1精确三目标加权方案-2026-09-26.md",
       "bytes": 2426,
       "sha256": "4da21c36b56bee595736117b3c1b4458397e767a18d71a093370d5039dea2df2"
+    },
+    {
+      "path": "docs/交接记录/成员A/Q1重力标准统一-2026-09-27.md",
+      "bytes": 539,
+      "sha256": "5e02d0317552ce1dbc12882902794ac43b6359a1c77be6b95971354bf3f629fc"
     },
     {
       "path": "docs/交接记录/成员A/外部Q1方案统一模型重算-2026-09-24.md",
@@ -598,13 +608,18 @@
     },
     {
       "path": "results/q1_exact_dp/P1_receipt.md",
-      "bytes": 701,
-      "sha256": "d62d6dfc673ccd59900c065c592de74961772792adceb0e062ab2c46199912df"
+      "bytes": 405,
+      "sha256": "d73b823abda8b71617276512df226b20393b4030660088f7b1f54b59ac7ca8e9"
+    },
+    {
+      "path": "results/q1_exact_dp/P2_gravity_revision.md",
+      "bytes": 1207,
+      "sha256": "9e638e81dc0c10eb17ffa9cd6da03c103ab061d2f73e761afb30e250c6274dd3"
     },
     {
       "path": "results/q1_exact_dp/P2_receipt.md",
-      "bytes": 1284,
-      "sha256": "e2d913f4dee14b859c3c35f39b45ab1e62e10867e951c175f5f4e593573df3b6"
+      "bytes": 1588,
+      "sha256": "45dbc8eea8d879db35229eda26fbe5a5d87d12c704bddce4dfe584b918f50bfb"
     },
     {
       "path": "results/q1_exact_dp/Q1_结果提交.xlsx",
@@ -907,6 +922,16 @@
       "sha256": "d4337c8948ed03360d33440499185d094c1137d5028f4f0363a3982f7e6e041d"
     },
     {
+      "path": "results/q1_exact_dp/gravity_revision.json",
+      "bytes": 743,
+      "sha256": "8754719a254bd7ab8ee7ffeff064faa85d64f62391195e2c0c9ef0778a30fa68"
+    },
+    {
+      "path": "results/q1_exact_dp/gravity_revision.md",
+      "bytes": 539,
+      "sha256": "5e02d0317552ce1dbc12882902794ac43b6359a1c77be6b95971354bf3f629fc"
+    },
+    {
       "path": "results/q1_exact_dp/input_checks.json",
       "bytes": 348,
       "sha256": "be3fb0465ab013781bc6f0b6254fbc5f635ae1ce8f5aa6333adf52fd83a2f98e"
@@ -920,6 +945,11 @@
       "path": "results/q1_exact_dp/max_safe_payload.csv",
       "bytes": 6914,
       "sha256": "e0c29c1af14369d40061e2722407044dd24456aee7044e45fd4fa489b03418ad"
+    },
+    {
+      "path": "results/q1_exact_dp/merge_revision_audit.json",
+      "bytes": 5166,
+      "sha256": "95673bfd5e92386a4445fe446230a3cba6ed2aa0274fe09461b5130d56ae6ef1"
     },
     {
       "path": "results/q1_exact_dp/objective_comparison.csv",
@@ -953,8 +983,8 @@
     },
     {
       "path": "results/q1_exact_dp/q1_solution.mat",
-      "bytes": 1053594,
-      "sha256": "f71565b1134d499a39973a373ee03edc0f5ef36d0a1cf33e5f72fd670ce66a18"
+      "bytes": 1053532,
+      "sha256": "6bf3c67e7cc9a93a202f1b355ec819268acfd42a85ffae1c24b9ac339b34842f"
     },
     {
       "path": "results/q1_exact_dp/reference/pre_edit_q1.png",
@@ -1098,8 +1128,8 @@
     },
     {
       "path": "results/q1_exact_dp/文档线索索引.md",
-      "bytes": 1722,
-      "sha256": "eca4c3a619eabdd032dc6c9cc38e3951e87d032c1e8611516e920012de486755"
+      "bytes": 2082,
+      "sha256": "bdb44bbb2d8d6d3ff236b0bab7c949b594dbc95ac26be1c6dc77357adce0e482"
     },
     {
       "path": "results/q1_余量敏感性.json",

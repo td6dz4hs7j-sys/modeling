@@ -1,0 +1,25 @@
+{
+  "gravity_before": 9.81,
+  "gravity_after": 9.806,
+  "before": {
+    "total_sorties": 18,
+    "total_energy_kWh": 59.131296022052844,
+    "total_operation_time_s": 32776.01574891568,
+    "total_operation_time_h": 9.104448819143244,
+    "total_flight_time_h": 5.357782152476576,
+    "total_mass_kg": 758,
+    "total_boxes": 80
+  },
+  "after": {
+    "total_sorties": 18,
+    "total_energy_kWh": 59.130253926648535,
+    "total_operation_time_s": 32776.01574891568,
+    "total_operation_time_h": 9.104448819143244,
+    "total_flight_time_h": 5.357782152476576,
+    "total_mass_kg": 758,
+    "total_boxes": 80
+  },
+  "delta_energy_kWh": -0.0010420954043084407,
+  "same_batching": true,
+  "source": "Full MATLAB rerun, not rescaling old totals"
+}
