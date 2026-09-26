@@ -1,0 +1,1340 @@
+{
+  "scope": "Published branch snapshot, current and explicitly labelled historical evidence; excludes ignored inputs, caches and this manifest.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 252,
+      "sha256": "806145dee39d2ee6691d45b2aa55671efa089fbfb3b981ed76189170669a4c3f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1142,
+      "sha256": "59d3df83d6f13de339f2999936f5df26270fd282c65a28b978e9e8a1201324d5"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1922,
+      "sha256": "ef050f938c9f7dcd0bbaa0c707d3a428386ce1f451afb475b93f1377ab3efead"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2523,
+      "sha256": "7141dd468aaa718df847fecf40501580aeed4bbe9cdb2b8fd80fd4cb548c7d8e"
+    },
+    {
+      "path": "SKILL_VERSION.md",
+      "bytes": 946,
+      "sha256": "7d7679b570e249c0290eae4d0db5f5dcec4650412cecd7e672dda974097d409a"
+    },
+    {
+      "path": "data/.gitkeep",
+      "bytes": 48,
+      "sha256": "2aa4048e48c2c867065004fdaaaeeb5a134a95e79ac02d52c8db5fc659ddace5"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 2180,
+      "sha256": "ca1f2f39cb44b8bbc0e673a581fc94e5be599d6d413b85a7fc98d3d561b7c65e"
+    },
+    {
+      "path": "data/raw/D题/对照方案_问题1_结果提交.xlsx",
+      "bytes": 18784,
+      "sha256": "6ba869961e276bb833ed5bf5836e4a62016bd913eb11e235cf48fc3d7b888bb0"
+    },
+    {
+      "path": "data/raw/D题/山区洪涝灾害下无人机运输与通信协同优化.docx",
+      "bytes": 6971534,
+      "sha256": "0a4f507b91a02a0ea4264973dd432cdcb5b8916c61c24214719665f326d57685"
+    },
+    {
+      "path": "data/raw/D题/数据/无人机应急物资运输基础数据/中继无人机数据.xlsx",
+      "bytes": 11082,
+      "sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04"
+    },
+    {
+      "path": "data/raw/D题/数据/无人机应急物资运输基础数据/物资需求与配送时限.xlsx",
+      "bytes": 17474,
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a"
+    },
+    {
+      "path": "data/raw/D题/数据/无人机应急物资运输基础数据/调度中心与服务区.xlsx",
+      "bytes": 11017,
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38"
+    },
+    {
+      "path": "data/raw/D题/数据/无人机应急物资运输基础数据/运输无人机数据.xlsx",
+      "bytes": 11746,
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb"
+    },
+    {
+      "path": "data/raw/D题/数据/无人机应急物资运输基础数据/通信链路参数.xlsx",
+      "bytes": 10485,
+      "sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.mat",
+      "bytes": 6746494,
+      "sha256": "c68703e0cc8f94f4bd52ff6e9974b66a2dae33865f0723ad71c04b6694bf4fbf"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
+      "bytes": 7867096,
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.csv",
+      "bytes": 9736,
+      "sha256": "e08b6b3b5283a3c9ba5f898b5b7c54badddc786c58ec415dbd1035b3ddbc9759"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.mat",
+      "bytes": 119280,
+      "sha256": "61419e92447ada38c56b7f64f04e4aada2eb1ed076ae33e95f1cbc69f3514beb"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
+      "bytes": 283376,
+      "sha256": "a3dd9377bfc82656e376a3a6f52ef9019ed76117b8df1841d1409a253790df81"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.mat",
+      "bytes": 179705,
+      "sha256": "b79df14bdc0b22811f5c219897a66775d8879a93c4a865e455d8c43ab099b50a"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.csv",
+      "bytes": 301794,
+      "sha256": "e7d26a3cdf26e845b63d8c4942b94f35fd38f71dc63b07655ca8adf15013ba2e"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.mat",
+      "bytes": 179598,
+      "sha256": "b89f4f294bf771962676009fa9044f46ef26a06613fb6f91e2c6f9ccd430f8e8"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
+      "bytes": 1444497,
+      "sha256": "019c720d07c023cb7ffeb25952bf6cd1ffcf4e7ffec9e1833e162108965f7ec9"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.mat",
+      "bytes": 399882,
+      "sha256": "c868717284d8aee60157e3bc9b20e18a81b26fde3d75fc7d80317ef877af9849"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡地理空间数据说明.pdf",
+      "bytes": 85812,
+      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4"
+    },
+    {
+      "path": "data/raw/D题/数据/镇龙乡地理空间数据/镇龙乡地理空间详情地图.html",
+      "bytes": 4701769,
+      "sha256": "af1ae5cb0d3a843eb5b8a4adaea36dff6689ce2020061b1a234b71fe3a39b7ad"
+    },
+    {
+      "path": "data/raw/D题/结果提交模板.xlsx",
+      "bytes": 20893,
+      "sha256": "16f521f29a7103c4ff7c3709ce1696bb9fffa18ce741895e45b7bc7afaf3320a"
+    },
+    {
+      "path": "docs/Q1_最新版模型与术语.md",
+      "bytes": 10976,
+      "sha256": "efa15e8b486b80e88e427328cbd392c496536b7476f6b5cbf7d1671331fe45d6"
+    },
+    {
+      "path": "docs/history/P2_Q1_g9.81_2026-09-26.md",
+      "bytes": 921,
+      "sha256": "228305020d7e15986ab0cc404d8ae5325f16218719e7143c6bca8e23f954ee3e"
+    },
+    {
+      "path": "docs/history/README_旧Python链.md",
+      "bytes": 7289,
+      "sha256": "3ec1775ae8a86d3041994419f0699a674e73333ffa36fe1aff178da77fb8475c"
+    },
+    {
+      "path": "docs/history/figure_audit_g9.81.json",
+      "bytes": 5679,
+      "sha256": "b0c26f01d64902c1335208e351fb45e0c9672cb3a3a848d726f99a91cfcc4114"
+    },
+    {
+      "path": "docs/history/术语表格.md",
+      "bytes": 4480,
+      "sha256": "9fbd92d7ecb2ff05d10c836af5384b3308aee58d201e045e2f99c5521a31ca9f"
+    },
+    {
+      "path": "docs/history/模型与参数.md",
+      "bytes": 7054,
+      "sha256": "9615d5cb89a883684470c33e451c8552e2001e59449ea0242bfc1b5e534b80f8"
+    },
+    {
+      "path": "docs/history/项目进度.md",
+      "bytes": 8960,
+      "sha256": "2f8db40a1b520c091e79878d26084ed94ffad9141cdf9d52d4d451b59ecfecf8"
+    },
+    {
+      "path": "docs/history/题目分析报告.md",
+      "bytes": 6842,
+      "sha256": "a184d2ee412f593f554d48cd36c2d5ec68ef5848be6ddd544592343f823f7ca0"
+    },
+    {
+      "path": "docs/交接记录/README.md",
+      "bytes": 723,
+      "sha256": "c416d1d724062fa332247e8cdf2663d226583ccffe6e4d8b046a93eced42627b"
+    },
+    {
+      "path": "docs/交接记录/成员A/.gitkeep",
+      "bytes": 58,
+      "sha256": "b8211a7865949cd05ecda8e0f737f61232a942e4547371fc52b2b7784b553b35"
+    },
+    {
+      "path": "docs/交接记录/成员A/MATLAB验证与对比优势-2026-09-24.md",
+      "bytes": 2744,
+      "sha256": "47f5334a621b7b9f7a47ef9cd8fb78586df77e9d7ab97ad3fde6a77fb4e30c2d"
+    },
+    {
+      "path": "docs/交接记录/成员A/Q1主表替换与作业时间-2026-09-24.md",
+      "bytes": 1537,
+      "sha256": "09d041fdda6977eb6423a3a3b7654d9be6207e5a4f9b7b7e57f7648f07dab09a"
+    },
+    {
+      "path": "docs/交接记录/成员A/Q1作业时间与装卸交接-2026-09-24.md",
+      "bytes": 3901,
+      "sha256": "12a1d81c74d95569c284355029f2080f4ad0a36fac7d2ae1514de4c81b2d8758"
+    },
+    {
+      "path": "docs/交接记录/成员A/Q1最新版发布核对-2026-09-27.md",
+      "bytes": 671,
+      "sha256": "1283ce0e3ea1ed0499e5595deaab50134777d9a8ef8627f625c7a050a01d33b4"
+    },
+    {
+      "path": "docs/交接记录/成员A/Q1精确三目标加权方案-2026-09-26.md",
+      "bytes": 2426,
+      "sha256": "4da21c36b56bee595736117b3c1b4458397e767a18d71a093370d5039dea2df2"
+    },
+    {
+      "path": "docs/交接记录/成员A/外部Q1方案统一模型重算-2026-09-24.md",
+      "bytes": 1811,
+      "sha256": "61c58a3cee1b70c8697b9d1057e62867edac2e7d31a592ddbe21f3d9384bd98a"
+    },
+    {
+      "path": "docs/交接记录/成员A/问题一数据核验与基线-2026-09-23.md",
+      "bytes": 2341,
+      "sha256": "2625473e47f673a9b6965a5b4cfc7163b986d8bc19d8456bca2c12bdf7b33d23"
+    },
+    {
+      "path": "docs/交接记录/成员B/.gitkeep",
+      "bytes": 58,
+      "sha256": "b8211a7865949cd05ecda8e0f737f61232a942e4547371fc52b2b7784b553b35"
+    },
+    {
+      "path": "docs/交接记录/成员C/.gitkeep",
+      "bytes": 58,
+      "sha256": "b8211a7865949cd05ecda8e0f737f61232a942e4547371fc52b2b7784b553b35"
+    },
+    {
+      "path": "docs/分工.md",
+      "bytes": 977,
+      "sha256": "00be0bbd54ff14dec1e09011a1095f08dac965b3c6a06b81b2805887a9c7f073"
+    },
+    {
+      "path": "docs/模型与参数.md",
+      "bytes": 440,
+      "sha256": "9f9dfa1a8716d21044af6d408ce03bb024f30ea5b29dfe9da2845acbe9b9284e"
+    },
+    {
+      "path": "docs/能耗模型核验.md",
+      "bytes": 3079,
+      "sha256": "29f7817f2afbc8b6d5c97b9c224078cc47e53186598d8ae7c0750f5efc0e082a"
+    },
+    {
+      "path": "docs/项目进度.md",
+      "bytes": 434,
+      "sha256": "e9b51c6956647fd315985a4d134db606bb016280fa27878d1e5ed2846fe06100"
+    },
+    {
+      "path": "figures/.gitkeep",
+      "bytes": 51,
+      "sha256": "b92e50b2d6cca4aa370d177958d4f41f00e02360a842940547180dbe75a67665"
+    },
+    {
+      "path": "figures/flow_overall_model.png",
+      "bytes": 85953,
+      "sha256": "5f118c0bc34ab9d6d6abe5f73ff4a0d230824e3fdda9938632447fff5f20c27e"
+    },
+    {
+      "path": "figures/flow_overall_model.svg",
+      "bytes": 9101,
+      "sha256": "5be079058419c94e98af414e104986f196d70266320a7014ec17eb98e2a69100"
+    },
+    {
+      "path": "figures/flow_q1_model.png",
+      "bytes": 95330,
+      "sha256": "ab60bc693daaf944493922a5f45a9a4b8d264d94f560f5d6efb82efe8d850c7e"
+    },
+    {
+      "path": "figures/flow_q1_model.svg",
+      "bytes": 9531,
+      "sha256": "faa2235fccc64fe8d2e63df85b69338a096cc0f9c3a66075ac2b097deaeba1ce"
+    },
+    {
+      "path": "figures/process_q1_dem_route_profile.png",
+      "bytes": 118336,
+      "sha256": "18bd5ee42e6c3717b76e8916e1f43cec56383ccd1fbea39ef96a4898b3b25cad"
+    },
+    {
+      "path": "figures/process_q1_dem_route_profile.svg",
+      "bytes": 26304,
+      "sha256": "1c73aff42ccde3c44d56f6e3412db9d056733cc6ec518b4a9d83fb62be3bb581"
+    },
+    {
+      "path": "figures/process_q1_matlab_time_reconciliation.png",
+      "bytes": 38204,
+      "sha256": "0a0a98b42a0ed60add5b91c4f2a208c8f1120c7b919b485767122e3d480156d4"
+    },
+    {
+      "path": "figures/process_q1_matlab_time_reconciliation.svg",
+      "bytes": 39751,
+      "sha256": "3cd735986fec4be8d44e57e9a864d83b53ae0ba92feccf0119010c72e536f535"
+    },
+    {
+      "path": "figures/process_q1_payload_energy_curves.png",
+      "bytes": 136115,
+      "sha256": "7238f7b81069bf738136024e60fe91bd99476a777bb9823ddabe600169b6d8be"
+    },
+    {
+      "path": "figures/process_q1_payload_energy_curves.svg",
+      "bytes": 61520,
+      "sha256": "edae41452f6deed0af2ca79e0376f25a48a01404ea3d4041fa8c68d441ae5ca7"
+    },
+    {
+      "path": "figures/process_q1_selected_soc_slack.png",
+      "bytes": 75309,
+      "sha256": "51d7f8a92a3c76e0d9800c8f6a3293051fd467151542ef7eccbacaee62a9dd94"
+    },
+    {
+      "path": "figures/process_q1_selected_soc_slack.svg",
+      "bytes": 13626,
+      "sha256": "d2647de3bde0c3ca9527aa1f0bee3972afa312f744e6b8ca68680072b9065c88"
+    },
+    {
+      "path": "figures/raw_q1_area_demand_mass.png",
+      "bytes": 118376,
+      "sha256": "fe36cbe2e1cad77901bd130c025a3c4964ef836b54505bc31d5aaaa35cfc5ce4"
+    },
+    {
+      "path": "figures/raw_q1_area_demand_mass.svg",
+      "bytes": 23966,
+      "sha256": "e60ae2468369eda243f4c0e7e5e9c3589da730ec0aa453bb3e51e9e4f8c4beba"
+    },
+    {
+      "path": "figures/raw_q1_box_mass_distribution.png",
+      "bytes": 62265,
+      "sha256": "de0af292bd76bd1001afa488294bdb382ae7ae707edd1255d95de1c9427adcfe"
+    },
+    {
+      "path": "figures/raw_q1_box_mass_distribution.svg",
+      "bytes": 14018,
+      "sha256": "febd43bbbb033a27c571b5e4fbda1a5768b9aef04f8eb20be5aacd04693365fa"
+    },
+    {
+      "path": "figures/raw_q1_box_mass_volume.png",
+      "bytes": 70337,
+      "sha256": "d5d99bc392263f2b9eca5f7ee743b7f4745436bb8370bbe30ac1957cba679321"
+    },
+    {
+      "path": "figures/raw_q1_box_mass_volume.svg",
+      "bytes": 34665,
+      "sha256": "7c508eae9b16a1998a9e560c5f8fa44a412713780c275c0fedcf36066e0d51f0"
+    },
+    {
+      "path": "figures/result_q1_matlab_advantage.png",
+      "bytes": 37904,
+      "sha256": "48da363d6f1e47d8a29a783d38a420dfb07bbe7f66b228d6604d83ff37d2a148"
+    },
+    {
+      "path": "figures/result_q1_matlab_advantage.svg",
+      "bytes": 42089,
+      "sha256": "57f3001eb2e290a6d51377b94a9a955f8ab8af1e9f0570919a140f5ab5f21bd0"
+    },
+    {
+      "path": "figures/result_q1_matlab_method_comparison.png",
+      "bytes": 61845,
+      "sha256": "1b1919d0c2351d6a18e9079291454e34d3a77e349274689999c9d4d0c4be1db5"
+    },
+    {
+      "path": "figures/result_q1_matlab_method_comparison.svg",
+      "bytes": 58768,
+      "sha256": "9dfd85ac6c6e615a76d938945b9eafbe1304233bb765c96055e1d8cd3f7c5901"
+    },
+    {
+      "path": "figures/result_q1_method_comparison.png",
+      "bytes": 103881,
+      "sha256": "545e739bdc5de832a2e600c6cd76a368ceb26364c8a36e0a1cc45f9803bcbc30"
+    },
+    {
+      "path": "figures/result_q1_method_comparison.svg",
+      "bytes": 30726,
+      "sha256": "3d3c05d67b50e33c05d21fb1a07aa92fdf888b946384d5d2b5c0b3de644de518"
+    },
+    {
+      "path": "figures/result_q1_reserve_sensitivity.png",
+      "bytes": 155405,
+      "sha256": "e8bea38af6b468ca47b2febdfc95e20ac43371729ac4fb59d5627f1a052cf3d8"
+    },
+    {
+      "path": "figures/result_q1_reserve_sensitivity.svg",
+      "bytes": 35587,
+      "sha256": "da89cbd8016bbd405cae35fb41fc9e8aa342001c6669d7e96583ede7e25e1a99"
+    },
+    {
+      "path": "figures/result_q1_safe_payload_heatmap.png",
+      "bytes": 147599,
+      "sha256": "91d4a0f5ae497b48e4f687c1d68ff6775ae964e9f7ef9a16bac6f4daea087e4e"
+    },
+    {
+      "path": "figures/result_q1_safe_payload_heatmap.svg",
+      "bytes": 41732,
+      "sha256": "33191a31d45647150e67a60189c1c15532ccaf74ce94175d1e7d35b6366fd649"
+    },
+    {
+      "path": "matlab_q1_exact/README.md",
+      "bytes": 1477,
+      "sha256": "3d12d83fb33b09d79b3f7bff9fef321f5da111062a434b4beb97e256bc9de950"
+    },
+    {
+      "path": "matlab_q1_exact/common/flight_energy_model.m",
+      "bytes": 466,
+      "sha256": "0d356ca2d6ae87e90de058d0f7e0c662f0df5c2f359ea59549582d1bcf80a009"
+    },
+    {
+      "path": "matlab_q1_exact/common/flight_time_model.m",
+      "bytes": 188,
+      "sha256": "e475efa64d1e8e7294d93a792d7a100a5beb27afe6536a0c6e3afb3c96ab57d7"
+    },
+    {
+      "path": "matlab_q1_exact/common/load_dem.m",
+      "bytes": 676,
+      "sha256": "4596127c01e861b1a5f4fcc44497f332222fc856d72bdbb74389e1c398d25fc5"
+    },
+    {
+      "path": "matlab_q1_exact/common/load_problem_data.m",
+      "bytes": 1753,
+      "sha256": "f31b5bc81ef3f6afa50d430e52b15d50d12b0bc2de4adc91e080e41098544e25"
+    },
+    {
+      "path": "matlab_q1_exact/common/physical_constants.m",
+      "bytes": 224,
+      "sha256": "cf4a57012af2eff664fa7141c4dae4c83a774a975f1ea11b3d3b898527084b2a"
+    },
+    {
+      "path": "matlab_q1_exact/common/terrain_profile.m",
+      "bytes": 1655,
+      "sha256": "f667f3554a407e49970ce6bb15a9466b0c6fa25038eb6b79a0fcc05633152398"
+    },
+    {
+      "path": "matlab_q1_exact/common/validate_physics.m",
+      "bytes": 632,
+      "sha256": "fac7be161ee72a4f4766c490bf8de572b2a3639af8a72fbaba886f54625003fe"
+    },
+    {
+      "path": "matlab_q1_exact/q1/baseline_batching.m",
+      "bytes": 719,
+      "sha256": "3d9e5e8f99c482fa0dafbd99b80ea9a79fa37096e77129d44d13965738f3c726"
+    },
+    {
+      "path": "matlab_q1_exact/q1/compare_objectives.m",
+      "bytes": 2825,
+      "sha256": "01aa173d44f639829e0365cee01e15d78e5f59b0b4226fc89817eac67ee48181"
+    },
+    {
+      "path": "matlab_q1_exact/q1/enumerate_patterns.m",
+      "bytes": 911,
+      "sha256": "abf9e8185b4dbe84c9f2f69b114be0d2be203b08c83967c4727381c439e06135"
+    },
+    {
+      "path": "matlab_q1_exact/q1/evaluate_q1_solution.m",
+      "bytes": 2004,
+      "sha256": "ac8789d5141c180071ed512f4d936594182525a310ab4dd9d8c3963963c200d1"
+    },
+    {
+      "path": "matlab_q1_exact/q1/export_q1.m",
+      "bytes": 1687,
+      "sha256": "759d5565d6de4822315621210429d1a0819dcc4502ff0350a758d876499c5710"
+    },
+    {
+      "path": "matlab_q1_exact/q1/finalize_q1_report.m",
+      "bytes": 1914,
+      "sha256": "7e890a7946eaf36ca3eca065dc689c2894efa28813766c2a311da0b435695b55"
+    },
+    {
+      "path": "matlab_q1_exact/q1/main_q1.m",
+      "bytes": 2379,
+      "sha256": "03ba53dba93b7f9e7be03a5be617e7c8587bcc575fb85973af746dab73510c58"
+    },
+    {
+      "path": "matlab_q1_exact/q1/make_manifest.m",
+      "bytes": 1595,
+      "sha256": "a89f2720556d5ceee21ca3000786e27aeec089dcfa956a7f2bee9795582d9426"
+    },
+    {
+      "path": "matlab_q1_exact/q1/plot_q1_results.m",
+      "bytes": 8242,
+      "sha256": "ee8e9fc6860c17d7fabf76c346b7ad9c3b226d2f92077909c2bbc19ad3bb3b2b"
+    },
+    {
+      "path": "matlab_q1_exact/q1/render_existing.m",
+      "bytes": 342,
+      "sha256": "e249f3b855d5887ee518d84af4c93a675f824b8fa36bf79f06734f2899140f16"
+    },
+    {
+      "path": "matlab_q1_exact/q1/sensitivity_q1.m",
+      "bytes": 872,
+      "sha256": "26ba0e6a4932d82be6ebb88481d54547b640adb132d030aa4c8a788f26d92b48"
+    },
+    {
+      "path": "matlab_q1_exact/q1/solve_batching.m",
+      "bytes": 1267,
+      "sha256": "ddec6dd7b4a6c896649034df9068db611214ddf4cae1f3ce57a0c8c1f9e8af7e"
+    },
+    {
+      "path": "matlab_q1_exact/q1/solve_max_payload.m",
+      "bytes": 1137,
+      "sha256": "d1f0861f9eedb0394967bd1d7cea5f2ad856bfc17974e73572fce5d7ada76984"
+    },
+    {
+      "path": "matlab_q1_exact/q1/test_boundaries.m",
+      "bytes": 983,
+      "sha256": "15b9128a13050839e27a17ff22d06b2f3ff718cf3f7503c0d8e94c4b2b752cc7"
+    },
+    {
+      "path": "matlab_q1_exact/q1/test_svg_export.m",
+      "bytes": 343,
+      "sha256": "74649e044d3898c4c54de80c88aa0bede74b4df227408dc4c680e3b9ebd9087a"
+    },
+    {
+      "path": "matlab_q1_exact/q1/test_validator.m",
+      "bytes": 807,
+      "sha256": "74961865aa6965feaa18d9c8cddd700a77cb9c70db7a0301bef2c8683c06368a"
+    },
+    {
+      "path": "matlab_q1_exact/q1/validate_q1_solution.m",
+      "bytes": 2201,
+      "sha256": "aec22cf5d75a09b4ea63389b8ee05b1befd61d8036d1cf998c9787ac105334bb"
+    },
+    {
+      "path": "matlab_q1_exact/q1/verify_milp.m",
+      "bytes": 1208,
+      "sha256": "cb65d70e5cfa71086eb9985e443cc181434a52c15ffc5560be6a9be533534100"
+    },
+    {
+      "path": "matlab_q1_exact/run_q1.ps1",
+      "bytes": 1794,
+      "sha256": "79524488c87916f0395503ddd091082ec060f8e876757b20b66a493cfa8bba6e"
+    },
+    {
+      "path": "matlab_q1_exact/utils/apply_publication_style.m",
+      "bytes": 2303,
+      "sha256": "4829dc0a7d1a67c8875f0dda514f647158c6cf0fe6fb8eeb9ccb9f9f53d5fa65"
+    },
+    {
+      "path": "matlab_q1_exact/utils/audit_publication_figure.m",
+      "bytes": 3628,
+      "sha256": "c3363a6cab172ee8a764b3f2c7d765ad9ec1e3d8afcd3e3c7de42e4ba17a503b"
+    },
+    {
+      "path": "matlab_q1_exact/utils/check_matlab_env.m",
+      "bytes": 1349,
+      "sha256": "5be4117dd1b6b72b0eff51ae9d4548628c7a6cc51f1b33f74b07ebd923e5af13"
+    },
+    {
+      "path": "matlab_q1_exact/utils/export_editable_svg.m",
+      "bytes": 6170,
+      "sha256": "4517a0f4f317b9d42c4a8b5f005fcd232009eaa47fbca5eb46fc67d897e42844"
+    },
+    {
+      "path": "matlab_q1_exact/utils/export_publication_figure.m",
+      "bytes": 1742,
+      "sha256": "b3196d53633249971a17d43cda225e45c44d3d97918c48d68d9f2bb2fd0e876f"
+    },
+    {
+      "path": "paper/.gitkeep",
+      "bytes": 49,
+      "sha256": "276dd4fafcd95744a68cc89c251fd10a3eb5b257df85d4c7d511ef4e4aa4ab58"
+    },
+    {
+      "path": "results/.gitkeep",
+      "bytes": 51,
+      "sha256": "c9e750e82c75f059319bbdaf62ebafe89915ff17ced31de011508179b2c70709"
+    },
+    {
+      "path": "results/matlab_q1_advantage.csv",
+      "bytes": 287,
+      "sha256": "a0458ce3a300ebabde1dd9113833a38ae485909802a767c01e8d06cbccda1fae"
+    },
+    {
+      "path": "results/matlab_q1_method_comparison.csv",
+      "bytes": 580,
+      "sha256": "787abd6210fb73b971523d172c6412b5fffa52998887b5191c3822734cb6bc9a"
+    },
+    {
+      "path": "results/matlab_q1_reference_gap.csv",
+      "bytes": 267,
+      "sha256": "bacfd3c5508e2c8afd4606e3c149ff9e0d97833be1c3e6e89d50c48a00b2779a"
+    },
+    {
+      "path": "results/matlab_q1_verification.json",
+      "bytes": 1957,
+      "sha256": "8b09c78d51a974a1273bc278364442b8c3a7262b72117bcf6d6ea70c425718c4"
+    },
+    {
+      "path": "results/q1_exact_dp/D题_问题一_结果提交.xlsx",
+      "bytes": 23248,
+      "sha256": "ad7e23f03b14f498fb72b4b89d9ffd73baedd916de5fb1ad9a1be3af526cfc4c"
+    },
+    {
+      "path": "results/q1_exact_dp/M1_receipt.md",
+      "bytes": 685,
+      "sha256": "fb1056c07c46329fecc04b89f459f9fc88bc599ebdececd9ca6b8536815a3f7d"
+    },
+    {
+      "path": "results/q1_exact_dp/P1_receipt.md",
+      "bytes": 701,
+      "sha256": "d62d6dfc673ccd59900c065c592de74961772792adceb0e062ab2c46199912df"
+    },
+    {
+      "path": "results/q1_exact_dp/P2_receipt.md",
+      "bytes": 1284,
+      "sha256": "e2d913f4dee14b859c3c35f39b45ab1e62e10867e951c175f5f4e593573df3b6"
+    },
+    {
+      "path": "results/q1_exact_dp/Q1_结果提交.xlsx",
+      "bytes": 23248,
+      "sha256": "ad7e23f03b14f498fb72b4b89d9ffd73baedd916de5fb1ad9a1be3af526cfc4c"
+    },
+    {
+      "path": "results/q1_exact_dp/alternative_E-N-T.csv",
+      "bytes": 5027,
+      "sha256": "28d5bfce7be60725dec60bb88a08313a74773fbeb1262949797afb63f9776349"
+    },
+    {
+      "path": "results/q1_exact_dp/alternative_E-T-N.csv",
+      "bytes": 5027,
+      "sha256": "28d5bfce7be60725dec60bb88a08313a74773fbeb1262949797afb63f9776349"
+    },
+    {
+      "path": "results/q1_exact_dp/alternative_N-E-T.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/alternative_N-T-E.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/alternative_T-E-N.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/alternative_T-N-E.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/attachment_audit.json",
+      "bytes": 37591,
+      "sha256": "b20aca98a95b16d00f16fe5af00a3aa26a4030b5dbe21aa5aa1b933745426d77"
+    },
+    {
+      "path": "results/q1_exact_dp/baseline_sorties.csv",
+      "bytes": 4997,
+      "sha256": "72f7e6e6a6f05926db74f59d91d49150f6e24d2db7ad9c1f052f81280e25f6e8"
+    },
+    {
+      "path": "results/q1_exact_dp/box_inventory.csv",
+      "bytes": 3132,
+      "sha256": "ef647f6972c0eb7e09a2837b9b1ad9c2dcde87f8ad06a70832062d41ca46b00d"
+    },
+    {
+      "path": "results/q1_exact_dp/data_profile.json",
+      "bytes": 2755,
+      "sha256": "e22b8ccaa30ed0fee35b12d00b042cf5231a44f424f7576e120af70b3c609ab4"
+    },
+    {
+      "path": "results/q1_exact_dp/figure_audit_latest.json",
+      "bytes": 5666,
+      "sha256": "da08cc9ed09ce7d79ee2ac19b6abadeccb61627a61ae53166c8988bce019582c"
+    },
+    {
+      "path": "results/q1_exact_dp/figure_contract.md",
+      "bytes": 3251,
+      "sha256": "47cdd3ed62f0c3e64b929031101cb8ce32fdef845d57b27a80900f86e7775521"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/flow_q1_model_grayscale.png",
+      "bytes": 52139,
+      "sha256": "4237074eb697017b0fe868a84491d304412ddefd67b396a2dbcf20621f08a2ae"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_certificates_grayscale.png",
+      "bytes": 31375,
+      "sha256": "ab4c74558ed07eb6ab156307a90813aa761e608f5f74930826288202afc54a99"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_energy_payload_grayscale.png",
+      "bytes": 27790,
+      "sha256": "c93d45d4464620f583aad820fabf92418e578b52bf90a09372898412000c5afa"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_profiles_grayscale.png",
+      "bytes": 43064,
+      "sha256": "123b04d2c0f6534493b11b4fa1d01719b1390fdef3c5e3c839055c0dae0941f7"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/process_q1_tradeoff_grayscale.png",
+      "bytes": 30996,
+      "sha256": "213f90a8be942a5a01339a87b31c4d9f264414a71647d491c03cc5e0ef0cee2d"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/raw_q1_box_distribution_grayscale.png",
+      "bytes": 15851,
+      "sha256": "038de4320d02397111f08f3553f7b5c00cc9ad25c8fa078646c69107403ee72a"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/raw_q1_demand_grayscale.png",
+      "bytes": 26995,
+      "sha256": "9505fba60b098431cb198464d6006372ff4cdffc5a4eb372693c6976f6076160"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/raw_q1_map_grayscale.png",
+      "bytes": 416175,
+      "sha256": "57d056e0644370a5c7dfb4d5284e2f58c3dd688da9a1c1d2349d8ce0ca25698f"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_energy_grayscale.png",
+      "bytes": 29128,
+      "sha256": "322bba085c8c637377e03a0d543b8329a677455424bad665fa2ed0b166f2c950"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_payload_grayscale.png",
+      "bytes": 34494,
+      "sha256": "44f71d99054f3577c6d5101c782f74cd1a8b33b5e58a4bac0043d288d767e283"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_reserve_metrics_grayscale.png",
+      "bytes": 59096,
+      "sha256": "32a784e74bd4094b237b6df4f702d5f093f1458ca04ceaca83090202f9f28d0b"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_reserve_payload_grayscale.png",
+      "bytes": 38239,
+      "sha256": "594940ccf593f9ebf25a4fa2381c1783dd5655b4808ae95b13eee005b51f0962"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_sorties_grayscale.png",
+      "bytes": 23989,
+      "sha256": "53b5fc5c6cfe2115c726a6b6b39d2b8623925e3bd36f3cb7d0bb8e685742896d"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_time_grayscale.png",
+      "bytes": 28995,
+      "sha256": "fc3d9d426de470a06b52c15d54cbd41c53f9ee9e9a14f3ea867986a6778222db"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/_qa/result_q1_utilization_grayscale.png",
+      "bytes": 25965,
+      "sha256": "ed8c5e1b16631e4082274ca553f842a9d2b6087515061d4aef45a47e8461caa8"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/flow_overall_model.png",
+      "bytes": 110999,
+      "sha256": "0897283603b4506cfad70a89a3baf990bc54385702320e0449efe51f06d6557d"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/flow_overall_model.svg",
+      "bytes": 12310,
+      "sha256": "3e28a06164010d4038a4c7701a3549489f4a27e113972b7a3096b012ce1aa3d8"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/flow_q1_model.png",
+      "bytes": 110999,
+      "sha256": "0897283603b4506cfad70a89a3baf990bc54385702320e0449efe51f06d6557d"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/flow_q1_model.svg",
+      "bytes": 12310,
+      "sha256": "3e28a06164010d4038a4c7701a3549489f4a27e113972b7a3096b012ce1aa3d8"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_certificates.png",
+      "bytes": 62673,
+      "sha256": "d5075a4a61b2b6a50d7c7bd91a61ee065893f5e86e2945a70a74379d591f7ee2"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_certificates.svg",
+      "bytes": 11816,
+      "sha256": "418d14bc66e0497a249279a44f1fd3b829b40210701dda156cd6228fd93714c5"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_energy_payload.png",
+      "bytes": 55173,
+      "sha256": "789e2e97a52bfdb37ee3497482d9ab7f858db2f0f6d2b4aa0adb7ff679747695"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_energy_payload.svg",
+      "bytes": 20510,
+      "sha256": "dd911e0e0705d2cdb0ae393b3b876da06330edd910090d02db43dad33ff9bc18"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_profiles.png",
+      "bytes": 84129,
+      "sha256": "eaab8d0f5f4c2daaa24b0a57afbd2b49c533e41d2ead84f229c417831f389360"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_profiles.svg",
+      "bytes": 175697,
+      "sha256": "a16241e71755f16acd72796adb45ddad7e451fd9bfc918008fa50c594d7dfe76"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_tradeoff.png",
+      "bytes": 64206,
+      "sha256": "8b466d69630d575e37ef86f8cafa7c218934da8eb270c3244135ae570889aacd"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/process_q1_tradeoff.svg",
+      "bytes": 10129,
+      "sha256": "ec664d70606213be932f3a18f5b421be4751b9083a25c8f71020666a8702b299"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_box_distribution.png",
+      "bytes": 32743,
+      "sha256": "25e0c502761e15ade201cf70d019b2538f0c4d05a6f9e7d33723f4b582e02675"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_box_distribution.svg",
+      "bytes": 8215,
+      "sha256": "4aac3f029c479f4db78ea16f06e919f925e76690dbc16dd1547cf395a0892503"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_demand.png",
+      "bytes": 55340,
+      "sha256": "419b6f860a26c6f1611ae5b91b981f14706f401d6648b5798ebfa80477cf3bf7"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_demand.svg",
+      "bytes": 10674,
+      "sha256": "e950a3502596e424626b060e87e9b272dddaaefed9815f1b28df559fa2c9db21"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_map.png",
+      "bytes": 638309,
+      "sha256": "9bfc9a76bd51cd1e5b66f6f2e2db2a00f473caede36c56774fd0d98f6840e07a"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/raw_q1_map.svg",
+      "bytes": 3526459,
+      "sha256": "f10910cb544ded24660c63521bbf4e2748c7822617dc564ae14b8f9019c2202e"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_energy.png",
+      "bytes": 60945,
+      "sha256": "86e8bf45ce6c988d61a6ba3784b5accb410a7dbb732c07ae2aab40b945a6735c"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_energy.svg",
+      "bytes": 19488,
+      "sha256": "5d665615e153a442a6499e5fadf2cd66081cc22cc666b9daf5adfa6496ab3970"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_payload.png",
+      "bytes": 69807,
+      "sha256": "2adc079f96494ee97c44e894404a2928929297eb3636634d52829d13c2e64283"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_payload.svg",
+      "bytes": 15818,
+      "sha256": "07c61b71926bbc8c1fba251233b7d4c6cd1895100e7ca6b3e4ada91ede085f86"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_reserve_metrics.png",
+      "bytes": 120454,
+      "sha256": "645934ab407e0e0c36cf3a6221e615b626177cafb767a56af5a54df4a78f6d13"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_reserve_metrics.svg",
+      "bytes": 43752,
+      "sha256": "ca177b250634b5c00b9836ad86f275c55dc5e548ad65fb55f87e38fe4f787110"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_reserve_payload.png",
+      "bytes": 78662,
+      "sha256": "2f14f4c66cf44869569f8aa07f0fcefc52d6100d8a5fe64ca493d6a1e1c442af"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_reserve_payload.svg",
+      "bytes": 88052,
+      "sha256": "88cf764592de986f0cbab570e89e018168fef036ae8ab0d25d1d3a7080abd8dd"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_sorties.png",
+      "bytes": 49650,
+      "sha256": "1ae92fd37260918146339dc79b52ec7d507e1e6bdcf896a78cb82c869aee2478"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_sorties.svg",
+      "bytes": 12388,
+      "sha256": "ac7269223f0ae4bff7d3a0d6e4f06bfe4f00269e46bdd5cdc9ca4998553c89c0"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_time.png",
+      "bytes": 60141,
+      "sha256": "a2f01e719649f8be5ff8437474763ba62f20c37953a3336e476cddb9299c24a0"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_time.svg",
+      "bytes": 18782,
+      "sha256": "12f339bafaaccc7a7e40c92e820339cd498af9e1e508ec5a9db542143bd8acc7"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_utilization.png",
+      "bytes": 49879,
+      "sha256": "d95538fddfacec4425bf1f2ad41ce7bc239b541b82a725279c9a14846e8c9ce6"
+    },
+    {
+      "path": "results/q1_exact_dp/figures/result_q1_utilization.svg",
+      "bytes": 12208,
+      "sha256": "d4337c8948ed03360d33440499185d094c1137d5028f4f0363a3982f7e6e041d"
+    },
+    {
+      "path": "results/q1_exact_dp/input_checks.json",
+      "bytes": 348,
+      "sha256": "be3fb0465ab013781bc6f0b6254fbc5f635ae1ce8f5aa6333adf52fd83a2f98e"
+    },
+    {
+      "path": "results/q1_exact_dp/input_hashes.json",
+      "bytes": 3344,
+      "sha256": "8467c0279bee024ab76a935a042f893b9c0d9e0ce648ee470139e43b0cac5a0f"
+    },
+    {
+      "path": "results/q1_exact_dp/max_safe_payload.csv",
+      "bytes": 6914,
+      "sha256": "e0c29c1af14369d40061e2722407044dd24456aee7044e45fd4fa489b03418ad"
+    },
+    {
+      "path": "results/q1_exact_dp/objective_comparison.csv",
+      "bytes": 2103,
+      "sha256": "5678be0ada1fbd1adf1c9ee16f7401b8829fd9af565d2b63558835d794106c2c"
+    },
+    {
+      "path": "results/q1_exact_dp/old_geometry_inference.csv",
+      "bytes": 1658,
+      "sha256": "9c757e0c7a1d8d3da758ffc88410683c6f444c4be227bbd11668f02dac0752f6"
+    },
+    {
+      "path": "results/q1_exact_dp/old_screenshot_transcription.csv",
+      "bytes": 679,
+      "sha256": "cc39e0d8d5dbad48fde0e6460b6401777d3164dfef147de66717ede77aab954e"
+    },
+    {
+      "path": "results/q1_exact_dp/optimality_certificates.csv",
+      "bytes": 2092,
+      "sha256": "789aa56a3cbf6fb1d10eecd7e6f2e5864a0dc61cdc196d906a84d12872ce4e3b"
+    },
+    {
+      "path": "results/q1_exact_dp/overall_metrics.json",
+      "bytes": 253,
+      "sha256": "58e3e623fae87306fc43405065bbeee281db665fec458f4a2d4102db9b796ddb"
+    },
+    {
+      "path": "results/q1_exact_dp/physics_checks.json",
+      "bytes": 151,
+      "sha256": "0d79901e740afa77ff0c65a946e54285676c1ed5a12443146245c643ed3cf9c2"
+    },
+    {
+      "path": "results/q1_exact_dp/q1_solution.mat",
+      "bytes": 1053594,
+      "sha256": "f71565b1134d499a39973a373ee03edc0f5ef36d0a1cf33e5f72fd670ce66a18"
+    },
+    {
+      "path": "results/q1_exact_dp/reference/pre_edit_q1.png",
+      "bytes": 194026,
+      "sha256": "0449b16ee3fa6728221b314f59da3a4c07177c1c2b62c43f2449e27ae5d765bd"
+    },
+    {
+      "path": "results/q1_exact_dp/reference_check.md",
+      "bytes": 2354,
+      "sha256": "931ec1cd5f7041c4aef23e817f77e598c316f991f76e860772099d9f5328e6f5"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_00_sorties.csv",
+      "bytes": 4700,
+      "sha256": "31846c45ea36a9cd49c503e84d015c3dfe00f81e9ea80244509965e2d44c8092"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_05_sorties.csv",
+      "bytes": 4725,
+      "sha256": "a84f387864392b50c588a8faaad2d8d181fa0c75d360cd27248dcbe2da6e9c5e"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_10_sorties.csv",
+      "bytes": 4781,
+      "sha256": "cdb992e0bfb8b1bcc572d5a6fb484780fbc5600a4bb46e40dfcc6575102f9148"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_15_sorties.csv",
+      "bytes": 4780,
+      "sha256": "5b6e45a3955fe18c4a54b8295a3d9eb77e3104d6f84618a452d6918ef79f9898"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_20_sorties.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_25_sorties.csv",
+      "bytes": 5027,
+      "sha256": "75061aacd1dccf7032808710bc46efd7159eeec9492321594af868473dc4ebe4"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_30_sorties.csv",
+      "bytes": 5220,
+      "sha256": "6859d87c69198027b0bb581e69303ef8e9c2391644adf080bc5c7168b7b048ef"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_35_sorties.csv",
+      "bytes": 6365,
+      "sha256": "a12c6f371c33ba7d420d5ddb932811a578ff37b3f9043d1de336db80288d58d8"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_payloads.csv",
+      "bytes": 76429,
+      "sha256": "b14f6a310eb990cd3333ad1a5c041525206151caba79f321be6c362db8a8aa0a"
+    },
+    {
+      "path": "results/q1_exact_dp/reserve_sensitivity.csv",
+      "bytes": 659,
+      "sha256": "a7570996e056aa78ee52b8d6cdbd8bb577ef295f4832d4ac48db161db7f7bd7a"
+    },
+    {
+      "path": "results/q1_exact_dp/run_status_full.txt",
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "path": "results/q1_exact_dp/run_status_full.txt.previous",
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "path": "results/q1_exact_dp/service_summary.csv",
+      "bytes": 1077,
+      "sha256": "496426f7cf6d2783d17f635f7981cced801c3168f56ad732b125db3a4cdb061b"
+    },
+    {
+      "path": "results/q1_exact_dp/sortie_batches.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/terrain_audit.csv",
+      "bytes": 2072,
+      "sha256": "a1be0801d71a976b68a9c2ef683808d36d8ac6b6d13dbed73b3fd804e4a7f770"
+    },
+    {
+      "path": "results/q1_exact_dp/validation.json",
+      "bytes": 176,
+      "sha256": "814a5a095d4740f0e05af9847c8ca00ea5a1915c7f09dc00d3887d4692615142"
+    },
+    {
+      "path": "results/q1_exact_dp/validator_mutations.csv",
+      "bytes": 152,
+      "sha256": "e9dd46d7624d5d6f64ee2557f11cccaae193036daf965320d2344d0b8e02cd1f"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_N15_E25_T60_sorties.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_N15_E60_T25_sorties.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_N45_E30_T25_sorties.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_N60_E25_T15_sorties.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_balanced_sorties.csv",
+      "bytes": 4781,
+      "sha256": "ea2326ad525d2f659a08cbd6e6b899d9ee2026449c0e6dbf3ac8a585f7b8a8bd"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_comparison.csv",
+      "bytes": 1292,
+      "sha256": "d9100dfee6b23130eeb0c79c368b1a9e3b021410a2e3d674f62f62601e1867ac"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_energy_dominant_N01_E98_T01_sorties.csv",
+      "bytes": 5027,
+      "sha256": "28d5bfce7be60725dec60bb88a08313a74773fbeb1262949797afb63f9776349"
+    },
+    {
+      "path": "results/q1_exact_dp/weighted_joint_tradeoff.md",
+      "bytes": 1099,
+      "sha256": "e0545c2736f950c141af6a482ca0ec71f84702696c9652d654a8eeb18b70fa40"
+    },
+    {
+      "path": "results/q1_exact_dp/复现清单.json",
+      "bytes": 19541,
+      "sha256": "a8d71dd268ea532e30f341eaf870cc7b14dbf16b303063deb494898518a9e93c"
+    },
+    {
+      "path": "results/q1_exact_dp/文档线索索引.md",
+      "bytes": 1722,
+      "sha256": "eca4c3a619eabdd032dc6c9cc38e3951e87d032c1e8611516e920012de486755"
+    },
+    {
+      "path": "results/q1_余量敏感性.json",
+      "bytes": 8543,
+      "sha256": "df12cdb670261c9b5dbb3787dbcc9b3aadb465fbf99932ffcdd02e3a12a34232"
+    },
+    {
+      "path": "results/q1_安全载荷.csv",
+      "bytes": 4085,
+      "sha256": "e52a1305d6239b57a3912f525b3a7a78c15a42287ef7b050088799d8c6335a23"
+    },
+    {
+      "path": "results/q1_对照方案_统一模型.csv",
+      "bytes": 8350,
+      "sha256": "4e1bfa376922dd729cd913d1684acdfd72fc2a36f5b1da5e0ad67e6f3d17bda6"
+    },
+    {
+      "path": "results/q1_对照方案_统一模型.json",
+      "bytes": 26146,
+      "sha256": "614c1c9a48b2f7f4e9d9d79a1e3c31b4d01b491de6f37c1e0cf57e41dc57de39"
+    },
+    {
+      "path": "results/q1_方法比较.csv",
+      "bytes": 328,
+      "sha256": "d8795ad82485c8b832d65831a8d6ee60f9424beb1b01561571f9f1e4a5e70237"
+    },
+    {
+      "path": "results/q1_算法复现清单.json",
+      "bytes": 2835,
+      "sha256": "9d97fcea2fb1dee16c40d4bc5325d4d80900cc08c87719531fad6083005306b3"
+    },
+    {
+      "path": "results/q1_约束验证.json",
+      "bytes": 2724,
+      "sha256": "fba8fe3b1ee452e71fe6f314def149482e63f47c927251c568a806d81ac2292b"
+    },
+    {
+      "path": "results/q1_组批方案.csv",
+      "bytes": 3027,
+      "sha256": "a3223708b970baea4a98a1bb765b914aa58edbed52dbbff7ddadd268b6fa7499"
+    },
+    {
+      "path": "results/q1_路线几何.csv",
+      "bytes": 3024,
+      "sha256": "2f23c9ec5d23dd6f4a71302713aa48a783dd4df356089e8e344a28756d0deed4"
+    },
+    {
+      "path": "results/复现清单.json",
+      "bytes": 4320,
+      "sha256": "e196b15953fc0ca9bc10b860858103c99f62bb83173e333f66dd05d5df8165f7"
+    },
+    {
+      "path": "results/结果提交模板_Q1_已填写.xlsx",
+      "bytes": 31023,
+      "sha256": "361ed563692d036186da730be378fd154c3e3667a66fbfaf89ffb1f622b09407"
+    },
+    {
+      "path": "results/结果提交模板_Q1_已填写_含作业时间.xlsx",
+      "bytes": 29508,
+      "sha256": "c036bdd5da53c0267f0d28e006b19912ee6814923f6cc7a38f1545f4a4417035"
+    },
+    {
+      "path": "results/结果提交模板_Q1_算法方案_含作业时间.xlsx",
+      "bytes": 38705,
+      "sha256": "853f8ee3c4e72523575555db16e73c9633335734c07c83b8b1ba0b05b1e08ace"
+    },
+    {
+      "path": "results/运行状态.json",
+      "bytes": 1821,
+      "sha256": "f4813db38a49e9b2d1d30d577637666aeec3dba70bf6c6662b2b898df35670fd"
+    },
+    {
+      "path": "results/问题1_对照方案_统一模型.xlsx",
+      "bytes": 30148,
+      "sha256": "00d263b6fe80513bd65abb7feae4e24e9add3123d0b268367daae8da1cefb21d"
+    },
+    {
+      "path": "results/问题1_对照方案_统一模型_含作业时间.xlsx",
+      "bytes": 30813,
+      "sha256": "0a906c48e47bf6237addd71cc076e30891e02edf2e4270c2a38d8013bdca31aa"
+    },
+    {
+      "path": "src/.gitkeep",
+      "bytes": 50,
+      "sha256": "778038e6f27012c11fee6b09237db872e8f87dd0223d3afaac1adf5bcfb0db18"
+    },
+    {
+      "path": "src/__init__.py",
+      "bytes": 62,
+      "sha256": "7b730a88963e1c9f2d3e1769ac58bf4c8b4870e21dd47770804ce16c495a3fb6"
+    },
+    {
+      "path": "src/batching.py",
+      "bytes": 13624,
+      "sha256": "31c1de862bbd1da4f641440f2f2de2a125032e9766ba2a0b7a0b1061cb1cc2f1"
+    },
+    {
+      "path": "src/data_loader.py",
+      "bytes": 20094,
+      "sha256": "6019703bf22d254e34b95298263aa19d9d79182a71f30c70c8a4762534758bb0"
+    },
+    {
+      "path": "src/energy_model.py",
+      "bytes": 6530,
+      "sha256": "6e9c1440d95b055b66c2a7a03fe9c43902aff43068cd7832cbb18774984eb365"
+    },
+    {
+      "path": "src/exceptions.py",
+      "bytes": 552,
+      "sha256": "81bb38846e8038afae942966ed891633f0fb909690f3d7200fc1421dd7dff2a5"
+    },
+    {
+      "path": "src/fill_q1_excel.py",
+      "bytes": 19390,
+      "sha256": "4980e3ef13cbc9662b4bab4904d0592ab0910da887a8c6a6531c963a1a91f321"
+    },
+    {
+      "path": "src/make_q1_figures.py",
+      "bytes": 15563,
+      "sha256": "518d33f94f3c043318198fa7b0e0a7cd88bc0d2ac36d617ddc734506c144e9a9"
+    },
+    {
+      "path": "src/matlab_q1_batch.m",
+      "bytes": 1047,
+      "sha256": "1a0824154a6e0f9fc0cfea75ec25f1af4fafe1f219fd5ac2a7f864bef9aac7cb"
+    },
+    {
+      "path": "src/matlab_validate_q1.m",
+      "bytes": 18994,
+      "sha256": "f8d01a167d7bd92b0e9e75b0a4d9344f72dc85f44ecf8c21c7b15d734c10b892"
+    },
+    {
+      "path": "src/milp_solver.py",
+      "bytes": 6318,
+      "sha256": "7aad920dbfad004e96ab6fa8f3b09d1cea8c0bc35c7202674f550a355de94693"
+    },
+    {
+      "path": "src/models.py",
+      "bytes": 3150,
+      "sha256": "ce7e5cc82fa3fdae39f3f7667c97a3492a2fababc3a5f900719e410fa74af0bd"
+    },
+    {
+      "path": "src/optimization.py",
+      "bytes": 4874,
+      "sha256": "8a203b76c4fca74fa2f29002485d36b8bddd7b09c3df1899df71fe3090639010"
+    },
+    {
+      "path": "src/payload_solver.py",
+      "bytes": 5407,
+      "sha256": "23afa3cfddba2800ef6ef9c65793dc3843b47bbe0da17ca44b47e6f521b374fd"
+    },
+    {
+      "path": "src/problem_energy_provider.py",
+      "bytes": 3875,
+      "sha256": "14c397cb58a924ffd91010d24e6615cfbc6cf387306231500a19a04e068cdc8b"
+    },
+    {
+      "path": "src/recompute_q1_solution.py",
+      "bytes": 30698,
+      "sha256": "3c112dfe1692575c44e1676d7a98e8a73429e85c6b20d87777643173cc777960"
+    },
+    {
+      "path": "src/replace_q1_submission.py",
+      "bytes": 7634,
+      "sha256": "61caa7db7fdea3491e6d49574b29f464e603dc2553d020021e7ac1414c633c95"
+    },
+    {
+      "path": "src/run_q1.py",
+      "bytes": 12120,
+      "sha256": "8b031a0f0acbbac59dd77d5afaa69f6480f50b6421385f9cb61b2e76dfffcf10"
+    },
+    {
+      "path": "src/self_test_q1.py",
+      "bytes": 2797,
+      "sha256": "b97e086dbe8f2eb29d74e75a2725c8bc064f0b016521a9cf050c550ed4343369"
+    },
+    {
+      "path": "src/sensitivity.py",
+      "bytes": 2816,
+      "sha256": "af46d63856f4a8264f0b8c6aa48107c334ec297370ce97d12905e38e0a377e45"
+    },
+    {
+      "path": "src/terrain.py",
+      "bytes": 10578,
+      "sha256": "4074fd71c4bb5ffd68a63eadd178faf41a26e30b7956c919c351a5bb106d2f0c"
+    },
+    {
+      "path": "src/update_q1_workbook.mjs",
+      "bytes": 2635,
+      "sha256": "b467ab79f4a678ac70c40162aacc1d2a311362197e36d8b8d8a2bfbfad80ce81"
+    },
+    {
+      "path": "src/validation.py",
+      "bytes": 4303,
+      "sha256": "9907a5d4522e3a911c4cb2ca6fa55805cebf672a0472c24fecf15bfc9d206ef1"
+    },
+    {
+      "path": "utils/apply_publication_style.m",
+      "bytes": 2285,
+      "sha256": "0b829c059c69fdb6e7548bd056e35a6621c0602722e8fffb65f3c0f3b9fcdd51"
+    },
+    {
+      "path": "utils/audit_publication_figure.m",
+      "bytes": 3628,
+      "sha256": "c3363a6cab172ee8a764b3f2c7d765ad9ec1e3d8afcd3e3c7de42e4ba17a503b"
+    },
+    {
+      "path": "utils/check_matlab_env.m",
+      "bytes": 1349,
+      "sha256": "5be4117dd1b6b72b0eff51ae9d4548628c7a6cc51f1b33f74b07ebd923e5af13"
+    },
+    {
+      "path": "utils/export_publication_figure.m",
+      "bytes": 1642,
+      "sha256": "d2280d3d52a148bc3580521a1fba425b9bf2731d0e1646f2e32c15d90bce9ed4"
+    },
+    {
+      "path": "verify_snapshot.py",
+      "bytes": 2434,
+      "sha256": "4d7178b7dfb9452a7a27ec09bad7ab218da257376dd8c0d9d38a8a9e894b9050"
+    },
+    {
+      "path": "使用指南.md",
+      "bytes": 3506,
+      "sha256": "f8180ac6acd0f6946cc69f1c78668279312ba0c90191102f411ef8df45f55fd1"
+    },
+    {
+      "path": "术语表格.md",
+      "bytes": 255,
+      "sha256": "940bb94f3d2a549444be64ad90577fd6da818b9b3c0c7f32caa695e0b1717159"
+    },
+    {
+      "path": "题目分析报告.md",
+      "bytes": 267,
+      "sha256": "b90587804ed8576565a53c8f0136f67e298d45bc18204ccd95456018731dcc11"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "source": "results\\box_inventory.csv",
+  "n_rows": 80,
+  "n_cols": 5,
+  "columns": {
+    "id": {
+      "type": "unknown",
+      "n_total": 80,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "area": {
+      "type": "unknown",
+      "n_total": 80,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "category": {
+      "type": "unknown",
+      "n_total": 80,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "mass": {
+      "type": "ordinal",
+      "n_total": 80,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 80,
+      "n_unique": 4,
+      "categories": [
+        [
+          "14",
+          36
+        ],
+        [
+          "8",
+          19
+        ],
+        [
+          "3",
+          16
+        ],
+        [
+          "6",
+          9
+        ]
+      ],
+      "min_group_n": 9,
+      "max_group_n": 36,
+      "small_groups_flag": true
+    },
+    "volume": {
+      "type": "continuous",
+      "n_total": 80,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 80,
+      "mean": 0.0251375,
+      "median": 0.027,
+      "sd": 0.00704190665708433,
+      "min": 0.012,
+      "max": 0.035,
+      "skewness": -0.9653273677973887,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 25,
+      "outlier_lo": 0.0255,
+      "outlier_hi": 0.029500000000000002,
+      "needs_log_axis": "False"
+    }
+  },
+  "correlation": null,
+  "group_summary": {
+    "by": [
+      "area"
+    ],
+    "n_groups": 15,
+    "min_n_per_group": 3,
+    "max_n_per_group": 15,
+    "median_n_per_group": 5,
+    "small_groups_flag": true,
+    "tiny_groups_flag": false,
+    "per_group_counts": [
+      [
+        "S001",
+        15
+      ],
+      [
+        "S002",
+        8
+      ],
+      [
+        "S003",
+        8
+      ],
+      [
+        "S004",
+        6
+      ],
+      [
+        "S005",
+        6
+      ],
+      [
+        "S006",
+        6
+      ],
+      [
+        "S007",
+        5
+      ],
+      [
+        "S008",
+        5
+      ],
+      [
+        "S009",
+        3
+      ],
+      [
+        "S010",
+        3
+      ],
+      [
+        "S011",
+        3
+      ],
+      [
+        "S012",
+        3
+      ],
+      [
+        "S013",
+        3
+      ],
+      [
+        "S014",
+        3
+      ],
+      [
+        "S015",
+        3
+      ]
+    ]
+  },
+  "warnings": [
+    "列 'mass' 至少有一个类别 n<10 — 小样本必须展示原始数据点，不要只画均值柱状图。"
+  ],
+  "suggestions": [
+    "分类 vs 连续，小样本（每组 n<10）→ **箱线图/小提琴图 + stripplot 叠加原始点**；**避免**只画均值柱状图，会掩盖分布。"
+  ]
+}

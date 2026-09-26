@@ -24,6 +24,7 @@ else
  comparison=compare_objectives(D,P,C,out);writetable(comparison,fullfile(out,'objective_comparison.csv'));
  [sensitivity,sensPayload]=sensitivity_q1(D,P,out);writetable(sensitivity,fullfile(out,'reserve_sensitivity.csv'));writetable(sensPayload,fullfile(out,'reserve_payloads.csv'));
  save(fullfile(out,'q1_solution.mat'),'D','P','C','S','sorties','summary','metrics','payload','proof','validation','physics','comparison','sensitivity','sensPayload','boundaries');
+ finalize_q1_report(metrics,comparison,out);
  plot_q1_results(D,dem,P,payload,sorties,summary,proof,comparison,sensitivity,sensPayload);
  make_manifest(D,toc(t0),out);
 end

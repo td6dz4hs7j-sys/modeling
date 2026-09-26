@@ -1,0 +1,16 @@
+{
+  "dem_shape": [
+    1309,
+    1486
+  ],
+  "mat_equals_tiff": true,
+  "nodata_count": 0,
+  "elevation_range_m": [
+    41.68908,
+    1132.8561
+  ],
+  "box_rows_including_header": 81,
+  "first_box": "S001-MED-01",
+  "last_box": "S015-FOD-01",
+  "input_zip_sha256": "bbb4c17705b70b1ba365523ab189810305db86d6457aed5f4f5587274e4d07b4"
+}
