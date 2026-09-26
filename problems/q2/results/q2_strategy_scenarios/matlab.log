@@ -1,0 +1,25 @@
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+STRATEGY_FINAL sortie_priority N=22 Cmax=101.027192 E=67.136899 tested=1220 improved=0
+STRATEGY time_priority t=17.0 N=23 Cmax=96.270050 E=68.349631 score=-0.335231
+STRATEGY time_priority t=17.6 N=23 Cmax=95.611497 E=68.349631 score=-0.504154
+STRATEGY time_priority t=18.5 N=23 Cmax=95.611497 E=68.333491 score=-0.506211
+STRATEGY time_priority t=23.6 N=23 Cmax=95.611497 E=68.304475 score=-0.509909
+STRATEGY_FINAL time_priority N=23 Cmax=95.611497 E=68.304475 tested=1056 improved=4
+STRATEGY energy_priority t=2.3 N=23 Cmax=98.493148 E=65.887655 score=-0.400470
+STRATEGY energy_priority t=2.6 N=23 Cmax=98.493148 E=65.887451 score=-0.400543
+STRATEGY energy_priority t=3.2 N=23 Cmax=98.108989 E=65.887451 score=-0.430863
+STRATEGY energy_priority t=5.6 N=23 Cmax=98.108989 E=65.871312 score=-0.436622
+STRATEGY energy_priority t=8.4 N=23 Cmax=98.108989 E=65.826360 score=-0.452661
+STRATEGY energy_priority t=9.7 N=23 Cmax=98.108989 E=65.823323 score=-0.453745
+STRATEGY energy_priority t=16.6 N=23 Cmax=98.108989 E=65.823119 score=-0.453818
+STRATEGY_FINAL energy_priority N=23 Cmax=98.108989 E=65.823119 tested=1162 improved=7
+STRATEGY balanced t=0.2 N=23 Cmax=98.493148 E=65.826360 score=0.084599
+STRATEGY balanced t=3.4 N=23 Cmax=98.108989 E=65.871516 score=0.041739
+STRATEGY balanced t=7.7 N=23 Cmax=98.108989 E=65.826360 score=0.034066
+STRATEGY balanced t=26.3 N=23 Cmax=97.705872 E=65.872128 score=-0.011184
+STRATEGY balanced t=26.5 N=23 Cmax=97.705872 E=65.869091 score=-0.011700
+STRATEGY_FINAL balanced N=23 Cmax=97.705872 E=65.869091 tested=1111 improved=5
+Q2_STRATEGY_SCENARIOS PASS all=4

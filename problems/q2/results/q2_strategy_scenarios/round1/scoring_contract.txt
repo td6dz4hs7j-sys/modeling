@@ -1,0 +1,3 @@
+All four strategies used fresh Q2 data, parallel fixed-prep/load/charging, strict 80-box-on-time validator, same two PASS seeds, same 30.0-s search budget, same random-neighborhood algorithm, and each independently saved its best PASS plan.
+Score=wN*(N-22.000000000000)/(23.000000000000-22.000000000000)+wT*(Cmax_min-98.493147971872)/(101.027192065093-98.493147971872)+wE*(E_kWh-67.290217229767)/(69.251959983411-67.290217229767).
+Reference extrema were frozen from four previously verified candidates and were not recomputed during search.

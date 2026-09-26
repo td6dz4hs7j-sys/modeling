@@ -1,0 +1,7 @@
+scheme,algorithm,objective_priority,sorties,Cmax_min,energy_kWh,cumulative_flight_delivery_h,weighted_lateness_priority_s,boxes_on_time,multi_area_sorties,validator,source,minimum_expected_margin_min,minimum_energy_reserve_margin_kWh
+到期时间贪心排序,最早期望期限排序+资源解码,期限→时间,23,104.362006653575,67.2902172297666,9.47248165562709,0,80,7,PASS,derived EDD from frozen 23-route set,8.99505249549044,0.149596893078465
+22架次时间优先搜索,架次压缩+时间搜索,先定22架次，再优化时间,22,101.027192065093,68.0707683407435,9.5170086609953,0,80,8,PASS,q2_prestage/recovered_101027_pass.mat,11.7416622081255,0.0440579919351816
+多区路线拆分构造,多服务区路线拆分+资源解码,先拆分路线，再优化时间,23,99.6430895277835,68.9211378629067,9.7162031630212,0,80,8,PASS,q2_prestage_split23/best_23_pass.mat,11.7416622081255,0.0440579919351816
+路线与时刻局部精修,任务顺序/机型/箱分配局部搜索,时间优先局部搜索,23,99.0430895277835,69.2519599834115,9.79564842832961,0,80,8,PASS,q2_prestage_23_refine/best_pass.mat,11.7416622081255,0.0440579919351816
+任务分配与能耗精修,箱转移/交换/机型变更,能耗优先，时间设上限,23,98.4931479718722,67.2902172297666,9.47248165562709,0,80,7,PASS,q2_99_review/final_best_pass.mat,5.70642588105951,0.149596893078465
+加权邻域联合搜索,模拟退火式多邻域联合搜索,能耗权重最高,23,98.1089889817611,65.8231190684277,9.35669610043882,0,80,7,PASS,q2_strategy_scenarios/energy_priority_best_pass.mat,0.381755287271896,0.0126904376691908

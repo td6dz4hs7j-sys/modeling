@@ -1,0 +1,12 @@
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+        strategy         sorties    Cmax_min    energy_kWh    boxes    validator
+    _________________    _______    ________    __________    _____    _________
+
+    "sortie_priority"      22        101.03       67.137       80       "PASS"  
+    "time_priority"        23        95.611       68.304       80       "PASS"  
+    "energy_priority"      23        98.109       65.823       80       "PASS"  
+    "balanced"             23        97.706       65.869       80       "PASS"  
+

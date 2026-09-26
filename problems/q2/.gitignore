@@ -1,0 +1,5 @@
+input/
+cache/
+__pycache__/
+*.asv
+*.tmp
