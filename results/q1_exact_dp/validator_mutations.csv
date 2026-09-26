@@ -1,0 +1,9 @@
+mutation,rejected
+duplicate sortie,1
+wrong energy unit,1
+cross-area ID,1
+invalid type,1
+wrong mass,1
+wrong time,1
+wrong SOC,1
+missing sortie,1

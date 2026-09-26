@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "verified_boxes": 80,
+  "verified_sorties": 18,
+  "minimum_SOC": 0.23088349763662808,
+  "units": "kg m^3 m s kWh",
+  "independent_recalculation": true
+}

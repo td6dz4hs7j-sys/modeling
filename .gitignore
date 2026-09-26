@@ -63,3 +63,9 @@ results/*_预览.png
 figures/_qa/
 results/matlab_*.log
 results/matlab_q1_batch_error.txt
+
+# The independent MATLAB Q1 worktree writes only to results/q1_exact_dp.
+# Do not track the stale source-copy outputs accidentally left under the
+# module directory during local assembly.
+matlab_q1_exact/results/
+matlab_q1_exact/results_file_backup

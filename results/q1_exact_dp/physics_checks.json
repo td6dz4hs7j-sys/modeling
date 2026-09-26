@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "units": "m kg m^3 s kWh",
+  "gravity": 9.81,
+  "joule_per_kWh": 3.6E+6,
+  "max_distance_approx_error_m": 30.965999209518486
+}

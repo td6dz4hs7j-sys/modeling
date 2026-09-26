@@ -1,0 +1,760 @@
+{
+  "seed": 2.0260924E+7,
+  "runtime": "MATLAB",
+  "runtime_version": "9.12.0.1884302 (R2022a)",
+  "dependencies": [
+    {
+      "Name": "5G Toolbox",
+      "Version": "2.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "AUTOSAR Blockset",
+      "Version": "2.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Aerospace Blockset",
+      "Version": "5.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Aerospace Toolbox",
+      "Version": "4.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Antenna Toolbox",
+      "Version": "5.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Audio Toolbox",
+      "Version": "3.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Automated Driving Toolbox",
+      "Version": "3.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Bioinformatics Toolbox",
+      "Version": "4.16",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Bluetooth Toolbox",
+      "Version": "1.0",
+      "Release": "(R2022a)",
+      "Date": "12-Jan-2022"
+    },
+    {
+      "Name": "Communications Toolbox",
+      "Version": "7.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Computer Vision Toolbox",
+      "Version": "10.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Control System Toolbox",
+      "Version": "10.11.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Curve Fitting Toolbox",
+      "Version": "3.7",
+      "Release": "(R2022a)",
+      "Date": "12-Jan-2022"
+    },
+    {
+      "Name": "DDS Blockset",
+      "Version": "1.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "DSP HDL Toolbox",
+      "Version": "1.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "DSP System Toolbox",
+      "Version": "9.14",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Data Acquisition Toolbox",
+      "Version": "4.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Database Toolbox",
+      "Version": "10.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Datafeed Toolbox",
+      "Version": "6.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Deep Learning HDL Toolbox",
+      "Version": "1.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Deep Learning Toolbox",
+      "Version": "14.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Econometrics Toolbox",
+      "Version": "6.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Embedded Coder",
+      "Version": "7.8",
+      "Release": "(R2022a)",
+      "Date": "23-Nov-2021"
+    },
+    {
+      "Name": "Filter Design HDL Coder",
+      "Version": "3.1.11",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Financial Instruments Toolbox",
+      "Version": "3.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Financial Toolbox",
+      "Version": "6.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Fixed-Point Designer",
+      "Version": "7.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Fuzzy Logic Toolbox",
+      "Version": "2.9",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "GPU Coder",
+      "Version": "2.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Global Optimization Toolbox",
+      "Version": "4.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "HDL Coder",
+      "Version": "3.20",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "HDL Verifier",
+      "Version": "6.5",
+      "Release": "(R2022a)",
+      "Date": "23-Nov-2021"
+    },
+    {
+      "Name": "Image Acquisition Toolbox",
+      "Version": "6.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Image Processing Toolbox",
+      "Version": "11.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Industrial Communication Toolbox",
+      "Version": "6.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Instrument Control Toolbox",
+      "Version": "4.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "LTE Toolbox",
+      "Version": "3.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Lidar Toolbox",
+      "Version": "2.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "MATLAB",
+      "Version": "9.12",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "MATLAB Coder",
+      "Version": "5.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "MATLAB Compiler",
+      "Version": "8.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "MATLAB Compiler SDK",
+      "Version": "7.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "MATLAB Report Generator",
+      "Version": "5.12",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Mapping Toolbox",
+      "Version": "5.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Mixed-Signal Blockset",
+      "Version": "2.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Model Predictive Control Toolbox",
+      "Version": "7.3",
+      "Release": "(R2022a)",
+      "Date": "23-Nov-2021"
+    },
+    {
+      "Name": "Model-Based Calibration Toolbox",
+      "Version": "5.12",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Motor Control Blockset",
+      "Version": "1.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Navigation Toolbox",
+      "Version": "2.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Optimization Toolbox",
+      "Version": "9.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Parallel Computing Toolbox",
+      "Version": "7.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Partial Differential Equation Toolbox",
+      "Version": "3.8",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Phased Array System Toolbox",
+      "Version": "4.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Powertrain Blockset",
+      "Version": "1.11",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Predictive Maintenance Toolbox",
+      "Version": "2.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "RF Blockset",
+      "Version": "8.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "RF PCB Toolbox",
+      "Version": "1.1",
+      "Release": "(R2022a)",
+      "Date": "24-Jan-2022"
+    },
+    {
+      "Name": "RF Toolbox",
+      "Version": "4.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "ROS Toolbox",
+      "Version": "1.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Radar Toolbox",
+      "Version": "1.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Reinforcement Learning Toolbox",
+      "Version": "2.2",
+      "Release": "(R2022a)",
+      "Date": "23-Nov-2021"
+    },
+    {
+      "Name": "Requirements Toolbox",
+      "Version": "2.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Risk Management Toolbox",
+      "Version": "2.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Robotics System Toolbox",
+      "Version": "4.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Robust Control Toolbox",
+      "Version": "6.11.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Satellite Communications Toolbox",
+      "Version": "1.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Sensor Fusion and Tracking Toolbox",
+      "Version": "2.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "SerDes Toolbox",
+      "Version": "2.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Signal Integrity Toolbox",
+      "Version": "1.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Signal Processing Toolbox",
+      "Version": "9.0",
+      "Release": "(R2022a)",
+      "Date": "24-Jan-2022"
+    },
+    {
+      "Name": "SimBiology",
+      "Version": "6.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "SimEvents",
+      "Version": "5.11",
+      "Release": "(R2022a)",
+      "Date": "15-Apr-2021"
+    },
+    {
+      "Name": "Simscape",
+      "Version": "5.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simscape Driveline",
+      "Version": "3.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simscape Electrical",
+      "Version": "7.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simscape Fluids",
+      "Version": "3.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simscape Multibody",
+      "Version": "7.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink",
+      "Version": "10.5",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink 3D Animation",
+      "Version": "9.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Check",
+      "Version": "6.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Code Inspector",
+      "Version": "4.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Coder",
+      "Version": "9.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Compiler",
+      "Version": "1.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Control Design",
+      "Version": "6.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Coverage",
+      "Version": "5.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Design Optimization",
+      "Version": "3.11",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Design Verifier",
+      "Version": "4.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Desktop Real-Time",
+      "Version": "5.14",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink PLC Coder",
+      "Version": "3.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Real-Time",
+      "Version": "8.0",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Report Generator",
+      "Version": "5.12",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Simulink Test",
+      "Version": "3.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "SoC Blockset",
+      "Version": "1.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Spreadsheet Link",
+      "Version": "3.4.7",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Stateflow",
+      "Version": "10.6",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Statistics and Machine Learning Toolbox",
+      "Version": "12.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Symbolic Math Toolbox",
+      "Version": "9.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "System Composer",
+      "Version": "2.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "System Identification Toolbox",
+      "Version": "9.16",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Text Analytics Toolbox",
+      "Version": "1.8.1",
+      "Release": "(R2022a)",
+      "Date": "23-Nov-2021"
+    },
+    {
+      "Name": "UAV Toolbox",
+      "Version": "1.3",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Vehicle Dynamics Blockset",
+      "Version": "1.8",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Vehicle Network Toolbox",
+      "Version": "5.2",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Vision HDL Toolbox",
+      "Version": "2.5",
+      "Release": "(R2022a)",
+      "Date": "23-Nov-2021"
+    },
+    {
+      "Name": "WLAN Toolbox",
+      "Version": "3.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Wavelet Toolbox",
+      "Version": "6.1",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Wireless HDL Toolbox",
+      "Version": "2.4",
+      "Release": "(R2022a)",
+      "Date": "13-Nov-2021"
+    },
+    {
+      "Name": "Wireless Testbench",
+      "Version": "1.0",
+      "Release": "(R2022a)",
+      "Date": "02-Jan-2022"
+    }
+  ],
+  "elapsed_seconds": 119.8042765,
+  "input_files": [
+    {
+      "path": "data\\raw\\D题\\对照方案_问题1_结果提交.xlsx",
+      "sha256": "6ba869961e276bb833ed5bf5836e4a62016bd913eb11e235cf48fc3d7b888bb0"
+    },
+    {
+      "path": "data\\raw\\D题\\山区洪涝灾害下无人机运输与通信协同优化.docx",
+      "sha256": "0a4f507b91a02a0ea4264973dd432cdcb5b8916c61c24214719665f326d57685"
+    },
+    {
+      "path": "data\\raw\\D题\\结果提交模板.xlsx",
+      "sha256": "16f521f29a7103c4ff7c3709ce1696bb9fffa18ce741895e45b7bc7afaf3320a"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\中继无人机数据.xlsx",
+      "sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx",
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx",
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx",
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\无人机应急物资运输基础数据\\通信链路参数.xlsx",
+      "sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡地理空间数据说明.pdf",
+      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡地理空间详情地图.html",
+      "sha256": "af1ae5cb0d3a843eb5b8a4adaea36dff6689ce2020061b1a234b71fe3a39b7ad"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.mat",
+      "sha256": "c68703e0cc8f94f4bd52ff6e9974b66a2dae33865f0723ad71c04b6694bf4fbf"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\村镇点位\\镇龙乡及周边村镇点位.csv",
+      "sha256": "e08b6b3b5283a3c9ba5f898b5b7c54badddc786c58ec415dbd1035b3ddbc9759"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\村镇点位\\镇龙乡及周边村镇点位.mat",
+      "sha256": "61419e92447ada38c56b7f64f04e4aada2eb1ed076ae33e95f1cbc69f3514beb"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\水体（面）\\镇龙乡及周边水体.csv",
+      "sha256": "a3dd9377bfc82656e376a3a6f52ef9019ed76117b8df1841d1409a253790df81"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\水体（面）\\镇龙乡及周边水体.mat",
+      "sha256": "b79df14bdc0b22811f5c219897a66775d8879a93c4a865e455d8c43ab099b50a"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\水系（线）\\镇龙乡及周边水系.csv",
+      "sha256": "e7d26a3cdf26e845b63d8c4942b94f35fd38f71dc63b07655ca8adf15013ba2e"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\水系（线）\\镇龙乡及周边水系.mat",
+      "sha256": "b89f4f294bf771962676009fa9044f46ef26a06613fb6f91e2c6f9ccd430f8e8"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\道路\\镇龙乡及周边道路.csv",
+      "sha256": "019c720d07c023cb7ffeb25952bf6cd1ffcf4e7ffec9e1833e162108965f7ec9"
+    },
+    {
+      "path": "data\\raw\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\道路\\镇龙乡及周边道路.mat",
+      "sha256": "c868717284d8aee60157e3bc9b20e18a81b26fde3d75fc7d80317ef877af9849"
+    }
+  ],
+  "parameters": {
+    "gravity": 9.81,
+    "clearance_m": 50,
+    "delivery_height_m": 30,
+    "reserve": [
+      0.2,
+      0.2,
+      0.2
+    ],
+    "objective": "lexicographic N E T plus normalized joint weights over N/E/T",
+    "joint_weight_formula": "J=wN*N/N0+wE*E/E0+wT*T/T0; wN+wE+wT=1",
+    "tolerances": {
+      "mass": 1E-9,
+      "volume": 1E-12,
+      "energy": 1E-10,
+      "objective": 1E-10,
+      "time": 1E-6,
+      "milpEnergy": 1E-8
+    }
+  },
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\matlab_q1_exact\\run_q1.ps1 -Mode full",
+  "optimality_scope": "exact pattern-count DP, cross-checked MILP; conditional physical interpretation and numerical tolerance"
+}
