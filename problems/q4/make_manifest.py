@@ -10,7 +10,7 @@ def files():
 def main():
     d=dict(command='python run_problem4.py',verification='python verify_bundle.py',random_seed=None,
            deterministic=True,python=platform.python_version(),
-           dependencies={n:importlib.metadata.version(n) for n in ('numpy','scipy','h5py','openpyxl')},
+           dependencies={n:importlib.metadata.version(n) for n in ('numpy','scipy','h5py','openpyxl','matplotlib','Pillow')},
            files=[dict(path=p.relative_to(ROOT).as_posix(),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in files()])
     (ROOT/'manifest.json').write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')
 if __name__=='__main__':main()

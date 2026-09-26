@@ -1,2 +1,4 @@
 # Preserve the exact bytes covered by the reproducibility manifests.
 * -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Generated SVG path whitespace is significant only to formatting.
+*.svg -whitespace

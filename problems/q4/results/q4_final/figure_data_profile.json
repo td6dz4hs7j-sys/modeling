@@ -1,0 +1,9 @@
+{
+  "transport_rows": 23,
+  "relay_rows": 4,
+  "certificate_rows": 296,
+  "two_group_partitions": 127,
+  "three_group_partitions": 966,
+  "missing_core_values": 0,
+  "semantics": "deterministic complete enumeration; no inferential error bars"
+}

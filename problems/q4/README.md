@@ -46,3 +46,12 @@ python verify_bundle.py
 `results/q4_final/q4_results.json`的`final_solutions`与`pooled_results.recommended`为正式选解；`results`及`comparison_original_id_*`仅为严格保留原ID的对照核验证据。最终主结果不采用历史截图优先的三组10/15/4/5。
 
 清单`manifest.json`记录包文件相对路径与SHA256；依赖实际版本也记录其中。后续开发说明见[GitHub任务指令](docs/GitHub任务指令.md)。本分支只发布问题四必要的处理后输入、程序和结果，不包含原始竞赛附件、凭据或缓存。
+
+## 最新图件
+
+本分支现含9幅与最终两组29件、三组34件方案一致的证据图及1幅流程图，提供300 DPI PNG、SVG与灰度预览。旧Q4均衡方案的图没有混入最终图目录。图件来源哈希见`results/q4_final/figure_source_sha256.json`；图表契约见`figure_contract.json`。重画命令为`python q4/plot_final.py`，完整复现也会自动重画。
+
+![资源与库存](figures/q4_final/result_q4_resource_inventory.png)
+![工作量与取舍](figures/q4_final/result_q4_workload.png)
+
+全部图件在[figures/q4_final](figures/q4_final/)；辅助导出代码随包保存于utils，源自项目使用的math-modeling绘图工具，无需安装本机技能目录。中文字体推荐Microsoft YaHei、SimHei或Noto Sans CJK SC。

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="316.8pt" viewBox="0 0 518.4 316.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-27T02:03:18.105260</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 316.8 
+L 518.4 316.8 
+L 518.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 226.363359 39.360478 
+L 292.036641 39.360478 
+Q 295.636641 39.360478 295.636641 35.760478 
+L 295.636641 26.183916 
+Q 295.636641 22.583916 292.036641 22.583916 
+L 226.363359 22.583916 
+Q 222.763359 22.583916 222.763359 26.183916 
+L 222.763359 35.760478 
+Q 222.763359 39.360478 226.363359 39.360478 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="34.103916" transform="rotate(-0 259.2 34.103916)">最新Q3与原库存</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 259.2 45.403963 
+Q 259.2 54.281222 259.2 62.040446 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 58.440446 
+L 259.2 62.040446 
+L 257.4 58.440446 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <g id="patch_4">
+     <path d="M 218.7 88.80012 
+L 299.7 88.80012 
+Q 303.3 88.80012 303.3 85.20012 
+L 303.3 76.20012 
+Q 303.3 72.60012 299.7 72.60012 
+L 218.7 72.60012 
+Q 215.1 72.60012 215.1 76.20012 
+L 215.1 85.20012 
+Q 215.1 88.80012 218.7 88.80012 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="84.12012" transform="rotate(-0 259.2 84.12012)">共访闭包与保障映射</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 259.2 95.131886 
+Q 259.2 104.009145 259.2 111.768369 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 108.168369 
+L 259.2 111.768369 
+L 257.4 108.168369 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <g id="patch_6">
+     <path d="M 224.450859 138.793824 
+L 293.949141 138.793824 
+Q 297.549141 138.793824 297.549141 135.193824 
+L 297.549141 125.662262 
+Q 297.549141 122.062262 293.949141 122.062262 
+L 224.450859 122.062262 
+Q 220.850859 122.062262 220.850859 125.662262 
+L 220.850859 135.193824 
+Q 220.850859 138.793824 224.450859 138.793824 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="133.582262" transform="rotate(-0 259.2 133.582262)">127/966分区穷举</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 259.2 144.859809 
+Q 259.2 153.737068 259.2 161.496293 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 157.896293 
+L 259.2 161.496293 
+L 257.4 157.896293 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <g id="patch_8">
+     <path d="M 214.2 188.255966 
+L 304.2 188.255966 
+Q 307.8 188.255966 307.8 184.655966 
+L 307.8 175.655966 
+Q 307.8 172.055966 304.2 172.055966 
+L 214.2 172.055966 
+Q 210.6 172.055966 210.6 175.655966 
+L 210.6 184.655966 
+Q 210.6 188.255966 214.2 188.255966 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="183.575966" transform="rotate(-0 259.2 183.575966)">组内同型最少路径覆盖</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 259.2 194.587733 
+Q 259.2 203.464991 259.2 211.224216 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 207.624216 
+L 259.2 211.224216 
+L 257.4 207.624216 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <g id="patch_10">
+     <path d="M 218.226797 237.98389 
+L 300.173203 237.98389 
+Q 303.773203 237.98389 303.773203 234.38389 
+L 303.773203 225.38389 
+Q 303.773203 221.78389 300.173203 221.78389 
+L 218.226797 221.78389 
+Q 214.626797 221.78389 214.626797 225.38389 
+L 214.626797 234.38389 
+Q 214.626797 237.98389 218.226797 237.98389 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="233.30389" transform="rotate(-0 259.2 233.30389)">缺口 → 总件数 → CV</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 259.2 244.315656 
+Q 259.2 253.192914 259.2 260.952139 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 257.352139 
+L 259.2 260.952139 
+L 257.4 257.352139 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <g id="patch_12">
+     <path d="M 227.7 287.711813 
+L 290.7 287.711813 
+Q 294.3 287.711813 294.3 284.111813 
+L 294.3 275.111813 
+Q 294.3 271.511813 290.7 271.511813 
+L 227.7 271.511813 
+Q 224.1 271.511813 224.1 275.111813 
+L 224.1 284.111813 
+Q 224.1 287.711813 227.7 287.711813 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="283.031813" transform="rotate(-0 259.2 283.031813)">独立核验与输出</text>
+   </g>
+  </g>
+ </g>
+</svg>

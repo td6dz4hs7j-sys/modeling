@@ -1,0 +1,102 @@
+[
+  {
+    "file": "raw_q4_duration",
+    "conclusion": "任务时长差异是均衡分区的输入依据。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "raw_q4_payload_energy",
+    "conclusion": "运输任务的载荷与能耗随机型不同，资源不可跨型号抵扣。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "raw_q4_relay_windows",
+    "conclusion": "原中继窗口固定，跨组复制必须保持同一服务时段。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "process_q4_2group_tradeoff",
+    "conclusion": "2组穷举揭示资源缺口与工作量均衡的权衡。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "process_q4_3group_tradeoff",
+    "conclusion": "3组穷举揭示资源缺口与工作量均衡的权衡。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "process_q4_relay_dependency",
+    "conclusion": "同一中继任务关联多个组，造成中继任务复制。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "result_q4_resource_inventory",
+    "conclusion": "两组配置9/15/2/3，三组9/15/4/6；三组增加中继隔离资源。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "result_q4_workload",
+    "conclusion": "资源最少方案工作量明显不均衡，不能解释为均衡最优。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "result_q4_pooled_gap",
+    "conclusion": "两组缺C型机和C型电池各1件；三组另缺2架中继机。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  },
+  {
+    "file": "flow_overall_model",
+    "conclusion": "本轮Q4流程继承Q3后完成分区、资源核算与独立验证。",
+    "size_inches": [
+      7.2,
+      4.4
+    ],
+    "dpi": 300,
+    "note": "确定性任务数据；无抽样推断或误差棒"
+  }
+]

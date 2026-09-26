@@ -53,5 +53,18 @@ def main():
         assert all(r['variant']=='recommended' for r in assignments if r['K']==k)
     errors={'#VALUE!','#DIV/0!','#REF!','#NAME?','#NULL!','#NUM!','#N/A'}
     assert not any(c.data_type=='e' or (isinstance(c.value,str) and c.value in errors) for s in w for row in s for c in row)
+    sources=json.loads((out/'figure_source_sha256.json').read_text(encoding='utf-8'))
+    for path,digest in sources.items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
+    from PIL import Image
+    contracts=json.loads((out/'figure_contract.json').read_text(encoding='utf-8'))
+    assert len(contracts)==10
+    for entry in contracts:
+        stem=ROOT/'figures/q4_final'/entry['file']
+        assert stem.with_suffix('.svg').is_file()
+        with Image.open(stem.with_suffix('.png')) as im:
+            assert im.size==(2160,1320) and min(im.info['dpi'])>=299
+        with Image.open(stem.parent/'_qa'/(stem.name+'_grayscale.png')) as im:
+            assert im.size==(2160,1320)
+    assert all(sum(e['file'].startswith(prefix) for e in contracts)==3 for prefix in ('raw_','process_','result_'))
     print('PASS: hashes, 5 template rows, preserved Q1-Q3, 160 box mappings, 592 communication intervals, global minima 29/34 and shortage 2/4')
 if __name__=='__main__':main()

@@ -5,10 +5,12 @@ ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'q4'))
 import final_delivery
 import optimality_audit
+import plot_final
 import make_manifest
 import verify_bundle
 if __name__=='__main__':
     final_delivery.main()
     optimality_audit.main()
+    plot_final.main()
     make_manifest.main()
     verify_bundle.main()
