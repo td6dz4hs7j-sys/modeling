@@ -1,0 +1,21 @@
+﻿time_weight,energy_weight,method,weighted_target_gap_pct,best_under_weights
+0,1,22-sortie time-first search,1.5981617026022366,False
+0,1,23-sortie route split,2.867369944636872,False
+0,1,23-sortie local refinement,3.3611343035992474,False
+0,1,23-sortie energy refinement,0.43316004442775674,True
+0.25,0.75,22-sortie time-first search,3.067555336816838,False
+0.25,0.75,23-sortie route split,3.651349141398798,False
+0.25,0.75,23-sortie local refinement,3.8620979425354713,False
+0.25,0.75,23-sortie energy refinement,1.5198561960527868,True
+0.5,0.5,22-sortie time-first search,4.53694897103144,False
+0.5,0.5,23-sortie route split,4.4353283381607245,False
+0.5,0.5,23-sortie local refinement,4.363061581471695,False
+0.5,0.5,23-sortie energy refinement,2.606552347677817,True
+0.75,0.25,22-sortie time-first search,6.006342605246041,False
+0.75,0.25,23-sortie route split,5.219307534922651,False
+0.75,0.25,23-sortie local refinement,4.864025220407918,False
+0.75,0.25,23-sortie energy refinement,3.693248499302847,True
+1,0,22-sortie time-first search,7.475736239460643,False
+1,0,23-sortie route split,6.003286731684577,False
+1,0,23-sortie local refinement,5.364988859344142,False
+1,0,23-sortie energy refinement,4.779944650927877,True

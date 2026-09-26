@@ -1,0 +1,6 @@
+# Preserve audited file bytes on every platform.
+* -text whitespace=cr-at-eol,-blank-at-eof
+# Generated SVG path whitespace is significant only to formatting.
+*.svg -whitespace
+# Preserve historical evidence verbatim.
+*.log -whitespace

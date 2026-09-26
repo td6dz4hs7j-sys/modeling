@@ -1,0 +1,5 @@
+mutation,rejected,diagnostic
+early_fixed_prep,1,prestage fixed prep/load timing invalid
+early_load,1,prestage fixed prep/load timing invalid
+wrong_charge_ready,1,battery recharge-ready time mismatch | battery/charging interval overlap
+wrong_energy,1,reported energy mismatch

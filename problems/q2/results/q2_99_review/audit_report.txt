@@ -1,0 +1,12 @@
+Q2 99-minute scenario independent audit
+status=PASS
+N=23
+Cmax_min=98.493147971872
+E_kWh=67.290217229767
+boxes_on_time=80/80
+multi_area_sorties=7
+minimum_expected_margin_min=5.70642588
+minimum_energy_reserve_margin_kWh=0.14959689
+assumption=fixed preparation of next sortie may start after prior takeoff; loading waits for prior return; shared battery must be fully charged at takeoff.
+comparison=4 verified candidate-generation/search methods, same data and timing scenario; no equal-runtime or global-optimality claim.
+

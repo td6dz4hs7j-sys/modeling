@@ -1,0 +1,12 @@
+{
+  "balanced_mat_sha256": "e3ff4a329ee6c01730d2aeec47159755d5dd06fc83d1ffdf4cdcbeacf214074a",
+  "official_workbook_sha256": "1497d5058b2622da466e2b5378c3accc83f7c327495a4728094f663d8a4f6ab1",
+  "source_node_workbook_sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+  "plot_csv_sha256": {
+    "latest_route_timeline.csv": "789a2c04da40870175cb68cf277a48bb7db8a30ee4eeaba74c5d14971ec5aaf3",
+    "latest_nodes.csv": "e12370483484aa6b4c7d9cdefee9bd031e79e63b4e07cf4a21e4adc38e4abb56"
+  },
+  "preparation_s": 300,
+  "load_s_per_box": 30,
+  "note": "All three types use these preparation/loading values in the original attachment."
+}

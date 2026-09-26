@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="345.6pt" viewBox="0 0 518.4 345.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-27T02:04:47.780624</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 518.4 345.6 
+L 518.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 204.313359 41.214197 
+L 314.086641 41.214197 
+Q 317.236641 41.214197 317.236641 38.064197 
+L 317.236641 29.064197 
+Q 317.236641 25.914197 314.086641 25.914197 
+L 204.313359 25.914197 
+Q 201.163359 25.914197 201.163359 29.064197 
+L 201.163359 38.064197 
+Q 201.163359 41.214197 204.313359 41.214197 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="36.984197" transform="rotate(-0 259.2 36.984197)">题目数据、DEM与80箱需求</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 259.2 49.147553 
+Q 259.2 59.033192 259.2 67.800796 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 64.200796 
+L 259.2 67.800796 
+L 257.4 64.200796 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <g id="patch_4">
+     <path d="M 205.2 95.55012 
+L 313.2 95.55012 
+Q 316.35 95.55012 316.35 92.40012 
+L 316.35 83.40012 
+Q 316.35 80.25012 313.2 80.25012 
+L 205.2 80.25012 
+Q 202.05 80.25012 202.05 83.40012 
+L 202.05 92.40012 
+Q 202.05 95.55012 205.2 95.55012 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="91.32012" transform="rotate(-0 259.2 91.32012)">多点路线构造与共同种子池</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 259.2 103.483476 
+Q 259.2 113.369115 259.2 122.13672 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 118.53672 
+L 259.2 122.13672 
+L 257.4 118.53672 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <g id="patch_6">
+     <path d="M 197.638594 150.151824 
+L 320.761406 150.151824 
+Q 323.911406 150.151824 323.911406 147.001824 
+L 323.911406 137.470262 
+Q 323.911406 134.320262 320.761406 134.320262 
+L 197.638594 134.320262 
+Q 194.488594 134.320262 194.488594 137.470262 
+L 194.488594 147.001824 
+Q 194.488594 150.151824 197.638594 150.151824 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="145.390262" transform="rotate(-0 259.2 145.390262)">多邻域搜索：架次 / 时间 / 能耗</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 259.2 157.8194 
+Q 259.2 167.705038 259.2 176.472643 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 172.872643 
+L 259.2 176.472643 
+L 257.4 172.872643 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <g id="patch_8">
+     <path d="M 205.2 204.221966 
+L 313.2 204.221966 
+Q 316.35 204.221966 316.35 201.071966 
+L 316.35 192.071966 
+Q 316.35 188.921966 313.2 188.921966 
+L 205.2 188.921966 
+Q 202.05 188.921966 202.05 192.071966 
+L 202.05 201.071966 
+Q 202.05 204.221966 205.2 204.221966 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="199.991966" transform="rotate(-0 259.2 199.991966)">实体机、电池与预准备排程</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 259.2 212.155323 
+Q 259.2 222.040961 259.2 230.808566 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 227.208566 
+L 259.2 230.808566 
+L 257.4 227.208566 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <g id="patch_10">
+     <path d="M 195.705 258.55789 
+L 322.695 258.55789 
+Q 325.845 258.55789 325.845 255.40789 
+L 325.845 246.40789 
+Q 325.845 243.25789 322.695 243.25789 
+L 195.705 243.25789 
+Q 192.555 243.25789 192.555 246.40789 
+L 192.555 255.40789 
+Q 192.555 258.55789 195.705 258.55789 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="254.32789" transform="rotate(-0 259.2 254.32789)">独立校验：80箱按期及物理资源</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 259.2 266.491246 
+Q 259.2 276.376885 259.2 285.144489 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+    <path d="M 261 281.544489 
+L 259.2 285.144489 
+L 257.4 281.544489 
+" style="fill: none; stroke: #37474f; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <g id="patch_12">
+     <path d="M 200.7 312.893813 
+L 317.7 312.893813 
+Q 320.85 312.893813 320.85 309.743813 
+L 320.85 300.743813 
+Q 320.85 297.593813 317.7 297.593813 
+L 200.7 297.593813 
+Q 197.55 297.593813 197.55 300.743813 
+L 197.55 309.743813 
+Q 197.55 312.893813 200.7 312.893813 
+z
+" style="fill: #edf3f5; stroke: #37474f; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Noto Sans SC', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="259.2" y="308.663813" transform="rotate(-0 259.2 308.663813)">四组偏好结果与综合均衡选解</text>
+   </g>
+  </g>
+ </g>
+</svg>

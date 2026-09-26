@@ -1,0 +1,9 @@
+﻿metric,value,unit_or_note
+peak_flying_uavs,8,count
+peak_charging_batteries,9,count
+peak_occupied_batteries,14,count
+distinct_used_batteries,14,count
+consecutive_prep_overlap_total,75.0,min; not additive Cmax saving
+consecutive_prep_overlap_count,15,count
+minimum_expected_margin,5.70642588105951,min
+minimum_energy_reserve_margin,0.149596893078465,kWh

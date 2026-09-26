@@ -1,23 +1,21 @@
-# GitHub / Codex 分支任务指令
+# 问题二分支维护指令
 
-## 可粘贴给 GitHub Codex 的指令
+仓库：https://github.com/td6dz4hs7j-sys/modeling；分支：feature/q2-drone-scheduling。当前交付已推送，工作范围problems/q2。
 
-请在当前仓库建立分支 `feature/q2-drone-scheduling`，将提供的 `github_delivery/q2` 导入仓库 `problems/q2/`。按该目录 README 中题目二两项主要需求组织结果，保留四份冻结的严格 PASS 排程及算法和加权目标表。保留 80 箱全部按期的强化约束与提前固定准备的扩展假设，不将有界随机搜索称为精确动态规划或全局最优。若具备 MATLAB 和原附件，运行 `verify_q2_github_bundle` 重新核验；否则注明只核对文件与存档校验，不能声称新运行 MATLAB。只提交 `problems/q2/`，不提交原题附件、不修改问题一/三/四。提交完成后创建草稿 PR，描述模型、两项题面需求映射、各权重真实结果、可复现命令及时间口径。
+以README和results/q2_strategy_scenarios中的四份冻结MAT及两份工作簿为准，主选综合均衡版23架次、97.705871716 min、65.869091416 kWh、80箱按期。保留预准备扩展假设和全按期强化约束，不将有界搜索称为全局最优。其他结果目录均为历史种子/诊断，对照图需标明版本。
 
-## 本地 PowerShell 命令
-
-用本包旁的 `import_q2_branch.ps1` 导入现有本地 clone：
-
-```powershell
-& 'D:\Desktop\modeling\github_delivery\import_q2_branch.ps1' -RepositoryPath 'D:\path\to\your-cloned-repository'
+```bash
+git clone https://github.com/td6dz4hs7j-sys/modeling.git
+cd modeling
+git switch --track origin/feature/q2-drone-scheduling
+cd problems/q2
+# 按README准备原附件并完成MATLAB与文件核验
+python verify_snapshot.py
+cd ../..
+git add problems/q2
+git diff --cached --check
+git commit -m "q2: update verified latest deliverables"
+git push origin feature/q2-drone-scheduling
 ```
 
-脚本要求工作区干净并且目标 `problems/q2` 尚不存在；建立新分支并只复制/暂存问题二文件，供审阅。检查后执行：
-
-```powershell
-git -C 'D:\path\to\your-cloned-repository' diff --cached --stat
-git -C 'D:\path\to\your-cloned-repository' commit -m 'Add Q2 drone scheduling model and verified strategy results'
-git -C 'D:\path\to\your-cloned-repository' push -u origin feature/q2-drone-scheduling
-```
-
-推送后在 GitHub 创建 PR。未提供仓库地址前，这份包没有建立远程分支或推送。
+不强推，不提交凭据、缓存或未经验证的新候选。更新模型或排程后，应重新生成与之对应的图表、来源哈希及manifest。

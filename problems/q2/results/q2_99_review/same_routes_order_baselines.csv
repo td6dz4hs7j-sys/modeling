@@ -1,0 +1,5 @@
+route_order_rule,sorties,Cmax_min,energy_kWh,boxes_on_time,strict_PASS,hard_deadline_feasible,validator_issues
+earliest_due_date,23,104.362006653575,67.2902172297666,80,1,1,
+shortest_route_first,23,113.772867602769,67.2902172297666,75,0,0,expected delivery time missed | medical hard deadline missed | first-batch deadline missed | expected delivery time missed | first-batch deadline missed | expected delivery time missed
+input_box_order,23,114.438651854845,67.2902172297666,74,0,0,medical hard deadline missed | first-batch deadline missed | expected delivery time missed | medical hard deadline missed | first-batch deadline missed | expected delivery time missed | first-batch deadline missed | expected delivery time missed
+optimized_route_order,23,98.4931479718722,67.2902172297666,80,1,1,

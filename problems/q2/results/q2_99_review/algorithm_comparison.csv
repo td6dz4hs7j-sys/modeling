@@ -1,0 +1,5 @@
+method,sorties,Cmax_min,energy_kWh,weighted_lateness_priority_s,boxes_on_time,multi_area_sorties,minimum_expected_margin_min,validator
+22-sortie time-first search,22,101.027192065093,68.0707683407435,0,80,8,11.7416622081255,PASS
+23-sortie route split,23,99.6430895277835,68.9211378629067,0,80,8,11.7416622081255,PASS
+23-sortie local refinement,23,99.0430895277835,69.2519599834115,0,80,8,11.7416622081255,PASS
+23-sortie energy refinement,23,98.4931479718722,67.2902172297666,0,80,7,5.70642588105951,PASS

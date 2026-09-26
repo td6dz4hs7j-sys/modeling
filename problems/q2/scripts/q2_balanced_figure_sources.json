@@ -1,0 +1,11 @@
+{
+  "input_sha256": {
+    "results/q2_strategy_scenarios/Q2_综合均衡最终结果.xlsx": "1497d5058b2622da466e2b5378c3accc83f7c327495a4728094f663d8a4f6ab1",
+    "input/数据/无人机应急物资运输基础数据/物资需求与配送时限.xlsx": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+    "results/q2_strategy_scenarios/weighted_scheme_comparison.csv": "4e858b2b505a261b14671000744541339fb346af4a31aaf5b32b6de40fbfd182",
+    "results/q2_strategy_scenarios/algorithm_strategy_comparison.csv": "067d0ec67e6d7ee7cd2fda3835c673b896eb9e15b40a240b554240d9addbb001"
+  },
+  "selected_sorties": 23,
+  "selected_boxes": 80,
+  "min_box_slack_min": 1.381755287271896
+}

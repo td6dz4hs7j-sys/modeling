@@ -1,0 +1,5 @@
+﻿method,normalized_sorties,normalized_Cmax,normalized_energy
+22-sortie time-first search,0.0,1.0,0.39788657790459286
+23-sortie route split,1.0,0.4537969796925311,0.8313631489704105
+23-sortie local refinement,1.0,0.2170213049498704,1.0
+23-sortie energy refinement,1.0,0.0,0.0

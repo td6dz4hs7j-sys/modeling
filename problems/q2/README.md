@@ -48,3 +48,19 @@ verify_q2_github_bundle(pwd); % 鲜读数据并独立严格复核四份冻结结
 ```
 
 重新搜索：`run_q2_strategy_scenarios(pwd,30)`；重新核验出版：`publish_q2_strategy_tables(pwd)`。随机序列固定，但 30 秒壁钟预算使不同设备候选数量和新解可能变化；复核已保存排程应重现指标。PowerShell 启动器默认本机 MATLAB 路径，其他设备需修改。
+
+## 最新图件与完整导出入口
+
+补齐的[五组PNG/SVG](figures/q2_strategy_scenarios/)严格对应当前97.705871716 min综合均衡版，包括排程、电池飞行及充电、80箱时限裕度、权重权衡与算法策略比较；来源哈希见`scripts/q2_balanced_figure_sources.json`。原有两张对比表PNG仍在results/q2_strategy_scenarios/。
+
+![最新综合均衡排程](figures/q2_strategy_scenarios/q2_balanced_schedule.png)
+
+完整重新导出还需`input/结果提交模板.xlsx`。在本目录MATLAB依次运行`verify_q2_github_bundle(pwd)`、`publish_q2_strategy_tables(pwd)`、`export_q2_strategy_final`；再运行`python q2/package_q2_strategy_scenarios.py`生成比较工作簿和表格PNG，运行`python scripts/make_q2_balanced_figures.py`生成最新五图（需要matplotlib、numpy、openpyxl及需求原表）。更新后重建manifest，再执行`python verify_snapshot.py`核对发布文件。
+
+`results/q2_99_review/`为曾交付的98.4931 min历史阶段，补齐其图表与核验文件仅为追溯，不能替代最新版。历史脚本不会作为默认最新入口自动执行。原附件不随包发布，按上文放置后方能重做物理核验；当前同步不重新搜索或改变任何已验收结果。
+
+## 补齐路线、实体机阶段与流程图
+
+当前图目录另外提供`result_q2_latest_routes`（23架次真实访问路线）、`process_q2_latest_uav_stages`（8架实体机的预准备、装载、飞行）和`flow_q2_latest_model`，均有PNG、SVG及灰度预览。它们直接读取冻结综合均衡MAT与官方表格，输入CSV和SHA256追溯文件位于结果目录；没有重新搜索。
+
+安装`python -m pip install numpy matplotlib openpyxl Pillow h5py`。已有输入CSV可直接运行`python scripts/plot_latest_supplement.py`；从原附件重新提取则先运行`python scripts/export_latest_plot_inputs.py`，也可用`--source-root`指定原项目目录。准备时间300 s、每箱装载30 s已与三机型原表核对。更新清单：`python verify_snapshot.py --refresh`。
